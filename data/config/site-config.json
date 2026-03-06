@@ -1,0 +1,22 @@
+{
+  "contact": {
+    "primary": {
+      "whatsapp": "+919452205049",
+      "email": "prabhat.cs025@gmail.com",
+      "phone": "+919452205049"
+
+
+    }
+  }
+,
+"map": {
+  "defaultCenter": { "lat": 25.3109, "lng": 83.0107 },
+  "defaultZoom": 6,
+  "markerColors": {
+    "varanasi": "red",
+    "ayodhya": "yellow",
+    "prayagraj": "#16a34a",
+    "default": "green"
+  }
+}
+}

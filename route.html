@@ -1,93 +1,357 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Tour Route Map • Spiritual Services</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Route Builder + Map</title>
 
-  <link rel="stylesheet" href="assets/css/theme-saffron.css" />
-  <link rel="stylesheet" href="assets/css/experiences.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/popout.css?v=99" />
 
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="assets/css/pp-nav.css" />
+    <style>
+      .rm-layout {
+        display: grid;
+        grid-template-columns: 420px 1fr;
+        gap: 12px;
+        margin-top: 12px;
+        align-items: start;
+      }
+      @media (max-width: 980px) {
+        .rm-layout { grid-template-columns: 1fr; }
+      }
 
-  <style>
-    .pp-route-wrap{display:grid; grid-template-columns: 1.25fr .75fr; gap:14px}
-    #routeMap{height: 72vh; min-height: 520px; border-radius: var(--r); overflow:hidden; border:1px solid var(--border); box-shadow: var(--shadow); background:var(--card)}
-    .pp-input{width:100%; padding:10px 12px; border-radius:12px; border:1px solid var(--border); background: rgba(255,255,255,.85)}
-    html[data-theme="dark"] .pp-input{background: rgba(17,24,39,.75); color: var(--ink)}
-    .pp-row{display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap}
-    .pp-list{display:grid; gap:10px}
-    .pp-stop{border:1px solid var(--border); background: rgba(255,255,255,.70); border-radius:16px; padding:12px}
-    html[data-theme="dark"] .pp-stop{background: rgba(17,24,39,.60)}
-    .pp-stop h3{margin:0 0 6px; font-size:15px}
-    .pp-stop .pp-muted{font-weight:700}
-    .pp-stop-actions{display:flex; gap:8px; flex-wrap:wrap; margin-top:8px}
-    .pp-num{display:inline-flex; align-items:center; justify-content:center; width:26px; height:26px; border-radius:999px;
-      background: linear-gradient(180deg, var(--brand), var(--brand2)); color:#fff; font-weight:900; font-size:13px; margin-right:8px}
-    @media (max-width: 980px){
-      .pp-route-wrap{grid-template-columns:1fr}
-      #routeMap{height: 52vh; min-height: 420px}
-    }
-  </style>
-</head>
-<body>
-  <div data-include="includes/header.html"></div>
+      #rmMap {
+        height: 72vh;
+        border-radius: 18px;
+        overflow: hidden;
+        border: 1px solid var(--border);
+        background: rgba(0, 0, 0, 0.03);
+      }
 
-  <main class="pp-container pp-main">
-    <section class="pp-panel">
-      <h1 class="pp-h1" style="margin:0 0 6px">Tour Route Map</h1>
-      <div class="pp-muted">
-        This page draws your <b>Tour Maker</b> itinerary on a map, connects stops in order, and calculates total distance.
-        You can reorder stops, auto-sort, and share the route on WhatsApp.
-      </div>
-      <div class="pp-row" style="margin-top:10px">
-        <div class="pp-actions">
-          <a class="pp-btn pp-btn-outline" href="tour-maker.html">Back to Tour Maker</a>
-          <button class="pp-btn" id="btnAutoSort" type="button">Auto-sort (nearest)</button>
-          <button class="pp-btn pp-btn-outline" id="btnLocateStart" type="button">Start from Current Location</button>
+      .rm-sticky { position: sticky; top: 74px; }
+      .rm-results { display: grid; gap: 10px; }
+
+      .rm-minihead {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        flex-wrap: wrap;
+        align-items: flex-end;
+      }
+
+      .leaflet-div-icon { background: transparent !important; border: none !important; }
+
+      .rm-pin, .rm-circle, .route-pin, .route-circle {
+        width: 34px;
+        height: 34px;
+        border-radius: 999px;
+        display: grid;
+        place-items: center;
+        font-weight: 1000;
+        font-size: 14px;
+        line-height: 1;
+        color: #fff;
+        background: var(--brand);
+        border: 2px solid rgba(255,255,255,.95);
+        box-shadow: 0 10px 22px rgba(0,0,0,.25);
+        transform: translate(-50%, -50%);
+      }
+
+      .leaflet-interactive{
+        stroke: var(--brand) !important;
+        fill: color-mix(in srgb, var(--brand2) 45%, transparent) !important;
+        stroke-width: 3 !important;
+        fill-opacity: .55 !important;
+      }
+
+      html.theme-animate .leaflet-container *,
+      html.theme-animate .leaflet-container{ transition: none !important; }
+    </style>
+  </head>
+
+  <body>
+    <div data-include="includes/header.html"></div>
+
+    <main class="pp-container">
+      <section class="pp-card pp-pad">
+        <div class="pp-mini">Single page: Search → Itinerary → Map (auto sync)</div>
+        <h1 class="pp-h1">Route Builder</h1>
+        <div class="pp-muted">
+          Same storage key: <b>pp_tour_maker_v1</b>. Any change updates the map immediately.
         </div>
-        <div class="pp-muted" id="summary"></div>
-      </div>
-    </section>
+      </section>
 
-    <div class="pp-route-wrap">
-      <div id="routeMap" aria-label="Route map"></div>
+      <div class="rm-layout">
+        <!-- LEFT -->
+        <div class="rm-sticky">
+          <section class="pp-card pp-pad">
+            <div class="pp-h2">Search & Add</div>
+            <div class="pp-mini" id="rsStatus" style="margin-top: 6px">Loading data…</div>
 
-      <aside style="display:flex; flex-direction:column; gap:12px">
-        <section class="pp-panel">
-          <div class="pp-row">
+            <div class="pp-actions" style="margin-top: 10px">
+              <select id="rsSource" class="pp-input" title="Search source">
+                <option value="locations">Only locations.json</option>
+                <option value="osm">Only OpenStreetMap</option>
+                <option value="both">Both (locations first)</option>
+              </select>
+
+              <input
+                id="rsQuery"
+                class="pp-input"
+                style="flex: 1"
+                placeholder="Type 3+ characters…"
+                autocomplete="off"
+              />
+              <button class="pp-btn" id="rsSearchBtn" type="button">Search</button>
+              <button class="pp-btn pp-btn--ghost" id="rsClearBtn" type="button">Clear</button>
+            </div>
+
+            <div style="margin-top: 12px" class="rm-results" id="rsResults"></div>
+          </section>
+
+          <section class="pp-card pp-pad" style="margin-top: 12px">
+            <div class="rm-minihead">
+              <div>
+                <div class="pp-h2">Itinerary</div>
+                <div class="pp-mini">Auto-updates map</div>
+              </div>
+              <div class="pp-actions">
+                <button class="pp-btn pp-btn--ghost" id="rsDownloadBtn" type="button">Download</button>
+                <button class="pp-btn" id="rsShareBtn" type="button">WhatsApp</button>
+                <button class="pp-btn pp-btn--ghost" id="rsClearItBtn" type="button">Clear</button>
+              </div>
+            </div>
+
+            <div id="rsItinerary" style="margin-top: 12px; display: grid; gap: 10px"></div>
+          </section>
+        </div>
+
+        <!-- RIGHT -->
+        <section class="pp-card pp-pad">
+          <div class="rm-minihead">
             <div>
-              <div class="pp-h2" style="margin:0">Stops</div>
-              <div class="pp-muted" style="font-size:13px">Order matters. Use ↑ ↓ to rearrange.</div>
+              <div class="pp-h2">Map</div>
+              <div class="pp-mini" id="rmStatus">Ready.</div>
             </div>
             <div class="pp-actions">
-              <button class="pp-btn pp-btn-outline" id="btnClear" type="button">Clear</button>
-              <a class="pp-btn" id="btnShare" target="_blank" rel="noopener">Share on WhatsApp</a>
+              <a class="pp-btn pp-btn--ghost" href="routes.html">Open old Routes page</a>
             </div>
           </div>
-          <div id="stopList" class="pp-list" style="margin-top:10px"></div>
+
+          <div style="margin-top: 12px" id="rmMap"></div>
         </section>
+      </div>
+    </main>
 
-        <section class="pp-panel">
-          <div class="pp-h2" style="margin:0 0 6px">Download</div>
-          <div class="pp-muted" style="font-size:13px">Save your route JSON for backup or sharing.</div>
-          <div class="pp-actions" style="margin-top:10px">
-            <button class="pp-btn" id="btnDownload" type="button">Download Route JSON</button>
-          </div>
-        </section>
-      </aside>
-    </div>
-  </main>
+    <div data-include="includes/footer.html"></div>
 
-  <div data-include="includes/footer.html"></div>
+    <!-- Includes -->
+    <script src="assets/js/includes.js"></script>
+    <script src="assets/js/pp-nav.js"></script>
+    <script src="assets/js/pp-theme.js"></script>
 
-  <script src="assets/js/includes.js"></script>
-  <script src="assets/js/i18n.js"></script>
-  <script src="assets/js/theme.js"></script>
-  <script src="assets/js/featured.js"></script>
-  <script src="assets/js/route-map.js"></script>
+    <!-- Leaflet -->
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
 
-  <script src="https://programmer-s-picnic.github.io/json-images/find-on-page.js"></script>
-</body>
+    <!-- Data + render + popout -->
+    <script src="assets/js/site-config.js"></script>
+    <script src="assets/js/data-store.js"></script>
+    <script src="assets/js/render.js"></script>
+    <script src="assets/js/popout.js"></script>
+
+    <!-- NEW: combined editor + map -->
+    <script src="assets/js/route-editor.js"></script>
+
+    <!-- ✅ Auto-load tour when opened as route.html?tour=<tourId> -->
+    <script>
+      (function () {
+        const STORE_KEY = "pp_tour_maker_v1";
+        const TOURS_URL = "data/master/tours.json";
+        const LOCATIONS_URL = "data/master/locations.json";
+
+        const qs = new URLSearchParams(location.search);
+        const tourId = qs.get("tour");
+        if (!tourId) return;
+
+        const norm = (s) => String(s || "").toLowerCase().trim();
+
+        function safeJSONParse(s) {
+          try { return JSON.parse(s); } catch { return null; }
+        }
+
+        function fetchJSON(url) {
+          return fetch(url, { cache: "no-store" }).then((res) => {
+            if (!res.ok) throw new Error(`Failed to load ${url} (${res.status})`);
+            return res.json();
+          });
+        }
+
+        // ✅ Extract places from { cities:[{places:[...]}] }
+        function extractPlaces(locJSON) {
+          if (!locJSON) return [];
+          if (Array.isArray(locJSON)) return locJSON;
+          if (Array.isArray(locJSON.locations)) return locJSON.locations;
+
+          const cities = Array.isArray(locJSON.cities) ? locJSON.cities : [];
+          const out = [];
+          for (const c of cities) {
+            const places = Array.isArray(c.places) ? c.places : [];
+            for (const p of places) out.push(p);
+          }
+          return out;
+        }
+
+        function pickTitle(place) {
+          if (!place) return "Stop";
+          if (typeof place.name === "string") return place.name;
+          if (place.name && place.name.en) return place.name.en;
+          return place.title || place.id || "Stop";
+        }
+
+        function pickLatLng(place) {
+          const a = Number(place?.lat);
+          const b = Number(place?.lng);
+          if (!Number.isFinite(a) || !Number.isFinite(b)) return null;
+          return { lat: a, lng: b };
+        }
+
+        function makeItineraryItems(stops) {
+          return stops.map((p, idx) => {
+            const ll = pickLatLng(p) || {};
+            return {
+              id: String(p.id || "stop_" + idx),
+              title: pickTitle(p),
+              lat: ll.lat,
+              lng: ll.lng,
+              source: "tour",
+              _raw: p
+            };
+          });
+        }
+
+        function writeToStoragePreservingShape(items, meta) {
+          const existingRaw = localStorage.getItem(STORE_KEY);
+          const existing = safeJSONParse(existingRaw);
+
+          if (Array.isArray(existing)) {
+            localStorage.setItem(STORE_KEY, JSON.stringify(items));
+            return;
+          }
+
+          if (existing && typeof existing === "object") {
+            const out = { ...existing };
+
+            if (Array.isArray(existing.items)) out.items = items;
+            else if (Array.isArray(existing.itinerary)) out.itinerary = items;
+            else out.items = items;
+
+            out.meta = { ...(existing.meta || {}), ...(meta || {}) };
+            out.updatedAt = new Date().toISOString();
+
+            localStorage.setItem(STORE_KEY, JSON.stringify(out));
+            return;
+          }
+
+          localStorage.setItem(
+            STORE_KEY,
+            JSON.stringify({ items, meta: meta || {}, updatedAt: new Date().toISOString() })
+          );
+        }
+
+        function pokeRouteEditorRefresh(meta) {
+          try {
+            window.dispatchEvent(new CustomEvent("pp:route:changed", { detail: meta || {} }));
+          } catch {}
+
+          try { window.RouteEditor?.loadFromStorage?.(); } catch {}
+          try { window.routeEditor?.loadFromStorage?.(); } catch {}
+          try { window.RouteEditor?.render?.(); } catch {}
+          try { window.routeEditor?.render?.(); } catch {}
+        }
+
+        async function applyTour() {
+          const rmStatus = document.getElementById("rmStatus");
+          if (rmStatus) rmStatus.textContent = "Loading tour…";
+
+          const [toursJSON, locJSON] = await Promise.all([
+            fetchJSON(TOURS_URL),
+            fetchJSON(LOCATIONS_URL)
+          ]);
+
+          const tours = toursJSON.tours || [];
+          const tour = tours.find((t) => norm(t.id) === norm(tourId));
+          if (!tour) throw new Error(`Tour not found: ${tourId}`);
+
+          const places = extractPlaces(locJSON);
+
+          // Map places by id
+          const placeMap = new Map();
+          for (const p of places) {
+            if (p && p.id) placeMap.set(String(p.id), p);
+          }
+
+          const missing = [];
+          const stops = (tour.location_ids || [])
+            .map((id) => {
+              const p = placeMap.get(String(id));
+              if (!p) missing.push(id);
+              return p || null;
+            })
+            .filter(Boolean);
+
+          if (!stops.length) {
+            throw new Error(`Tour "${tourId}" has no resolvable stops in locations.json`);
+          }
+
+          const items = makeItineraryItems(stops);
+
+          writeToStoragePreservingShape(items, { tourId: tour.id, tourTitle: tour.title || "" });
+
+          if (rmStatus) {
+            rmStatus.textContent =
+              `Loaded tour: ${tour.title || tour.id} (${items.length} stops)` +
+              (missing.length ? ` • Missing: ${missing.join(", ")}` : "");
+          }
+
+          pokeRouteEditorRefresh({ tourId: tour.id, tourTitle: tour.title || "" });
+        }
+
+        setTimeout(() => {
+          applyTour().catch((err) => {
+            console.error(err);
+            const rmStatus = document.getElementById("rmStatus");
+            if (rmStatus) rmStatus.textContent = `Tour load error: ${err.message || err}`;
+          });
+        }, 250);
+      })();
+    </script>
+
+    <!-- Map invalidate-size fix -->
+    <script>
+      (function(){
+        function getAnyMap(){ return window.rmMap || window.map || window._map || null; }
+        function invalidate(){
+          const m = getAnyMap();
+          if (m && typeof m.invalidateSize === "function") m.invalidateSize(true);
+        }
+        window.addEventListener("load", () => setTimeout(invalidate, 250));
+        window.addEventListener("resize", () => setTimeout(invalidate, 120));
+        document.addEventListener("click", (e)=>{
+          if (e.target.closest("[data-pp-burger], .pp-burger")) setTimeout(invalidate, 250);
+          if (e.target.closest("#ppThemeBtn")) setTimeout(invalidate, 250);
+        });
+      })();
+    </script>
+  </body>
 </html>

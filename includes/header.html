@@ -1,36 +1,30 @@
-<header class="pp-header">
-  <div class="pp-container pp-header-row">
-    <a class="pp-brand" href="index.html" aria-label="Home">
-      <span class="pp-brand-mark">🕉️</span>
-      <span class="pp-brand-name" data-i18n="siteName">Spiritual Services</span>
+<header class="pp-nav" id="ppHeader">
+  <div class="pp-nav__inner">
+    <a class="pp-brand" href="index.html" style="text-decoration:none">
+      <div class="pp-brand__logo">ॐ</div>
+      <div class="pp-brand__text">
+        <div class="pp-brand__name">Spiritual Tours</div>
+        <div class="pp-brand__tag">Routes • Rituals • Kathas • Calendar</div>
+      </div>
     </a>
 
-    <nav class="pp-nav" aria-label="Primary">
-      <a href="index.html" data-nav="index.html" data-i18n="navHome">Home</a>
-      <a href="experiences.html" data-nav="experiences.html" data-i18n="navExperiences">Experiences</a>
-      <a href="tours.html" data-nav="tours.html" data-i18n="navTours">Tours</a>
-      <a href="tour-maker.html" data-nav="tour-maker.html" data-i18n="navTourMaker">Tour Maker</a>
-      <a href="route.html" data-nav="route.html">Route Map</a>
-      <a href="rituals.html" data-nav="rituals.html" data-i18n="navRituals">Rituals</a>
-      <a href="katha.html" data-nav="katha.html" data-i18n="navKatha">Katha</a>
-      <a href="acharyas.html" data-nav="acharyas.html" data-i18n="navAcharyas">Acharyas</a>
-      <a href="calendar.html" data-nav="calendar.html" data-i18n="navCalendar">Calendar</a>
-      <a href="gallery.html" data-nav="gallery.html" data-i18n="navGallery">Gallery</a>
-      <a href="videos.html" data-nav="videos.html" data-i18n="navVideos">Videos</a>
-      <a href="contact.html" data-nav="contact.html" data-i18n="navContact">Contact</a>
-      <a href="master-data.html" data-nav="master-data.html">Data</a>
-    </nav>
+    <div class="pp-nav__right">
+      <nav class="pp-links" aria-label="Primary">
+        <a class="pp-link" href="index.html" data-pp-navlink>Home</a>
+        <a class="pp-link" href="routes.html" data-pp-navlink>Routes</a>
+        <a class="pp-link" href="route.html" data-pp-navlink>Route Map</a>
+        <a class="pp-link" href="calendar.html" data-pp-navlink>Calendar</a>
+        <a class="pp-link" href="tours.html" data-pp-navlink>Tours</a>
+        <a class="pp-link" href="kathas.html" data-pp-navlink>Kathas</a>
+        <a class="pp-link" href="rituals.html" data-pp-navlink>Rituals</a>
+        <a class="pp-link" href="admin-locations.html" data-pp-navlink>Admin</a>
+      </nav>
 
-    <div class="pp-actions">
-            <button class="pp-menu-btn" type="button" aria-label="Menu" aria-expanded="false">☰</button>
-<div class="pp-theme">
-        <select id="themeSelect" class="pp-select" aria-label="Theme"></select>
-      </div>
-      <button class="pp-lang" id="langToggle" type="button" aria-label="Toggle language">
-        <span class="pp-lang-pill">EN</span>
-        <span class="pp-lang-sep">⇄</span>
-        <span class="pp-lang-pill">HI</span>
-      </button>
+      <!-- THEME (always visible) -->
+      <button class="pp-navbtn" type="button" id="ppThemeBtn" aria-label="Theme">🔶</button>
+
+      <button class="pp-navbtn" type="button" data-pp-lang>HI</button>
+      <button class="pp-navbtn pp-burger" type="button" data-pp-burger aria-label="Menu">☰</button>
     </div>
   </div>
 </header>

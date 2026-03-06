@@ -1,130 +1,1143 @@
 <!doctype html>
-<html lang="en" data-lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Spiritual Services | Tours • Yagya • Katha</title>
-  <meta name="description" content="Spiritual tours, Vedic rituals, yagya, kathas and acharya-led services across India." />
-  <meta name="theme-color" content="#d97706" />
-  <link rel="stylesheet" href="assets/css/theme-saffron.css" />
-  <link rel="stylesheet" href="assets/css/experiences.css" />
-</head>
-<body>
-  <div data-include="includes/header.html"></div>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#d97706" />
+    <title>Home</title>
 
-  <section class="pp-hero">
-    <div class="pp-container">
-      <div class="pp-hero-card">
-        <h1 data-i18n="homeTitle">Spiritual Services & Pilgrimage Experiences</h1>
-        <p class="pp-muted" data-i18n="homeSubtitle">Tours, Yagya, Kathas & Sacred Arrangements — guided with devotion.</p>
-        <div class="pp-badges">
-          <span class="pp-badge" data-i18n="badgeTours">Spiritual Tours</span>
-          <span class="pp-badge" data-i18n="badgeRituals">Vedic Rituals</span>
-          <span class="pp-badge" data-i18n="badgeKatha">Kathas</span>
-        </div>
-      </div>
-    </div>
-  </section>
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/popout.css" />
+    <link rel="stylesheet" href="assets/css/pp-nav.css" />
 
-  <main class="pp-container pp-main">
-
-    <section class="pp-panel" style="margin-top:14px">
-      <h2 class="pp-h2" style="margin:0 0 6px">Featured</h2>
-      <div class="pp-muted">Auto from upcoming occasions (Calendar) with fallback to curated featured flags.</div>
-      <div class="pp-grid" data-featured-mount data-featured-mode="mixed" data-featured-limit="3" style="margin-top:12px"></div>
-    </section>
-
-    <section class="pp-panel">
-      <div class="pp-panel-row">
-        <div>
-          <h2 class="pp-h2" data-i18n="homeServicesTitle">Our Services</h2>
-      <div class="pp-muted" data-i18n="homeUpcomingHint">Auto-generated from the calendar.</div>
-      <h3 class="pp-h3" style="margin-top:14px" data-i18n="homeUpcomingTitle">Next Important Occasions</h3>
-      <div id="homeUpcoming"></div>
-      <div style="margin-top:10px"><a class="pp-btn pp-btn-outline" href="calendar.html" data-i18n="homeViewCalendar">View Full Calendar</a></div>
-      <hr style="border:none;border-top:1px solid rgba(234,220,197,.7);margin:14px 0">
-
-          <p class="pp-muted" data-i18n="homeServicesDesc">Choose from our core spiritual offerings.</p>
-        </div>
-      </div>
-
-      <div class="pp-grid">
-        <article class="pp-card">
-          <div class="pp-card-top"><div class="pp-icon">🧭</div><div class="pp-card-title" data-i18n="cardToursTitle">Spiritual Tours</div></div>
-          <div class="pp-card-body">
-            <p class="pp-card-desc" data-i18n="cardToursDesc">Kashi, Ayodhya, Prayagraj, Chitrakoot, Ujjain, Nashik & more.</p>
-            <div class="pp-card-actions">
-              <a class="pp-btn pp-btn-outline" href="tours.html" data-i18n="btnExplore">Explore</a>
-              <a class="pp-btn" href="gallery.html">Gallery</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="pp-card">
-          <div class="pp-card-top"><div class="pp-icon">🔥</div><div class="pp-card-title" data-i18n="cardRitualsTitle">Yagya & Rituals</div></div>
-          <div class="pp-card-body">
-            <p class="pp-card-desc" data-i18n="cardRitualsDesc">Mahamrityunjaya Jaap, Rudrabhishek, Shatchandi & more.</p>
-            <div class="pp-card-actions">
-              <a class="pp-btn pp-btn-outline" href="rituals.html" data-i18n="btnExplore">Explore</a>
-              <a class="pp-btn" href="gallery.html">Gallery</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="pp-card">
-          <div class="pp-card-top"><div class="pp-icon">📖</div><div class="pp-card-title" data-i18n="cardKathaTitle">Kathas & Discourses</div></div>
-          <div class="pp-card-body">
-            <p class="pp-card-desc" data-i18n="cardKathaDesc">Ram Katha, Bhagwat Katha, Shiv & Devi Mahapuran.</p>
-            <div class="pp-card-actions">
-              <a class="pp-btn pp-btn-outline" href="katha.html" data-i18n="btnExplore">Explore</a>
-              <a class="pp-btn" href="gallery.html">Gallery</a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="pp-contact-widget">
-      <div class="pp-contact-card">
-        <div>
-          <h3 class="pp-h3" data-i18n="ctaHomeTitle">Plan Your Spiritual Journey</h3>
-          <p class="pp-muted" data-i18n="ctaHomeDesc">Talk to us on WhatsApp or call directly for guidance.</p>
-        </div>
-        <div class="pp-cta-row">
-          <a class="pp-btn" data-pp="whatsapp" id="whatsAppBtn" href="#" target="_blank" rel="noopener" data-i18n="ctaWhatsApp">WhatsApp</a>
-          <a class="pp-btn pp-btn-outline" data-pp="call" id="callBtn" href="#" data-i18n="ctaCall">Call</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <div data-include="includes/footer.html"></div>
-
-  <script src="assets/js/include-loader.js"></script>
-  <script src="assets/js/lang.js"></script>
-  <script src="assets/js/i18n.js"></script>
-  <script>
-    (function(){
-      var PHONE_E164 = "+919999999999"; // TODO: replace
-      var WA_TEXT_EN = "Namaste! I want to know about your spiritual services.";
-      var WA_TEXT_HI = "नमस्ते! मैं आपकी आध्यात्मिक सेवाओं के बारे में जानकारी चाहता/चाहती हूँ।";
-      function lang(){ return (window.PP_LANG && window.PP_LANG.getLang) ? window.PP_LANG.getLang() : "en"; }
-      function update(){
-        var waText = (lang()==="hi") ? WA_TEXT_HI : WA_TEXT_EN;
-        var wa = document.getElementById("whatsAppBtn");
-        var call = document.getElementById("callBtn");
-        if (wa) wa.href = "https://wa.me/" + PHONE_E164.replace(/\D/g,"") + "?text=" + encodeURIComponent(waText);
-        if (call) call.href = "tel:" + PHONE_E164;
+    <style>
+      /* ---- home-only polish (theme-aware) ---- */
+      .hp-hero {
+        margin-top: 12px;
+        border: 1px solid var(--border);
+        border-radius: 22px;
+        overflow: hidden;
+        background:
+          radial-gradient(
+            1200px 500px at 10% 0%,
+            color-mix(in srgb, var(--brand2) 28%, transparent),
+            transparent 60%
+          ),
+          radial-gradient(
+            900px 420px at 90% 20%,
+            color-mix(in srgb, var(--brand) 20%, transparent),
+            transparent 58%
+          ),
+          linear-gradient(
+            145deg,
+            color-mix(in srgb, var(--bg-0) 95%, transparent),
+            color-mix(in srgb, var(--bg-1) 82%, transparent)
+          );
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.07);
+        position: relative;
       }
-      update();
-      window.addEventListener("pp:langchange", update);
-    })();
-  </script>
-  <script src="assets/js/include-loader.js"></script>  <script src="assets/js/lang.js"></script>  <script src="assets/js/i18n.js"></script>  <script src="data/site.config.js"></script>  <script src="assets/js/contact-utils.js"></script>\n\n
-  <script src="assets/js/external-scripts.js"></script>
-  <script src="assets/js/menu-toggle.js"></script>
-  <script src="assets/js/home-upcoming.js"></script>
-  <script src="assets/js/theme.js"></script>
-  <script src="assets/js/featured.js"></script>
-</body>
+      .hp-hero .inner {
+        padding: 18px 16px;
+      }
+      .hp-hero h1 {
+        margin: 8px 0 0;
+        font-size: 30px;
+        line-height: 1.08;
+        font-weight: 1000;
+      }
+      .hp-hero p {
+        margin: 10px 0 0;
+        max-width: 62ch;
+      }
+      .hp-badges {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 12px;
+      }
+      .hp-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 10px;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        background: color-mix(in srgb, var(--card) 70%, transparent);
+        font-weight: 900;
+        font-size: 12px;
+      }
+      .hp-actions {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 14px;
+      }
+      .hp-grid {
+        margin-top: 12px;
+        display: grid;
+        gap: 12px;
+        grid-template-columns: 1.2fr 0.8fr;
+        align-items: start;
+      }
+      @media (max-width: 980px) {
+        .hp-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      .hp-panel {
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        background: color-mix(in srgb, var(--card) 72%, transparent);
+        padding: 14px;
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+      }
+      .hp-kpis {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 10px;
+      }
+      .hp-kpi {
+        display: inline-flex;
+        gap: 8px;
+        align-items: center;
+        padding: 8px 10px;
+        border-radius: 999px;
+        background: color-mix(in srgb, var(--card) 60%, transparent);
+        border: 1px solid var(--border);
+        font-weight: 1000;
+      }
+      .hp-searchRow {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 10px;
+      }
+      .hp-searchRow > * {
+        flex: 1;
+        min-width: 160px;
+      }
+      .hp-results {
+        margin-top: 12px;
+        display: grid;
+        gap: 10px;
+      }
+      .hp-item {
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        background: color-mix(in srgb, var(--card) 86%, transparent);
+        overflow: hidden;
+      }
+      .hp-item .top {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        padding: 12px;
+      }
+      .hp-item .thumb {
+        width: 56px;
+        height: 56px;
+        border-radius: 14px;
+        background: color-mix(in srgb, var(--card) 60%, transparent);
+        flex: 0 0 auto;
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+      }
+      .hp-item .thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .hp-item .meta {
+        flex: 1;
+      }
+      .hp-item .ttl {
+        font-weight: 1000;
+      }
+      .hp-item .sub {
+        font-size: 12px;
+        opacity: 0.75;
+        margin-top: 4px;
+      }
+      .hp-item .chips {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-top: 8px;
+      }
+      .hp-item .chips .pp-pill {
+        font-size: 12px;
+      }
+      .hp-sectTitle {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        align-items: end;
+      }
+      .hp-sectTitle .pp-mini {
+        margin-top: 2px;
+      }
+      .hp-miniLinks {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+      .hp-muted {
+        opacity: 0.75;
+      }
+      .hp-divider {
+        height: 1px;
+        background: color-mix(in srgb, var(--border) 75%, transparent);
+        margin: 12px 0;
+      }
+      .hp-footnote {
+        font-size: 12px;
+        opacity: 0.78;
+        margin-top: 10px;
+      }
+    </style>
+
+    <link rel="stylesheet" href="assets/css/pp-carousel.css" />
+    <link rel="stylesheet" href="assets/css/pp-nav.css" />
+  </head>
+
+  <body>
+    <div data-include="includes/header.html"></div>
+
+    <main class="pp-container">
+      <div class="pp-carousel" data-ppc autoplay="1" interval="4000">
+        <div
+          class="ppc-slide"
+          data-kicker="Kashi Vishwanath • Jyotirlinga"
+          data-title="Experience the Divine at Mahadev’s Abode"
+          data-sub="Plan your darshan, explore nearby ghats, and map your sacred journey in minutes."
+          data-chip="🕉 Darshan + Route"
+        >
+          <img src="assets/images/varanasi/kashi-viswanath/0.jpg" alt="" />
+        </div>
+
+        <div
+          class="ppc-slide"
+          data-kicker="Golden Temple of Kashi"
+          data-title="Walk Through the Sacred Corridors of Vishwanath"
+          data-sub="Add temple, Ganga Aarti, and nearby shrines to your personalized itinerary."
+          data-chip="✨ Temple + Ganga Aarti"
+        >
+          <img src="assets/images/varanasi/kashi-viswanath/1.jpg" alt="" />
+        </div>
+
+        <div
+          class="ppc-slide"
+          data-kicker="Har Har Mahadev • Varanasi"
+          data-title="Plan Your Kashi Vishwanath Pilgrimage"
+          data-sub="Search mandirs, set darshan timing, open route map, and share with family."
+          data-chip="📍 Sacred Route Planner"
+        >
+          <img src="assets/images/varanasi/kashi-viswanath/2.jpg" alt="" />
+        </div>
+
+        <div
+          class="ppc-slide"
+          data-kicker="Ancient Kashi • Timeless Faith"
+          data-title="Discover the Glory of Shri Kashi Vishwanath"
+          data-sub="Explore temple history, nearby ghats, and build your spiritual travel map."
+          data-chip="🏛 Heritage + Itinerary"
+        >
+          <img src="assets/images/varanasi/kashi-viswanath/3.jpg" alt="" />
+        </div>
+
+        <div
+          class="ppc-slide"
+          data-kicker="Kashi Vishwanath Corridor"
+          data-title="Build Your Temple Visit Plan in 2 Minutes"
+          data-sub="Add darshan slots, open live route map, and share instantly on WhatsApp."
+          data-chip="⚡ Quick Darshan Planner"
+        >
+          <img src="assets/images/varanasi/kashi-viswanath/4.jpg" alt="" />
+        </div>
+
+        <div
+          class="ppc-slide"
+          data-kicker="City of Light • Varanasi"
+          data-title="Begin Your Journey to Kashi Vishwanath"
+          data-sub="Plan temple visit, Ganga snan, and evening aarti in one seamless route."
+          data-chip="🌅 Temple + Ghat Route"
+        >
+          <img src="assets/images/varanasi/kashi-viswanath/3.jpg" alt="" />
+        </div>
+      </div>
+
+      <!-- HERO -->
+      <section class="hp-hero">
+        <div class="inner">
+          <div class="pp-split">
+            <div>
+              <div class="pp-mini" id="hpMini"></div>
+              <h1 id="hpTitle">Spiritual Tours • Rituals • Kathas</h1>
+              <p class="pp-muted" id="hpSubtitle">
+                Plan trips to Kashi, Ayodhya, Prayagraj — book rituals, kathas &
+                arrangements. Build itinerary, view route on map, and share on
+                WhatsApp.
+              </p>
+
+              <div class="hp-badges">
+                <span class="hp-badge">📍 Locations database</span>
+                <span class="hp-badge">🗺 Route Map</span>
+                <span class="hp-badge">📅 Festivals Calendar</span>
+                <span class="hp-badge">💬 WhatsApp enquiry</span>
+              </div>
+
+              <div class="hp-actions">
+                <a class="pp-btn" href="routes.html" id="hpCta1"
+                  >Start Route Builder</a
+                >
+                <a class="pp-btn pp-btn--ghost" href="route.html" id="hpCta2"
+                  >Open Route Map</a
+                >
+                <a class="pp-btn pp-btn--ghost" href="calendar.html" id="hpCta3"
+                  >Open Calendar</a
+                >
+                <button
+                  class="pp-btn pp-btn--ghost"
+                  id="ppLangBtn"
+                  type="button"
+                >
+                  HI
+                </button>
+              </div>
+            </div>
+
+            <div class="hp-panel" style="max-width: 420px">
+              <div class="hp-sectTitle">
+                <div>
+                  <div class="pp-h2" id="hpQuickTitle">Quick Actions</div>
+                  <div class="pp-mini hp-muted" id="hpQuickSub">
+                    Everything important in one tap
+                  </div>
+                </div>
+                <div class="hp-miniLinks">
+                  <a class="pp-btn pp-btn--ghost" href="admin-locations.html"
+                    >Admin</a
+                  >
+                </div>
+              </div>
+
+              <div class="hp-divider"></div>
+
+              <div class="pp-actions" style="gap: 10px; flex-wrap: wrap">
+                <a
+                  class="pp-btn pp-btn--ghost"
+                  href="tours.html"
+                  id="hpLinkTours"
+                  >Tours</a
+                >
+                <a
+                  class="pp-btn pp-btn--ghost"
+                  href="tour-maker.html"
+                  id="hpLinkMaker"
+                  >Tour Maker</a
+                >
+                <a
+                  class="pp-btn pp-btn--ghost"
+                  href="kathas.html"
+                  id="hpLinkKathas"
+                  >Kathas</a
+                >
+                <a
+                  class="pp-btn pp-btn--ghost"
+                  href="rituals.html"
+                  id="hpLinkRituals"
+                  >Rituals</a
+                >
+                <a
+                  class="pp-btn pp-btn--ghost"
+                  href="occasions.html"
+                  id="hpLinkOcc"
+                  >Occasions</a
+                >
+              </div>
+
+              <div class="hp-kpis" id="hpKpis">
+                <span class="hp-kpi"
+                  >🏙️ Cities: <span id="kpiCities">…</span></span
+                >
+                <span class="hp-kpi"
+                  >📌 Places: <span id="kpiPlaces">…</span></span
+                >
+                <span class="hp-kpi"
+                  >🎉 Occasions: <span id="kpiOcc">…</span></span
+                >
+              </div>
+
+              <div class="hp-footnote" id="hpFoot">
+                Tip: Use the search below to find a place or festival and jump
+                directly to building the itinerary.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEARCH + HIGHLIGHTS -->
+      <section class="hp-grid">
+        <!-- LEFT: Smart Search -->
+        <section class="hp-panel">
+          <div class="hp-sectTitle">
+            <div>
+              <div class="pp-h2" id="ssTitle">Smart Search</div>
+              <div class="pp-mini hp-muted" id="ssSub">
+                Search across Locations + Occasions (3+ characters)
+              </div>
+            </div>
+            <div class="hp-miniLinks">
+              <a class="pp-btn pp-btn--ghost" href="routes.html" id="ssGoRoutes"
+                >Go to Routes</a
+              >
+            </div>
+          </div>
+
+          <div class="hp-searchRow">
+            <input
+              class="pp-input"
+              id="ssQuery"
+              placeholder="Type: Kashi / Sangam / Shivratri …"
+              autocomplete="off"
+            />
+            <select class="pp-input" id="ssMode">
+              <option value="both">Locations + Occasions</option>
+              <option value="locations">Locations only</option>
+              <option value="occasions">Occasions only</option>
+            </select>
+            <button class="pp-btn" id="ssBtn" type="button">Search</button>
+            <button class="pp-btn pp-btn--ghost" id="ssClear" type="button">
+              Clear
+            </button>
+          </div>
+
+          <div class="pp-mini hp-muted" id="ssStatus" style="margin-top: 10px">
+            Loading master data…
+          </div>
+          <div class="hp-results" id="ssResults"></div>
+        </section>
+
+        <!-- RIGHT: Today / This month -->
+        <section class="hp-panel">
+          <div class="hp-sectTitle">
+            <div>
+              <div class="pp-h2" id="hiTitle">Highlights</div>
+              <div class="pp-mini hp-muted" id="hiSub">
+                Today + this month from occasions.json
+              </div>
+            </div>
+            <div class="hp-miniLinks">
+              <a class="pp-btn pp-btn--ghost" href="calendar.html">Calendar</a>
+            </div>
+          </div>
+
+          <div class="hp-divider"></div>
+
+          <div class="pp-mini" id="hiTodayLbl">Today</div>
+          <div id="hiToday" class="hp-results"></div>
+
+          <div class="hp-divider"></div>
+
+          <div class="pp-mini" id="hiMonthLbl">This Month</div>
+          <div id="hiMonth" class="hp-results"></div>
+
+          <div class="hp-footnote hp-muted">
+            Festivals based on your <b>data/master/occasions.json</b>.
+          </div>
+        </section>
+      </section>
+
+      <!-- CITY SPOTLIGHT -->
+      <section class="pp-card pp-pad" style="margin-top: 12px">
+        <div class="hp-sectTitle">
+          <div>
+            <div class="pp-h2" id="csTitle">City Spotlight</div>
+            <div class="pp-mini hp-muted" id="csSub">
+              Top places from locations.json
+            </div>
+          </div>
+          <div class="hp-miniLinks">
+            <a class="pp-btn pp-btn--ghost" href="tours.html">Tours</a>
+            <a class="pp-btn pp-btn--ghost" href="routes.html">Routes</a>
+          </div>
+        </div>
+
+        <div class="pp-actions" style="margin-top: 12px">
+          <select class="pp-input" id="csCity"></select>
+          <button class="pp-btn pp-btn--ghost" id="csAddAll" type="button">
+            Add top 5 to itinerary
+          </button>
+          <a class="pp-btn" href="routes.html">Open Itinerary</a>
+        </div>
+
+        <div class="pp-grid" id="csGrid" style="margin-top: 12px"></div>
+      </section>
+
+      <div class="pp-mini hp-muted" style="margin: 14px 0 0">
+        Powered by master data: <b>data/master/locations.json</b>,
+        <b>data/master/occasions.json</b>.
+      </div>
+    </main>
+
+    <div data-include="includes/footer.html"></div>
+
+    <!-- Core -->
+    <script src="assets/js/includes.js"></script>
+    <script src="assets/js/pp-nav.js"></script>
+    <script src="assets/js/site-config.js"></script>
+    <script src="assets/js/lang.js"></script>
+
+    <!-- Optional (if you use popout elsewhere) -->
+    <script src="assets/js/render.js"></script>
+    <script src="assets/js/popout.js"></script>
+
+    <!-- Find on page -->
+    <script src="https://programmer-s-picnic.github.io/json-images/find-on-page.js"></script>
+    <script src="assets/js/pp-carousel.js"></script>
+
+    <!-- Your existing page logic (UNCHANGED) -->
+    <script>
+      (function () {
+        const LOC_PATH = "data/master/locations.json";
+        const OCC_PATH = "data/master/occasions.json";
+        const STORE_KEY = "pp_tour_maker_v1";
+
+        const $ = (id) => document.getElementById(id);
+        const pad2 = (n) => String(n).padStart(2, "0");
+        const iso = (d) =>
+          `${d.getFullYear()}-${pad2(d.getMonth() + 1)}-${pad2(d.getDate())}`;
+
+        function t(obj) {
+          if (!window.PP_LANG)
+            return typeof obj === "string" ? obj : obj?.en || obj?.hi || "";
+          return PP_LANG.t(obj);
+        }
+
+        function setLangTexts() {
+          const hi = PP_LANG.getLang() === "hi";
+          $("ppLangBtn").textContent = hi ? "EN" : "HI";
+
+          $("hpMini").textContent = hi
+            ? "यात्रा • अनुष्ठान • कथा • व्हाट्सएप"
+            : "Tours • Rituals • Kathas • WhatsApp";
+          $("hpTitle").textContent = hi
+            ? "आध्यात्मिक यात्राएँ • अनुष्ठान • कथाएँ"
+            : "Spiritual Tours • Rituals • Kathas";
+          $("hpSubtitle").textContent = hi
+            ? "काशी, अयोध्या, प्रयागराज की यात्रा प्लान करें — अनुष्ठान/कथा बुक करें। यात्रा सूची बनाएं, मैप पर रूट देखें और व्हाट्सएप पर भेजें।"
+            : "Plan trips to Kashi, Ayodhya, Prayagraj — book rituals, kathas & arrangements. Build itinerary, view route on map, and share on WhatsApp.";
+
+          $("hpCta1").textContent = hi
+            ? "रूट बिल्डर शुरू करें"
+            : "Start Route Builder";
+          $("hpCta2").textContent = hi ? "रूट मैप खोलें" : "Open Route Map";
+          $("hpCta3").textContent = hi ? "कैलेंडर खोलें" : "Open Calendar";
+
+          $("hpQuickTitle").textContent = hi ? "क्विक एक्शन" : "Quick Actions";
+          $("hpQuickSub").textContent = hi
+            ? "सब कुछ एक टैप में"
+            : "Everything important in one tap";
+          $("hpFoot").textContent = hi
+            ? "टिप: नीचे सर्च से जगह/त्योहार खोजें और तुरंत यात्रा सूची बनाना शुरू करें।"
+            : "Tip: Use the search below to find a place or festival and jump directly to building the itinerary.";
+
+          $("ssTitle").textContent = hi ? "स्मार्ट सर्च" : "Smart Search";
+          $("ssSub").textContent = hi
+            ? "लोकेशन + त्योहार (3+ अक्षर)"
+            : "Search across Locations + Occasions (3+ characters)";
+          $("ssGoRoutes").textContent = hi ? "Routes खोलें" : "Go to Routes";
+          $("ssQuery").placeholder = hi
+            ? "लिखें: काशी / संगम / शिवरात्रि …"
+            : "Type: Kashi / Sangam / Shivratri …";
+          $("ssBtn").textContent = hi ? "खोजें" : "Search";
+          $("ssClear").textContent = hi ? "साफ़ करें" : "Clear";
+          $("ssMode").options[0].text = hi
+            ? "लोकेशन + त्योहार"
+            : "Locations + Occasions";
+          $("ssMode").options[1].text = hi ? "केवल लोकेशन" : "Locations only";
+          $("ssMode").options[2].text = hi ? "केवल त्योहार" : "Occasions only";
+
+          $("hiTitle").textContent = hi ? "हाइलाइट्स" : "Highlights";
+          $("hiSub").textContent = hi ? "आज + इस महीने" : "Today + this month";
+          $("hiTodayLbl").textContent = hi ? "आज" : "Today";
+          $("hiMonthLbl").textContent = hi ? "इस महीने" : "This Month";
+
+          $("csTitle").textContent = hi ? "शहर स्पॉटलाइट" : "City Spotlight";
+          $("csSub").textContent = hi
+            ? "locations.json से टॉप स्थान"
+            : "Top places from locations.json";
+          $("csAddAll").textContent = hi
+            ? "टॉप 5 यात्रा सूची में जोड़ें"
+            : "Add top 5 to itinerary";
+        }
+
+        function norm(s) {
+          return (s || "").toString().trim().toLowerCase();
+        }
+        function pill(tag) {
+          return `<span class="pp-pill">${tag}</span>`;
+        }
+
+        function card({ type, title, sub, img, tags, href, onAdd, waText }) {
+          const tagHtml = (tags || []).slice(0, 6).map(pill).join("");
+          const btns = `
+          <div class="pp-actions" style="padding:0 12px 12px">
+            ${href ? `<a class="pp-btn pp-btn--ghost" href="${href}">${PP_LANG.getLang() === "hi" ? "खोलें" : "Open"}</a>` : ""}
+            ${onAdd ? `<button class="pp-btn" type="button" data-add="1">${PP_LANG.getLang() === "hi" ? "यात्रा में जोड़ें" : "Add to Itinerary"}</button>` : ""}
+            ${
+              waText
+                ? `<a class="pp-btn pp-btn--ghost" target="_blank" rel="noopener"
+              href="https://wa.me/${(window.PP_CONFIG?.contact?.primary?.whatsapp || "").replace(/\D/g, "")}?text=${encodeURIComponent(waText)}">
+              WhatsApp</a>`
+                : ""
+            }
+          </div>`;
+          const html = document.createElement("div");
+          html.className = "hp-item";
+          html.innerHTML = `
+          <div class="top">
+            <div class="thumb">${img ? `<img src="${img}" alt="">` : "📌"}</div>
+            <div class="meta">
+              <div class="ttl">${title}</div>
+              <div class="sub">${sub || type}</div>
+              <div class="chips">${tagHtml}</div>
+            </div>
+          </div>
+          ${btns}`;
+          if (onAdd) html.querySelector('[data-add="1"]').onclick = onAdd;
+          return html;
+        }
+
+        function loadIt() {
+          try {
+            return JSON.parse(localStorage.getItem(STORE_KEY) || "{}");
+          } catch {
+            return {};
+          }
+        }
+        function saveIt(obj) {
+          localStorage.setItem(STORE_KEY, JSON.stringify(obj));
+        }
+
+        function addToItinerary(place) {
+          const db = loadIt();
+          db.itinerary = Array.isArray(db.itinerary) ? db.itinerary : [];
+          const exists = db.itinerary.some((x) => x && x.id === place.id);
+          if (!exists) {
+            db.itinerary.push(place);
+            saveIt(db);
+          }
+        }
+
+        let LOC = null,
+          OCC = null;
+
+        function kpis() {
+          const cities = LOC?.cities?.length || 0;
+          let places = 0;
+          (LOC?.cities || []).forEach((c) => (places += c.places?.length || 0));
+          $("kpiCities").textContent = cities;
+          $("kpiPlaces").textContent = places;
+          $("kpiOcc").textContent = OCC?.occasions?.length || 0;
+        }
+
+        function renderHighlights() {
+          const todayISO = iso(new Date());
+          const month = new Date().getMonth() + 1;
+          const year = new Date().getFullYear();
+
+          const todayList = (OCC?.occasions || []).filter((o) =>
+            (o.dates || []).includes(todayISO),
+          );
+          const monthList = (OCC?.occasions || [])
+            .filter((o) =>
+              (o.dates || []).some(
+                (x) => x && x.startsWith(`${year}-${pad2(month)}-`),
+              ),
+            )
+            .slice(0, 6);
+
+          const hi = PP_LANG.getLang() === "hi";
+
+          const into = (hostId, list, emptyMsg) => {
+            const host = $(hostId);
+            host.innerHTML = "";
+            if (!list.length) {
+              host.innerHTML = `<div class="pp-muted">${emptyMsg}</div>`;
+              return;
+            }
+            list.forEach((o) => {
+              const title = t(o.title) || o.id;
+              const sub = t(o.summary) || t(o.description) || "";
+              const img =
+                o.images && o.images[0]
+                  ? o.images[0]
+                  : "assets/images/placeholder/place.svg";
+              const tags = o.tags || [];
+              host.appendChild(
+                card({
+                  type: "Occasion",
+                  title,
+                  sub,
+                  img,
+                  tags,
+                  href: "calendar.html",
+                  waText:
+                    (t(o.whatsappText) ||
+                      (hi ? "मुझे जानकारी चाहिए: " : "I want details for: ")) +
+                    title,
+                }),
+              );
+            });
+          };
+
+          into(
+            "hiToday",
+            todayList,
+            hi
+              ? "आज कोई त्योहार दर्ज नहीं है।"
+              : "No occasions listed for today.",
+          );
+          into(
+            "hiMonth",
+            monthList,
+            hi
+              ? "इस महीने के लिए अभी सूची खाली है।"
+              : "No occasions listed for this month.",
+          );
+        }
+
+        function citySpotlight() {
+          const sel = $("csCity");
+          sel.innerHTML = "";
+          (LOC?.cities || []).forEach((c) => {
+            const opt = document.createElement("option");
+            opt.value = c.id;
+            opt.textContent = t(c.name) || c.id;
+            sel.appendChild(opt);
+          });
+
+          function render() {
+            const id = sel.value;
+            const city =
+              (LOC?.cities || []).find((c) => c.id === id) ||
+              (LOC?.cities || [])[0];
+            if (!city) return;
+
+            const grid = $("csGrid");
+            grid.innerHTML = "";
+
+            (city.places || []).slice(0, 6).forEach((p) => {
+              const title = t(p.name) || p.id;
+              const sub = t(p.description) || "";
+              const img =
+                p.images && p.images[0]
+                  ? p.images[0]
+                  : "assets/images/placeholder/place.svg";
+              const tags = p.tags || [];
+              const placeObj = {
+                id: `${city.id}:${p.id}`,
+                name: title,
+                lat: p.lat,
+                lng: p.lng,
+                meta: { cityId: city.id, placeId: p.id },
+              };
+
+              grid.appendChild(
+                card({
+                  type: "Place",
+                  title,
+                  sub,
+                  img,
+                  tags,
+                  href: "routes.html",
+                  onAdd: () => {
+                    addToItinerary(placeObj);
+                    alert(
+                      PP_LANG.getLang() === "hi"
+                        ? "यात्रा सूची में जोड़ा गया"
+                        : "Added to itinerary",
+                    );
+                  },
+                }),
+              );
+            });
+          }
+
+          sel.onchange = render;
+          render();
+
+          $("csAddAll").onclick = () => {
+            const city = (LOC?.cities || []).find((c) => c.id === sel.value);
+            if (!city) return;
+            (city.places || []).slice(0, 5).forEach((p) => {
+              addToItinerary({
+                id: `${city.id}:${p.id}`,
+                name: t(p.name) || p.id,
+                lat: p.lat,
+                lng: p.lng,
+                meta: { cityId: city.id, placeId: p.id },
+              });
+            });
+            alert(
+              PP_LANG.getLang() === "hi"
+                ? "टॉप 5 यात्रा सूची में जोड़ दिए गए"
+                : "Top 5 added to itinerary",
+            );
+          };
+        }
+
+        function smartSearch() {
+          const qEl = $("ssQuery");
+          const modeEl = $("ssMode");
+          const resEl = $("ssResults");
+          const stEl = $("ssStatus");
+
+          function matchText(obj) {
+            if (!obj) return "";
+            if (typeof obj === "string") return obj;
+            return `${obj.en || ""} ${obj.hi || ""}`.trim();
+          }
+
+          function doSearch() {
+            const q = norm(qEl.value);
+            const mode = modeEl.value;
+            resEl.innerHTML = "";
+            if (q.length < 3) {
+              stEl.textContent =
+                PP_LANG.getLang() === "hi"
+                  ? "कम से कम 3 अक्षर लिखें…"
+                  : "Type at least 3 characters…";
+              return;
+            }
+            stEl.textContent =
+              PP_LANG.getLang() === "hi" ? "खोज रहे हैं…" : "Searching…";
+
+            const hits = [];
+
+            if (mode === "both" || mode === "locations") {
+              (LOC?.cities || []).forEach((c) => {
+                (c.places || []).forEach((p) => {
+                  const hay = norm(
+                    `${c.id} ${matchText(p.name)} ${matchText(p.description)} ${(p.tags || []).join(" ")}`,
+                  );
+                  if (hay.includes(q))
+                    hits.push({ kind: "place", city: c, place: p });
+                });
+              });
+            }
+
+            if (mode === "both" || mode === "occasions") {
+              (OCC?.occasions || []).forEach((o) => {
+                const hay = norm(
+                  `${o.id} ${matchText(o.title)} ${matchText(o.summary)} ${matchText(o.description)} ${(o.tags || []).join(" ")} ${(o.dates || []).join(" ")}`,
+                );
+                if (hay.includes(q)) hits.push({ kind: "occasion", occ: o });
+              });
+            }
+
+            if (!hits.length) {
+              stEl.textContent =
+                PP_LANG.getLang() === "hi"
+                  ? "कोई परिणाम नहीं मिला"
+                  : "No results";
+              return;
+            }
+            stEl.textContent =
+              PP_LANG.getLang() === "hi"
+                ? `${hits.length} परिणाम`
+                : `${hits.length} result(s)`;
+
+            hits.slice(0, 12).forEach((h) => {
+              if (h.kind === "place") {
+                const c = h.city,
+                  p = h.place;
+                const title = t(p.name) || p.id;
+                const sub = `${t(c.name) || c.id} • ${t(p.description) || ""}`;
+                const img =
+                  p.images && p.images[0]
+                    ? p.images[0]
+                    : "assets/images/placeholder/place.svg";
+                const tags = p.tags || [];
+                const placeObj = {
+                  id: `${c.id}:${p.id}`,
+                  name: title,
+                  lat: p.lat,
+                  lng: p.lng,
+                  meta: { cityId: c.id, placeId: p.id },
+                };
+
+                resEl.appendChild(
+                  card({
+                    type: "Place",
+                    title,
+                    sub,
+                    img,
+                    tags,
+                    href: "routes.html",
+                    onAdd: () => {
+                      addToItinerary(placeObj);
+                      alert(
+                        PP_LANG.getLang() === "hi"
+                          ? "यात्रा सूची में जोड़ा गया"
+                          : "Added to itinerary",
+                      );
+                    },
+                  }),
+                );
+              } else {
+                const o = h.occ;
+                const title = t(o.title) || o.id;
+                const sub =
+                  ((o.dates || [])[0] ? `${(o.dates || [])[0]} • ` : "") +
+                  (t(o.summary) || "");
+                const img =
+                  o.images && o.images[0]
+                    ? o.images[0]
+                    : "assets/images/placeholder/place.svg";
+                const tags = o.tags || [];
+
+                resEl.appendChild(
+                  card({
+                    type: "Occasion",
+                    title,
+                    sub,
+                    img,
+                    tags,
+                    href: "calendar.html",
+                    waText:
+                      (t(o.whatsappText) ||
+                        (PP_LANG.getLang() === "hi"
+                          ? "मुझे जानकारी चाहिए: "
+                          : "I want details for: ")) + title,
+                  }),
+                );
+              }
+            });
+          }
+
+          $("ssBtn").onclick = doSearch;
+          $("ssClear").onclick = () => {
+            qEl.value = "";
+            resEl.innerHTML = "";
+            $("ssStatus").textContent =
+              PP_LANG.getLang() === "hi" ? "तैयार" : "Ready";
+          };
+
+          qEl.addEventListener("input", () => {
+            if ((qEl.value || "").trim().length >= 3) doSearch();
+          });
+
+          window.addEventListener("pp:langchange", () => {
+            setLangTexts();
+            renderHighlights();
+            citySpotlight();
+            if ((qEl.value || "").trim().length >= 3) doSearch();
+          });
+        }
+
+        async function init() {
+          const btn = $("ppLangBtn");
+          btn.onclick = () =>
+            PP_LANG.setLang(PP_LANG.getLang() === "hi" ? "en" : "hi");
+
+          setLangTexts();
+
+          try {
+            const [locRes, occRes] = await Promise.all([
+              fetch(LOC_PATH, { cache: "no-store" }),
+              fetch(OCC_PATH, { cache: "no-store" }),
+            ]);
+
+            LOC = locRes.ok ? await locRes.json() : { cities: [] };
+            OCC = occRes.ok ? await occRes.json() : { occasions: [] };
+
+            $("ssStatus").textContent =
+              PP_LANG.getLang() === "hi" ? "तैयार" : "Ready";
+
+            kpis();
+            renderHighlights();
+            citySpotlight();
+            smartSearch();
+          } catch (e) {
+            console.error(e);
+            $("ssStatus").textContent = "Load failed. Check console.";
+          }
+        }
+
+        document.addEventListener("DOMContentLoaded", init);
+      })();
+    </script>
+
+    <!-- THEME ENGINE (1,2,3,4) -->
+    <script>
+      (function () {
+        "use strict";
+
+        const KEY = "pp_theme";
+        const THEMES = ["saffron", "midnight", "mint"];
+        const ICON = { saffron: "🔶", midnight: "🌙", mint: "🌿" };
+
+        function nowHour() {
+          try {
+            return new Date().getHours();
+          } catch {
+            return 12;
+          }
+        }
+
+        // 3) Auto-Midnight after 7PM (only if user hasn't chosen theme)
+        function pickDefaultTheme() {
+          const saved = localStorage.getItem(KEY);
+          if (saved && THEMES.includes(saved)) return saved;
+
+          const h = nowHour();
+          if (h >= 19 || h < 6) return "midnight";
+          return "saffron";
+        }
+
+        // 2) Smooth transitions (start after first paint)
+        function enableTransitions() {
+          requestAnimationFrame(() => {
+            document.documentElement.classList.add("theme-animate");
+          });
+        }
+
+        function setMetaThemeColor(theme) {
+          let m = document.querySelector('meta[name="theme-color"]');
+          if (!m) {
+            m = document.createElement("meta");
+            m.setAttribute("name", "theme-color");
+            document.head.appendChild(m);
+          }
+          const color =
+            theme === "midnight"
+              ? "#0b1220"
+              : theme === "mint"
+                ? "#059669"
+                : "#d97706";
+          m.setAttribute("content", color);
+        }
+
+        function applyTheme(theme, persist) {
+          const t = THEMES.includes(theme) ? theme : "saffron";
+          document.documentElement.setAttribute("data-theme", t);
+          if (persist) localStorage.setItem(KEY, t);
+          setMetaThemeColor(t);
+
+          const btn = document.getElementById("ppThemeBtn");
+          if (btn) btn.textContent = ICON[t] || "🔶";
+
+          const sel = document.getElementById("ppThemeSelectMobile");
+          if (sel) sel.value = t;
+        }
+
+        function cycleTheme() {
+          const cur =
+            document.documentElement.getAttribute("data-theme") || "saffron";
+          const idx = THEMES.indexOf(cur);
+          applyTheme(THEMES[(idx + 1) % THEMES.length], true);
+        }
+
+        // 4) Inject dropdown into mobile burger menu (works even if pp-nav.js builds the menu)
+        function ensureMobileThemeDropdown() {
+          const host =
+            document.querySelector(".pp-mobile__panel") ||
+            document.querySelector(".pp-nav__drawer") ||
+            document.querySelector(".pp-nav__sheet") ||
+            document.querySelector(".pp-nav__menu") ||
+            document.querySelector(".pp-nav__mobile") ||
+            document.querySelector("[data-pp-mobilemenu]") ||
+            document.querySelector(".pp-popout") ||
+            document.querySelector(".popout");
+
+          if (!host) return;
+          if (document.getElementById("ppThemeSelectMobile")) return;
+
+          const wrap = document.createElement("div");
+          wrap.style.display = "flex";
+          wrap.style.gap = "10px";
+          wrap.style.alignItems = "center";
+          wrap.style.padding = "10px 12px";
+          wrap.style.borderBottom = "1px solid var(--border)";
+
+          const lbl = document.createElement("div");
+          lbl.textContent = "Theme";
+          lbl.style.fontWeight = "900";
+          lbl.style.color = "var(--muted)";
+
+          const sel = document.createElement("select");
+          sel.id = "ppThemeSelectMobile";
+          sel.className = "pp-theme-select";
+          sel.innerHTML = `
+            <option value="saffron">🔶 Saffron</option>
+            <option value="midnight">🌙 Midnight</option>
+            <option value="mint">🌿 Mint</option>
+          `;
+          sel.addEventListener("change", (e) =>
+            applyTheme(e.target.value, true),
+          );
+
+          wrap.appendChild(lbl);
+          wrap.appendChild(sel);
+
+          host.prepend(wrap);
+          sel.value =
+            document.documentElement.getAttribute("data-theme") || "saffron";
+        }
+
+        function injectSelectStyleOnce() {
+          if (document.getElementById("ppThemeSelectStyle")) return;
+          const s = document.createElement("style");
+          s.id = "ppThemeSelectStyle";
+          s.textContent = `
+            .pp-theme-select{
+              padding: 8px 10px;
+              border-radius: 12px;
+              border: 1px solid var(--border);
+              background: var(--card);
+              color: var(--text);
+              font-weight: 900;
+              max-width: 220px;
+            }
+          `;
+          document.head.appendChild(s);
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+          injectSelectStyleOnce();
+          enableTransitions();
+
+          // Apply default (auto) theme without persisting (so user can still "choose" later)
+          applyTheme(pickDefaultTheme(), false);
+
+          // If user has already chosen, apply it (no extra write)
+          const saved = localStorage.getItem(KEY);
+          if (saved && THEMES.includes(saved)) applyTheme(saved, false);
+        });
+
+        // Delegated clicks: header is injected via includes.js
+        document.addEventListener("click", (e) => {
+          const tbtn = e.target.closest("#ppThemeBtn");
+          if (tbtn) {
+            cycleTheme();
+            return;
+          }
+
+          const burger = e.target.closest(
+            "[data-pp-burger], .pp-burger, #ppBurger",
+          );
+          if (burger) {
+            setTimeout(ensureMobileThemeDropdown, 60);
+            setTimeout(ensureMobileThemeDropdown, 260);
+          }
+        });
+      })();
+    </script>
+  </body>
 </html>

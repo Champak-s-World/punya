@@ -1,129 +1,40 @@
 {
+  "version": 1,
   "tours": [
     {
-      "id": "champ_darshan",
-      "title": {
-        "en": "Champ Darshan & Pujan",
-        "hi": "काशी दर्शन एवं पूजन"
-      },
-      "region": "Uttar Pradesh, India",
-      "duration": "2 Days",
-      "locations": [
-        "Kashi Vishwanath Temple",
-        "Ganga Aarti",
-        "Sarnath"
+      "id": "kv",
+      "title": "🔱 Kashi Shiva Circuit",
+      "kicker": "Varanasi • Shiva",
+      "duration": "3–4 Hours",
+      "best_time": "Morning or Evening",
+      "tags": ["Shiva", "Darshan", "Fast Route"],
+      "location_ids": [
+        "kashi_vishwanath",
+        "dashashwamedh_ghat",
+        "assi_ghat",
+        "sarnath"
       ],
-      "activities": [
-        "Temple darshan",
-        "Aarti",
-        "Boat ride (optional)"
-      ],
-      "bestFor": [
-        "family",
-        "elders",
-        "first-time"
-      ],
-      "tags": [
-        "tour",
-        "kashi",
-        "varanasi",
-        "shiv",
-        "ganga"
-      ],
-      "ctaText": {
-        "en": "Plan Kashi Yatra",
-        "hi": "काशी यात्रा प्लान करें"
-      },
-      "whatsappText": {
-        "en": "I want to plan Kashi Darshan & Pujan.",
-        "hi": "मुझे काशी दर्शन एवं पूजन की जानकारी चाहिए।"
-      },
-      "featured": true,
-      "featuredRank": 1,
-      "featuredNote": {
-        "en": "Popular pilgrimage plan.",
-        "hi": "लोकप्रिय यात्रा योजना।"
+      "hero": {
+        "emoji": "🔱",
+        "bg": "radial-gradient(900px 420px at 80% 0%, rgba(217,119,6,0.28), transparent 60%), radial-gradient(900px 520px at 10% 60%, rgba(245,158,11,0.22), transparent 65%)"
       }
     },
     {
-      "id": "kashi_darshan",
-      "title": {
-        "en": "Kashi Darshan & Pujan",
-        "hi": "काशी दर्शन एवं पूजन"
-      },
-      "region": "Uttar Pradesh, India",
-      "duration": "2 Days",
-      "locations": [
-        "Kashi Vishwanath Temple",
-        "Ganga Aarti",
-        "Sarnath"
+      "id": "assi_ghat",
+      "title": "🌅 Sunrise Ghats Walk",
+      "kicker": "Varanasi • Ganga",
+      "duration": "2–3 Hours",
+      "best_time": "Sunrise",
+      "tags": ["Ghats", "Sunrise", "Boat Optional"],
+      "location_ids": [
+        "assi_ghat",
+        "dashashwamedh_ghat",
+        "manikarnika_ghat"
       ],
-      "activities": [
-        "Temple darshan",
-        "Aarti",
-        "Boat ride (optional)"
-      ],
-      "bestFor": [
-        "family",
-        "elders",
-        "first-time"
-      ],
-      "tags": [
-        "tour",
-        "kashi",
-        "varanasi",
-        "shiv",
-        "ganga"
-      ],
-      "ctaText": {
-        "en": "Plan Kashi Yatra",
-        "hi": "काशी यात्रा प्लान करें"
-      },
-      "whatsappText": {
-        "en": "I want to plan Kashi Darshan & Pujan.",
-        "hi": "मुझे काशी दर्शन एवं पूजन की जानकारी चाहिए।"
-      },
-      "featured": true,
-      "featuredRank": 1,
-      "featuredNote": {
-        "en": "Popular pilgrimage plan.",
-        "hi": "लोकप्रिय यात्रा योजना।"
-      }
-    },
-    {
-      "id": "ayodhya_darshan",
-      "title": {
-        "en": "Ayodhya Darshan",
-        "hi": "अयोध्या दर्शन"
-      },
-      "region": "Uttar Pradesh, India",
-      "duration": "1 Day",
-      "locations": [
-        "Ram Janmabhoomi",
-        "Hanuman Garhi",
-        "Saryu Aarti"
-      ],
-      "activities": [
-        "Darshan",
-        "Aarti"
-      ],
-      "bestFor": [
-        "family",
-        "ram-bhakts"
-      ],
-      "tags": [
-        "tour",
-        "ayodhya",
-        "ram"
-      ],
-      "ctaText": {
-        "en": "Plan Ayodhya Darshan",
-        "hi": "अयोध्या दर्शन प्लान करें"
-      },
-      "whatsappText": {
-        "en": "I want to plan Ayodhya Darshan.",
-        "hi": "मुझे अयोध्या दर्शन की जानकारी चाहिए।"
+      "hero": {
+        "emoji": "🌅",
+        "bg": "radial-gradient(900px 420px at 70% 0%, rgba(245,158,11,0.28), transparent 60%), radial-gradient(900px 520px at 15% 70%, rgba(217,119,6,0.18), transparent 65%)"
       }
     }
   ]
-}
+} 

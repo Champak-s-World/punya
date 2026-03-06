@@ -1,53 +1,79 @@
 <!doctype html>
-<html lang="en" data-lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Acharyas | Spiritual Services</title>
-  <meta name="theme-color" content="#d97706" />
-  <link rel="stylesheet" href="assets/css/theme-saffron.css" />
-  <link rel="stylesheet" href="assets/css/experiences.css" />
-</head>
-<body>
-  <div data-include="includes/header.html"></div>
-  <section class="pp-hero">
-    <div class="pp-container">
-      <div class="pp-hero-card">
-        <h1>Acharyas</h1>
-        <p class="pp-muted">v1 placeholder (Option C). Next we will fill this with JSON-driven cards.</p>
-      </div>
-    </div>
-  </section>
-  <main class="pp-container pp-main">
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Acharyas</title>
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/popout.css?v=99" />
+    <link rel="stylesheet" href="assets/css/pp-nav.css" />
+  </head>
+  <body data-collection="acharyas" data-json="data/master/acharyas.json">
+    <div data-include="includes/header.html"></div>
 
-    <section class="pp-panel" style="margin-top:14px">
-      <h2 class="pp-h2" style="margin:0 0 6px">Featured</h2>
-      <div class="pp-muted">Auto from upcoming occasions (Calendar) with fallback to curated featured flags.</div>
-      <div class="pp-grid" data-featured-mount data-featured-mode="mixed" data-featured-limit="3" style="margin-top:12px"></div>
-    </section>
-
-    <section class="pp-panel">
-      <div class="pp-panel-row">
-        <div>
-          <h2 class="pp-h2">Coming next</h2>
-          <p class="pp-muted">Data-driven content + booking CTAs.</p>
+    <main class="pp-container">
+      <section class="pp-card pp-pad" style="margin-top: 12px">
+        <div class="pp-split">
+          <div>
+            <div class="pp-mini" id="cpStatus">…</div>
+            <h1 class="pp-h1" id="cpTitle"></h1>
+            <div class="pp-muted" id="cpSubtitle"></div>
+          </div>
+          <div class="pp-actions">
+            <button class="pp-btn pp-btn--ghost" id="cpLang" type="button">
+              HI
+            </button>
+          </div>
         </div>
-      </div>
-      <div class="pp-grid">
-        <article class="pp-card"><div class="pp-card-top"><div class="pp-icon">✨</div><div class="pp-card-title">Dummy Card</div></div><div class="pp-card-body"><p class="pp-card-desc">Replace with real content.</p><div class="pp-card-actions"><a class="pp-btn pp-btn-outline" href="gallery.html">See Gallery</a></div></div></article>
-        <article class="pp-card"><div class="pp-card-top"><div class="pp-icon">🕉️</div><div class="pp-card-title">Dummy Card</div></div><div class="pp-card-body"><p class="pp-card-desc">Replace with real content.</p><div class="pp-card-actions"><a class="pp-btn pp-btn-outline" href="contact.html">Contact</a></div></div></article>
-        <article class="pp-card"><div class="pp-card-top"><div class="pp-icon">📞</div><div class="pp-card-title">Dummy Card</div></div><div class="pp-card-body"><p class="pp-card-desc">Replace with real content.</p><div class="pp-card-actions"><a class="pp-btn pp-btn-outline" href="index.html">Home</a></div></div></article>
-      </div>
-    </section>
-  </main>
-  <div data-include="includes/footer.html"></div>
-  <script src="assets/js/include-loader.js"></script>
-  <script src="assets/js/lang.js"></script>
-  <script src="assets/js/i18n.js"></script>
-  <script src="assets/js/include-loader.js"></script>  <script src="assets/js/lang.js"></script>  <script src="assets/js/i18n.js"></script>  <script src="data/site.config.js"></script>  <script src="assets/js/contact-utils.js"></script>\n\n
-  <script src="assets/js/external-scripts.js"></script>
-  <script src="assets/js/menu-toggle.js"></script>
-  <script src="assets/js/theme.js"></script>
-  <script src="assets/js/featured.js"></script>
-</body>
+        <div class="pp-actions" style="margin-top: 12px">
+          <input
+            id="cpQuery"
+            class="pp-input"
+            style="flex: 1"
+            placeholder="Type 3+ characters to search…"
+          />
+          <select id="cpTagFilter" class="pp-input">
+            <option value="">All tags</option>
+          </select>
+          <button class="pp-btn" id="cpSearchBtn" type="button">Search</button>
+          <button class="pp-btn pp-btn--ghost" id="cpClearBtn" type="button">
+            Clear
+          </button>
+        </div>
+      </section>
+
+      <section class="pp-card pp-pad" style="margin-top: 12px">
+        <div class="pp-h2">Featured</div>
+        <div class="pp-grid" id="cpFeatured" style="margin-top: 12px"></div>
+      </section>
+
+      <section class="pp-card pp-pad" style="margin-top: 12px">
+        <div class="pp-h2">All Acharyas</div>
+        <div class="pp-grid" id="cpList" style="margin-top: 12px"></div>
+      </section>
+    </main>
+
+    <div data-include="includes/footer.html"></div>
+
+    <script>
+      window.__CP_PAGE_TITLE = {
+        en: "Acharyas & Pandits",
+        hi: "आचार्य व पंडित",
+      };
+      window.__CP_PAGE_SUB = {
+        en: "Browse specialties, cities, and book via WhatsApp.",
+        hi: "विशेषता, शहर देखें और व्हाट्सएप से बुक करें।",
+      };
+    </script>
+<script src="assets/js/includes.js"></script>
+<script src="assets/js/pp-nav.js"></script>
+<script src="assets/js/pp-theme.js"></script>
+
+    
+    <script src="assets/js/site-config.js"></script>
+    <script src="assets/js/lang.js"></script>
+    <script src="assets/js/render.js"></script>
+    <script src="assets/js/popout.js?v=99"></script>
+    <script src="assets/js/content-pages.js?v=1"></script>
+  </body>
 </html>

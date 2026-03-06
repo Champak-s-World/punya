@@ -1,65 +1,94 @@
 {
   "rituals": [
     {
-      "id": "rudrabhishek",
-      "title": {
-        "en": "Rudrabhishek",
-        "hi": "रुद्राभिषेक"
-      },
-      "ritualType": "abhishek",
-      "purpose": {
-        "en": "Peace, prosperity, Shiva blessings.",
-        "hi": "शांति, समृद्धि एवं शिव कृपा।"
-      },
-      "benefits": {
-        "en": "Auspicious for health and spiritual progress.",
-        "hi": "स्वास्थ्य एवं आध्यात्मिक उन्नति हेतु शुभ।"
-      },
-      "locationOptions": [
-        "Kashi",
-        "Ujjain"
-      ],
-      "duration": "2–3 hours",
-      "tags": [
-        "shiv",
-        "festival",
-        "ritual"
-      ],
-      "ctaText": {
-        "en": "Book Rudrabhishek",
-        "hi": "रुद्राभिषेक बुक करें"
-      },
-      "whatsappText": {
-        "en": "I want to book Rudrabhishek in Kashi.",
-        "hi": "मुझे काशी में रुद्राभिषेक बुक करना है।"
-      },
+      "id": "rahu-jaap ",
       "featured": true,
       "featuredRank": 1,
       "featuredNote": {
-        "en": "Most requested.",
-        "hi": "सबसे अधिक मांग।"
+        "en": "rahu jaap .",
+        "hi": "राहु जाप।"
+      },
+
+      "tags": ["temple", "shiv", "jyotirlinga"],
+      "images": [
+        "assets/images/rituals/0.jpeg",
+        "assets/images/rituals/1.jpeg",
+        "assets/images/rituals/2.jpeg",
+        "assets/images/rituals/3.jpeg",
+        "assets/images/rituals/4.jpeg",
+        "assets/images/rituals/5.jpeg"
+      ],
+
+      "title": { "en": "rahuwww.learnwithchampak.live/2025/10/interactive-pattern-programs-python.html?m=1www.learnwithchampak.live/2025/10/interactive-pattern-programs-python.html?m=1 jaap .", "hi": "राहु जाप" }
+    },
+
+    {
+      "id": "dasmahavidya",
+      "featured": true,
+      "featuredRank": 4,
+      "featuredNote": {
+        "en": "dasmahavidya .",
+        "hi": "दसमहाविद्या।"
+      },
+      "title": { "en": "dasmahavidya .", "hi": "दसमहाविद्या।" }
+    },
+
+    {
+      "id": "mahamrityunjay-jaap-ewam-maharudrabhishek",
+      "featured": true,
+      "featuredRank": 3,
+      "featuredNote": {
+        "en": "maharudrabhishe .",
+        "hi": "महामृत्युंजय जाप एवं महारुद्राभिषेक।"
+      },
+      "title": {
+        "en": "mahamrityunjay jaap ewam maharudrabhishek .",
+        "hi": "महामृत्युंजय जाप एवं महारुद्राभिषेक।"
       }
     },
+
     {
-      "id": "mahamrityunjay_jap",
+      "id": "shatchandi-ygaya",
+      "featured": true,
+      "featuredRank": 1,
+      "featuredNote": {
+        "en": "satchandi yagya .",
+        "hi": "शतचंडी यज्ञ ।"
+      },
+      "title": { "en": "shatchandi ygaya .", "hi": "शतचंडी यज्ञ ।" }
+    },
+    {
+      "id": "sahastrachandi-ygaya",
+      "featured": true,
+      "featuredRank": 2,
+      "featuredNote": {
+        "en": "sahastrachandi ygaya .",
+        "hi": "सहस्र चंडी यज्ञ।"
+      },
+      "title": { "en": "sahastrachandi ygaya .", "hi": "सहस्र चंडी यज्ञ।" }
+    },
+
+    {
+      "id": "rudrabhishek",
+      "featured": true,
+      "featuredRank": 1,
+      "featuredNote": {
+        "en": "Most requested in Kashi.",
+        "hi": "काशी में सबसे अधिक मांग।"
+      },
+      "title": { "en": "Maha Rudrabhishek", "hi": "रुद्राभिषेक" }
+    },
+    {
+      "id": "vivaha",
+      "featured": true,
+      "featuredRank": 2,
+      "featuredNote": {
+        "en": "Sacred Hindu wedding ceremony.",
+        "hi": "पवित्र हिंदू विवाह संस्कार।"
+      },
       "title": {
-        "en": "Mahamrityunjay Jap",
-        "hi": "महामृत्युंजय जाप"
-      },
-      "ritualType": "jap",
-      "purpose": {
-        "en": "Longevity, health, protection.",
-        "hi": "दीर्घायु, स्वास्थ्य, संरक्षण।"
-      },
-      "duration": "1 Day / Multiple days",
-      "tags": [
-        "shiv",
-        "health",
-        "ritual"
-      ],
-      "ctaText": {
-        "en": "Enquire Mahamrityunjay Jap",
-        "hi": "महामृत्युंजय जाप पूछें"
+        "en": "Vivaha (Wedding Ceremony)",
+        "hi": "विवाह"
       }
     }
   ]
