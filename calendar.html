@@ -6,6 +6,7 @@
   <title>Calendar</title>
 
   <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/utility-overrides.css" />
   <link rel="stylesheet" href="assets/css/popout.css" />
   <link rel="stylesheet" href="assets/css/pp-calendar.css" />
   <link rel="stylesheet" href="assets/css/pp-nav.css" />
@@ -159,10 +160,17 @@
     }
     .pp-occ-tags{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
     .pp-occ-rank{font-size:12px;opacity:.75;font-weight:900}
+
+
+    body.pp-utility-page .pp-split{align-items:center}
+    body.pp-utility-page #viewWeek,
+    body.pp-utility-page #viewMonth,
+    body.pp-utility-page #viewYear{position:relative;z-index:1}
+    body.pp-utility-page .pp-actions{position:relative;z-index:2}
   </style>
 </head>
 
-<body>
+<body class="pp-utility-page">
   <div data-include="includes/header.html"></div>
 
   <main class="pp-container">
@@ -237,7 +245,5 @@
   <script src="assets/js/render.js"></script>
   <script src="assets/js/popout.js?v=99"></script>
   <script src="assets/js/calendar-3views.js?v=2"></script>
-  <script src="https://programmer-s-picnic.github.io/json-images/find-on-page.js"></script>
-  <script src="https://programmer-s-picnic.github.io/json-images/imgshow.js"></script>
 </body>
 </html>

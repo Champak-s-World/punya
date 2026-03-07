@@ -6,6 +6,7 @@
     <title>Admin — Locations Editor</title>
 
     <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/utility-overrides.css" />
 
     <style>
       .al-wrap {
@@ -81,10 +82,13 @@
       .al-muted {
         opacity: 0.7;
       }
+      body.pp-utility-page .al-wrap { align-items:start; }
+      body.pp-utility-page .al-list,
+      body.pp-utility-page .al-places { align-content:start; }
     </style>
   </head>
 
-  <body>
+  <body class="pp-utility-page">
     <div data-include="includes/header.html"></div>
 
     <main class="pp-container">
