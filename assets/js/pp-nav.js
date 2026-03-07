@@ -21,6 +21,18 @@
     });
   }
 
+  function drawerText(key, fallback){
+    if (window.PP_I18N && window.PP_I18N.t) return window.PP_I18N.t(key) || fallback;
+    return fallback;
+  }
+
+  function syncDrawerText(){
+    const title = document.querySelector(".pp-drawer__title");
+    const tip = document.querySelector("[data-pp-drawer-tip]");
+    if (title) title.textContent = drawerText("navMenu", "Menu");
+    if (tip) tip.textContent = drawerText("navDrawerTip", "Tip: Use Routes to build itinerary and Route Map to view it.");
+  }
+
   function ensureDrawerMarkup(header){
     // If drawer already exists, don’t duplicate
     if (document.getElementById("ppDrawer")) return;
@@ -40,7 +52,7 @@
           <!-- cloned links go here -->
         </div>
 
-        <div style="padding:10px 6px; font-size:12px; opacity:.75;">
+        <div style="padding:10px 6px; font-size:12px; opacity:.75;" data-pp-drawer-tip>
           Tip: Use Routes to build itinerary and Route Map to view it.
         </div>
       </div>
@@ -56,6 +68,8 @@
       c.addEventListener("click", ()=> closeDrawer());
       host.appendChild(c);
     });
+
+    syncDrawerText();
 
     drawer.querySelectorAll("[data-pp-close]").forEach(el=>{
       el.addEventListener("click", closeDrawer);
@@ -98,6 +112,8 @@
 
     // Language toggle hook (if you have PP_LANG)
     const langBtn = header.querySelector("[data-pp-lang]");
+    syncDrawerText();
+    if (window.PP_I18N && window.PP_I18N.apply) window.PP_I18N.apply(document);
     if (langBtn && window.PP_LANG){
       const sync = () => (langBtn.textContent = (PP_LANG.getLang()==="hi") ? "EN" : "HI");
       sync();
@@ -105,7 +121,7 @@
         PP_LANG.setLang(PP_LANG.getLang()==="hi" ? "en" : "hi");
         sync();
       });
-      window.addEventListener("pp:langchange", sync);
+      window.addEventListener("pp:langchange", ()=>{ sync(); syncDrawerText(); if (window.PP_I18N && window.PP_I18N.apply) window.PP_I18N.apply(document); });
     }
   }
 

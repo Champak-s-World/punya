@@ -5,9 +5,12 @@
   // DICTIONARY
   // -----------------------------
   const I18N = {
-    siteName: { en: "Spiritual Services", hi: "आध्यात्मिक सेवाएँ" },
+    siteName: { en: "Spiritual Tours", hi: "आध्यात्मिक यात्राएँ" },
 
     navHome: { en: "Home", hi: "होम" },
+    navRoutes: { en: "Routes", hi: "रूट्स" },
+    navRouteMap: { en: "Route Map", hi: "रूट मैप" },
+    navAdmin: { en: "Admin", hi: "एडमिन" },
     navExperiences: { en: "Experiences", hi: "अनुभव" },
     navTours: { en: "Tours", hi: "टूर" },
     navRituals: { en: "Rituals", hi: "यज्ञ/पूजा" },
@@ -17,6 +20,8 @@
     navCalendar: { en: "Calendar", hi: "कैलेंडर" },
     navVideos: { en: "Videos", hi: "वीडियो" },
     navContact: { en: "Contact", hi: "संपर्क" },
+    navMenu: { en: "Menu", hi: "मेनू" },
+    navDrawerTip: { en: "Tip: Use Routes to build itinerary and Route Map to view it.", hi: "टिप: यात्रा सूची बनाने के लिए Routes और उसे देखने के लिए Route Map का उपयोग करें।" },
 
     homeTitle: {
       en: "Spiritual Services & Pilgrimage Experiences",

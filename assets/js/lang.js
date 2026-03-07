@@ -14,9 +14,18 @@
     return SUPPORTED.includes(saved) ? saved : "en";
   }
 
+  function syncDocumentLang() {
+    try {
+      const current = getLang();
+      document.documentElement.setAttribute("lang", current);
+      document.documentElement.setAttribute("data-lang", current);
+    } catch (e) {}
+  }
+
   function setLang(lang) {
     const v = (lang || "en").toLowerCase();
     localStorage.setItem(STORAGE_KEY, SUPPORTED.includes(v) ? v : "en");
+    syncDocumentLang();
     window.dispatchEvent(
       new CustomEvent("pp:langchange", { detail: { lang: getLang() } })
     );
@@ -28,6 +37,8 @@
     const lang = getLang();
     return obj[lang] || obj.en || obj.hi || "";
   }
+
+  syncDocumentLang();
 
   window.PP_LANG = {
     getLang,
