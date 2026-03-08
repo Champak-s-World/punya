@@ -1,0 +1,62 @@
+.city-hero{
+  margin-top:12px;
+  border:1px solid var(--border);
+  border-radius:34px;
+  overflow:hidden;
+  background:linear-gradient(135deg, color-mix(in srgb, var(--bg-0) 94%, #fff), color-mix(in srgb, var(--bg-1) 92%, #fff));
+  box-shadow:var(--shadow);
+}
+.city-hero__inner{padding:24px}
+.city-hero h1{margin:8px 0 0;font-size:clamp(2rem,4.8vw,4rem);line-height:1.05;font-weight:800;max-width:14ch}
+.city-hero p{max-width:70ch}
+.city-badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.city-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:#fff;border:1px solid var(--border);box-shadow:var(--shadow);font-size:12px;font-weight:800;color:var(--brand2)}
+.city-shell{display:grid;grid-template-columns:340px minmax(0,1fr);gap:18px;align-items:start;margin-top:18px}
+.city-side,.city-main{background:#fff;border:1px solid var(--border);border-radius:28px;box-shadow:var(--shadow)}
+.city-side{padding:18px;position:sticky;top:92px;max-height:calc(100vh - 110px);overflow:auto}
+.city-main{padding:18px}
+.city-side h2,.city-main h2{margin:0}
+.city-tools{display:grid;gap:12px;margin-top:14px}
+.city-search{width:100%}
+.city-chiprow,.city-tags{display:flex;gap:8px;flex-wrap:wrap}
+.city-chip{appearance:none;border:1px solid var(--border);background:#fff;padding:9px 13px;border-radius:999px;font-weight:800;color:var(--muted);cursor:pointer}
+.city-chip.active{background:var(--brand);color:#fff}
+.city-list{display:grid;gap:10px;margin-top:14px}
+.city-place{appearance:none;border:1px solid var(--border);background:#fff;border-radius:22px;padding:12px;display:grid;grid-template-columns:62px 1fr;gap:12px;align-items:center;cursor:pointer;text-align:left}
+.city-place:hover{background:var(--soft)}
+.city-place.active{border-color:var(--brand);box-shadow:var(--ring)}
+.city-place__thumb{width:62px;height:62px;border-radius:16px;overflow:hidden;background:var(--soft)}
+.city-place__thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.city-place__name{font-weight:800;font-family:"DM Sans",system-ui,sans-serif;line-height:1.1}
+.city-place__meta{font-size:12px;color:var(--muted);margin-top:4px}
+.city-view__top{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:18px;align-items:start}
+.city-view__title{font-size:clamp(1.6rem,3vw,2.6rem);margin:2px 0 0;line-height:1.08}
+.city-view__summary{margin-top:12px}
+.city-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.city-statbox{display:grid;gap:12px}
+.city-stat{padding:16px;border:1px solid var(--border);border-radius:22px;background:linear-gradient(180deg,#fff,color-mix(in srgb,var(--soft) 68%, #fff));}
+.city-stat b{display:block;font-family:"DM Sans",system-ui,sans-serif;font-size:1.1rem;margin-bottom:4px}
+.city-gallery{margin-top:18px;display:grid;gap:14px}
+.city-stage{border:1px solid var(--border);border-radius:28px;overflow:hidden;background:color-mix(in srgb,var(--soft) 45%, #fff);min-height:420px;display:grid;place-items:center}
+.city-stage img,.city-stage video{width:100%;height:100%;object-fit:cover;display:block}
+ .city-stage--empty{padding:32px;text-align:center;color:var(--muted)}
+.city-thumbs{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:12px}
+.city-thumb{appearance:none;border:1px solid var(--border);background:#fff;border-radius:20px;padding:0;overflow:hidden;cursor:pointer;position:relative;min-height:96px}
+.city-thumb img,.city-thumb video{width:100%;height:96px;object-fit:cover;display:block}
+.city-thumb.active{box-shadow:var(--ring);border-color:var(--brand)}
+.city-thumb__label{position:absolute;left:8px;bottom:8px;background:rgba(255,255,255,.92);padding:4px 8px;border-radius:999px;font-size:11px;font-weight:800}
+.city-panelgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+.city-panel{border:1px solid var(--border);border-radius:24px;padding:18px;background:#fff}
+.city-related{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.city-related a{padding:10px 12px;border-radius:999px;border:1px solid var(--border);text-decoration:none;font-weight:800;background:var(--soft)}
+.city-empty{padding:22px;border:1px dashed var(--border);border-radius:24px;color:var(--muted);background:color-mix(in srgb,var(--soft) 35%, #fff)}
+@media (max-width: 1060px){
+  .city-shell{grid-template-columns:1fr}
+  .city-side{position:static;max-height:none}
+  .city-view__top,.city-panelgrid{grid-template-columns:1fr}
+}
+@media (max-width: 720px){
+  .city-side,.city-main{padding:14px}
+  .city-hero__inner{padding:18px}
+  .city-stage{min-height:280px}
+}

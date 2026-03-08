@@ -3,11 +3,27 @@
   "tours": [
     {
       "id": "kv",
-      "title": "🔱 Kashi Shiva Circuit",
-      "kicker": "Varanasi • Shiva",
-      "duration": "3–4 Hours",
-      "best_time": "Morning or Evening",
-      "tags": ["Shiva", "Darshan", "Fast Route"],
+      "title": {
+        "en": "🔱 Kashi Shiva Circuit",
+        "hi": "🔱 काशी शिव परिक्रमा"
+      },
+      "kicker": {
+        "en": "Varanasi • Shiva",
+        "hi": "वाराणसी • शिव"
+      },
+      "duration": {
+        "en": "3–4 Hours",
+        "hi": "3–4 घंटे"
+      },
+      "best_time": {
+        "en": "Morning or Evening",
+        "hi": "सुबह या शाम"
+      },
+      "tags": [
+        "Shiva",
+        "Darshan",
+        "Fast Route"
+      ],
       "location_ids": [
         "kashi_vishwanath",
         "dashashwamedh_ghat",
@@ -17,15 +33,39 @@
       "hero": {
         "emoji": "🔱",
         "bg": "radial-gradient(900px 420px at 80% 0%, rgba(217,119,6,0.28), transparent 60%), radial-gradient(900px 520px at 10% 60%, rgba(245,158,11,0.22), transparent 65%)"
+      },
+      "ctaText": {
+        "en": "Enquire on WhatsApp",
+        "hi": "WhatsApp पर पूछें"
+      },
+      "whatsappText": {
+        "en": "Tour enquiry: Kashi Shiva Circuit",
+        "hi": "मैं काशी शिव परिक्रमा टूर की जानकारी चाहता/चाहती हूँ।"
       }
     },
     {
       "id": "assi_ghat",
-      "title": "🌅 Sunrise Ghats Walk",
-      "kicker": "Varanasi • Ganga",
-      "duration": "2–3 Hours",
-      "best_time": "Sunrise",
-      "tags": ["Ghats", "Sunrise", "Boat Optional"],
+      "title": {
+        "en": "🌅 Sunrise Ghats Walk",
+        "hi": "🌅 सूर्योदय घाट भ्रमण"
+      },
+      "kicker": {
+        "en": "Varanasi • Ganga",
+        "hi": "वाराणसी • गंगा"
+      },
+      "duration": {
+        "en": "2–3 Hours",
+        "hi": "2–3 घंटे"
+      },
+      "best_time": {
+        "en": "Sunrise",
+        "hi": "सूर्योदय"
+      },
+      "tags": [
+        "Ghats",
+        "Sunrise",
+        "Boat Optional"
+      ],
       "location_ids": [
         "assi_ghat",
         "dashashwamedh_ghat",
@@ -34,7 +74,15 @@
       "hero": {
         "emoji": "🌅",
         "bg": "radial-gradient(900px 420px at 70% 0%, rgba(245,158,11,0.28), transparent 60%), radial-gradient(900px 520px at 15% 70%, rgba(217,119,6,0.18), transparent 65%)"
+      },
+      "ctaText": {
+        "en": "Enquire on WhatsApp",
+        "hi": "WhatsApp पर पूछें"
+      },
+      "whatsappText": {
+        "en": "Tour enquiry: Sunrise Ghats Walk",
+        "hi": "मैं सूर्योदय घाट भ्रमण टूर की जानकारी चाहता/चाहती हूँ।"
       }
     }
   ]
-} 
+}

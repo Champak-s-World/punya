@@ -18,6 +18,7 @@
     navAcharyas: { en: "Acharyas", hi: "आचार्य" },
     navGallery: { en: "Gallery", hi: "गैलरी" },
     navCalendar: { en: "Calendar", hi: "कैलेंडर" },
+    navCityJourney: { en: "City Journey", hi: "शहर यात्रा" },
     navVideos: { en: "Videos", hi: "वीडियो" },
     navContact: { en: "Contact", hi: "संपर्क" },
     navMenu: { en: "Menu", hi: "मेनू" },
