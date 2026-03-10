@@ -1,5 +1,5 @@
 async function loadRituals() {
-  const res = await fetch("rituals.json");
+  const res = await fetch("./data/master/rituals.json");
   const data = await res.json();
   return data.rituals || [];
 }
