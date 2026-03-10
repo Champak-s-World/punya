@@ -80,7 +80,7 @@ async function initRituals(lang = "en") {
   const rituals = await loadRituals();
 
   const container = document.getElementById("rituals-container");
-alert(container);
+
   const html = rituals.map((r) => renderRitual(normalize(r), lang)).join("");
 
   container.innerHTML = html;
