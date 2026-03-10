@@ -12,67 +12,67 @@
     <div data-include="includes/header.html"></div>
 
     <main class="pp-container">
-      <section class="pp-card pp-pad" style="margin-top: 12px">
+      <section class="pp-card pp-pad" style="margin-top:12px">
         <div class="pp-split">
           <div>
-            <div class="pp-mini" id="cpStatus">…</div>
+            <div class="pp-mini" id="cpStatus">Loading…</div>
             <h1 class="pp-h1" id="cpTitle"></h1>
             <div class="pp-muted" id="cpSubtitle"></div>
           </div>
+
           <div class="pp-actions">
-            <button class="pp-btn pp-btn--ghost" id="cpLang" type="button">
-              HI
-            </button>
+            <button class="pp-btn pp-btn--ghost" id="cpLang" type="button">HI</button>
           </div>
         </div>
-        <div class="pp-actions" style="margin-top: 12px">
+
+        <div class="pp-actions" style="margin-top:12px">
           <input
             id="cpQuery"
             class="pp-input"
-            style="flex: 1"
+            style="flex:1"
             placeholder="Type 3+ characters to search…"
           />
           <select id="cpTagFilter" class="pp-input">
             <option value="">All tags</option>
           </select>
           <button class="pp-btn" id="cpSearchBtn" type="button">Search</button>
-          <button class="pp-btn pp-btn--ghost" id="cpClearBtn" type="button">
-            Clear
-          </button>
+          <button class="pp-btn pp-btn--ghost" id="cpClearBtn" type="button">Clear</button>
         </div>
       </section>
 
-      <section class="pp-card pp-pad" style="margin-top: 12px">
+      <section class="pp-card pp-pad" style="margin-top:12px">
         <div class="pp-h2">Featured</div>
-        <div class="pp-grid" id="cpFeatured" style="margin-top: 12px"></div>
+        <div class="pp-grid" id="cpFeatured" style="margin-top:12px"></div>
       </section>
 
-      <section class="pp-card pp-pad" style="margin-top: 12px">
+      <section class="pp-card pp-pad" style="margin-top:12px">
         <div class="pp-h2">All Yagyas</div>
-        <div class="pp-grid" id="cpList" style="margin-top: 12px"></div>
+        <div class="pp-grid" id="cpList" style="margin-top:12px"></div>
       </section>
     </main>
 
     <div data-include="includes/footer.html"></div>
 
     <script>
-      window.__CP_PAGE_TITLE = { en: "Yagyas & Havan", hi: "यज्ञ व हवन" };
+      window.__CP_PAGE_TITLE = {
+        "en": "Yagyas & Havan",
+        "hi": "यज्ञ व हवन"
+};
       window.__CP_PAGE_SUB = {
-        en: "Shatchandi, Sahasra Chandi, Dashmahavidya Jaap and more.",
-        hi: "शतचंडी, सहस्र चंडी, दशमहाविद्या जाप आदि।",
-      };
+        "en": "Shatchandi, Sahasra Chandi, Dashmahavidya Jaap and more.",
+        "hi": "शतचंडी, सहस्र चंडी, दशमहाविद्या जाप आदि।"
+};
     </script>
 
-    <script src="assets/js/includes.js"></script>
-    <script src="assets/js/pp-nav.js"></script>
-    <script src="assets/js/pp-theme.js"></script>
-
-    <script src="assets/js/site-config.js"></script>
-    <script src="assets/js/lang.js"></script>
-    <script src="assets/js/render.js"></script>
-    <script src="assets/js/popout.js?v=99"></script>
-    <script src="assets/js/content-pages.js?v=1"></script>
-    <script src="assets/js/i18n.js"></script>
-  <script src="assets/js/site-translate.js"></script>
-</body>
+    <script src="assets/js/includes.js" defer></script>
+    <script src="assets/js/pp-nav.js" defer></script>
+    <script src="assets/js/pp-theme.js" defer></script>
+    <script src="assets/js/site-config.js" defer></script>
+    <script src="assets/js/lang.js" defer></script>
+    <script src="assets/js/render.js" defer></script>
+    <script src="assets/js/popout.js" defer></script>
+    <script src="assets/js/content-pages.js" defer></script>
+    <script src="assets/js/i18n.js" defer></script>
+    <script src="assets/js/site-translate.js" defer></script>
+  </body>
 </html>
