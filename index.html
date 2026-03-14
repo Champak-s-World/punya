@@ -4,1176 +4,717 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="theme-color" content="#d97706" />
-    <title>Home</title>
+
+    <title>
+      Punya Yatra — Spiritual Tours, Rituals & Pilgrimage Routes in Varanasi
+    </title>
+
+    <meta
+      name="description"
+      content="Explore spiritual tours in Varanasi, temple circuits, ritual guidance, pilgrimage routes, kathas, yagyas, and sacred places across Kashi with Punya Yatra."
+    />
+
+    <meta
+      name="keywords"
+      content="Varanasi spiritual tours, Kashi pilgrimage, Varanasi temple tours, Hindu rituals Varanasi, Kashi darshan route, Varanasi ghats, Rudrabhishek Varanasi, Punya Yatra"
+    />
+
+    <meta name="author" content="Punya Yatra" />
+    <meta name="robots" content="index,follow" />
+    <meta name="googlebot" content="index,follow,max-image-preview:large" />
+    <meta name="geo.region" content="IN-UP" />
+    <meta name="geo.placename" content="Varanasi" />
+    <meta name="geo.position" content="25.3176;82.9739" />
+
+    <link rel="canonical" href="https://punyayatra.in/" />
+
+    <meta
+      property="og:title"
+      content="Punya Yatra — Spiritual Tours, Rituals & Pilgrimage Routes in Varanasi"
+    />
+    <meta
+      property="og:description"
+      content="Discover temple circuits, rituals, kathas, yagyas, ghats, and pilgrimage routes in Varanasi."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://punyayatra.in/" />
+    <meta
+      property="og:image"
+      content="https://punyayatra.in/assets/images/og-cover.jpg"
+    />
+    <meta property="og:site_name" content="Punya Yatra" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Punya Yatra — Spiritual Tours, Rituals & Pilgrimage Routes in Varanasi"
+    />
+    <meta
+      name="twitter:description"
+      content="Explore spiritual tours, temple routes, rituals and sacred journeys in Varanasi."
+    />
+    <meta
+      name="twitter:image"
+      content="https://punyayatra.in/assets/images/og-cover.jpg"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <link rel="stylesheet" href="assets/css/base.css" />
-    <link rel="stylesheet" href="assets/css/popout.css" />
     <link rel="stylesheet" href="assets/css/pp-nav.css" />
 
     <style>
-      /* ---- home-only polish (school-site inspired) ---- */
-      .hp-hero {
-        margin-top: 12px;
-        border: 1px solid var(--border);
-        border-radius: 34px;
-        overflow: hidden;
-        background: linear-gradient(
-          135deg,
-          color-mix(in srgb, var(--bg-0) 94%, #fff),
-          color-mix(in srgb, var(--bg-1) 92%, #fff)
-        );
-        box-shadow: var(--shadow);
-        position: relative;
+      :root {
+        --brand: #d97706;
+        --brand-2: #f59e0b;
+        --ink: #172033;
+        --muted: #5f6b7a;
+        --bg: #fff8eb;
+        --panel: rgba(255, 255, 255, 0.9);
+        --line: rgba(217, 119, 6, 0.18);
+        --line-strong: rgba(217, 119, 6, 0.3);
+        --shadow: 0 18px 44px rgba(28, 35, 52, 0.12);
+        --shadow-soft: 0 10px 24px rgba(28, 35, 52, 0.08);
+        --radius-xl: 28px;
+        --radius-lg: 20px;
+        --radius-md: 14px;
+        --maxw: 1220px;
       }
-      .hp-hero::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        pointer-events: none;
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
         background:
           radial-gradient(
-            900px 420px at 10% 0%,
-            color-mix(in srgb, var(--brand) 10%, transparent),
+            980px 540px at 10% 0%,
+            rgba(245, 158, 11, 0.16),
+            transparent 58%
+          ),
+          radial-gradient(
+            1100px 580px at 90% 10%,
+            rgba(217, 119, 6, 0.12),
+            transparent 60%
+          ),
+          linear-gradient(180deg, #fffdf8 0%, var(--bg) 100%);
+      }
+
+      .wrap {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        padding: 22px 16px 72px;
+      }
+
+      .hero {
+        position: relative;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 34px;
+        background:
+          radial-gradient(
+            900px 340px at 80% 0%,
+            rgba(245, 158, 11, 0.14),
             transparent 60%
           ),
           radial-gradient(
-            800px 380px at 92% 8%,
-            color-mix(in srgb, var(--brand2) 10%, transparent),
-            transparent 58%
-          );
+            800px 320px at 0% 100%,
+            rgba(217, 119, 6, 0.09),
+            transparent 60%
+          ),
+          rgba(255, 255, 255, 0.86);
+        box-shadow: var(--shadow);
+        padding: 28px;
       }
-      .hp-hero .inner {
-        position: relative;
-        padding: 26px 24px;
-      }
-      .hp-hero h1 {
-        margin: 8px 0 0;
-        font-size: clamp(2.3rem, 5vw, 4.9rem);
-        line-height: 1.05;
-        font-weight: 800;
-        max-width: 11ch;
-      }
-      .hp-hero p {
-        margin: 14px 0 0;
-        max-width: 62ch;
-        color: var(--muted);
-        font-size: 1.04rem;
-      }
-      .hp-badges {
-        display: flex;
-        gap: 10px;
-        flex-wrap: wrap;
-        margin-top: 12px;
-      }
-      .hp-badge {
+
+      .eyebrow {
         display: inline-flex;
         align-items: center;
         gap: 8px;
-        padding: 8px 14px;
+        padding: 8px 12px;
         border-radius: 999px;
-        border: 1px solid var(--border);
-        background: #fff;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.78);
+        color: var(--muted);
+        font-size: 0.92rem;
         font-weight: 800;
-        font-size: 12px;
-        color: var(--brand2);
-        box-shadow: var(--shadow);
       }
-      .hp-actions {
-        display: flex;
-        gap: 12px;
-        flex-wrap: wrap;
-        margin-top: 20px;
-      }
-      .hp-actions .pp-btn {
-        border-radius: 18px;
-      }
-      .hp-grid {
-        margin-top: 20px;
+
+      .heroGrid {
         display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
         gap: 18px;
-        grid-template-columns: 1.08fr 0.92fr;
         align-items: start;
       }
-      @media (max-width: 980px) {
-        .hp-grid {
-          grid-template-columns: 1fr;
-        }
+
+      .hero h1 {
+        margin: 14px 0 12px;
+        font-size: clamp(2rem, 3.3vw, 3.6rem);
+        line-height: 1.04;
+        letter-spacing: -0.035em;
       }
-      .hp-panel {
-        border: 1px solid var(--border);
-        border-radius: 28px;
+
+      .heroLead {
+        margin: 0;
+        max-width: 760px;
+        color: var(--muted);
+        font-size: 1.02rem;
+        line-height: 1.8;
+      }
+
+      .heroActions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 20px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        min-height: 48px;
+        padding: 0 16px;
+        border-radius: 16px;
+        text-decoration: none;
+        font-weight: 800;
+        transition: 0.18s ease;
+        border: 1px solid rgba(23, 32, 51, 0.12);
         background: #fff;
-        padding: 18px;
-        box-shadow: var(--shadow);
+        color: var(--ink);
       }
-      .hp-kpis {
+
+      .btn:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 8px 18px rgba(23, 32, 51, 0.08);
+      }
+
+      .btnPrimary {
+        background: linear-gradient(
+          180deg,
+          rgba(245, 158, 11, 0.95),
+          rgba(217, 119, 6, 0.95)
+        );
+        color: #fff;
+        border-color: rgba(217, 119, 6, 0.5);
+      }
+
+      .btnGhost {
+        background: rgba(255, 255, 255, 0.85);
+      }
+
+      .heroPanel {
+        border: 1px solid var(--line);
+        border-radius: 26px;
+        background: rgba(255, 255, 255, 0.74);
+        padding: 18px;
+        box-shadow: var(--shadow-soft);
+      }
+
+      .heroPanel h2 {
+        margin: 0 0 8px;
+        font-size: 1.06rem;
+      }
+
+      .heroPanel p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      .heroStats {
         display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 14px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
         margin-top: 18px;
       }
-      @media (max-width: 980px) {
-        .hp-kpis {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
+
+      .stat {
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.8);
+        padding: 14px 14px 12px;
+      }
+
+      .stat strong {
+        display: block;
+        font-size: 1.35rem;
+        letter-spacing: -0.02em;
+      }
+
+      .stat span {
+        display: block;
+        margin-top: 4px;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .section {
+        margin-top: 22px;
+      }
+
+      .sectionHead {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: 14px;
+        margin-bottom: 14px;
+      }
+
+      .sectionHead h2 {
+        margin: 0;
+        font-size: 1.4rem;
+        letter-spacing: -0.025em;
+      }
+
+      .sectionHead p {
+        margin: 6px 0 0;
+        color: var(--muted);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .card {
+        grid-column: span 12;
+        border: 1px solid var(--line);
+        border-radius: var(--radius-xl);
+        background: var(--panel);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+
+      @media (min-width: 760px) {
+        .card.col-4 {
+          grid-column: span 4;
+        }
+
+        .card.col-6 {
+          grid-column: span 6;
         }
       }
-      @media (max-width: 640px) {
-        .hp-kpis {
+
+      .cardInner {
+        padding: 20px;
+      }
+
+      .chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 7px 11px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.84);
+        color: var(--muted);
+        font-size: 0.84rem;
+        font-weight: 800;
+      }
+
+      .card h3 {
+        margin: 14px 0 8px;
+        font-size: 1.18rem;
+        letter-spacing: -0.02em;
+      }
+
+      .card p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.72;
+      }
+
+      .cardLink {
+        display: inline-flex;
+        margin-top: 14px;
+        color: var(--brand);
+        font-weight: 800;
+        text-decoration: none;
+      }
+
+      .cardLink:hover {
+        text-decoration: underline;
+      }
+
+      .seoBlock {
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        background: rgba(255, 255, 255, 0.84);
+        box-shadow: var(--shadow);
+        padding: 22px;
+      }
+
+      .seoBlock h2 {
+        margin: 0 0 12px;
+        font-size: 1.35rem;
+        letter-spacing: -0.025em;
+      }
+
+      .seoBlock p,
+      .seoBlock li {
+        color: var(--muted);
+        line-height: 1.8;
+      }
+
+      .seoCols {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .footerCta {
+        margin-top: 22px;
+        text-align: center;
+        border: 1px solid var(--line);
+        border-radius: 30px;
+        background:
+          radial-gradient(
+            700px 280px at 50% 0%,
+            rgba(245, 158, 11, 0.12),
+            transparent 60%
+          ),
+          rgba(255, 255, 255, 0.86);
+        box-shadow: var(--shadow);
+        padding: 28px 20px;
+      }
+
+      .footerCta h2 {
+        margin: 0 0 10px;
+        font-size: clamp(1.45rem, 2.2vw, 2.2rem);
+        letter-spacing: -0.025em;
+      }
+
+      .footerCta p {
+        margin: 0 auto;
+        max-width: 760px;
+        color: var(--muted);
+        line-height: 1.8;
+      }
+
+      .footerCta .heroActions {
+        justify-content: center;
+      }
+
+      @media (max-width: 920px) {
+        .heroGrid,
+        .seoCols {
           grid-template-columns: 1fr;
         }
       }
-      .hp-kpi {
-        display: block;
-        padding: 16px 18px;
-        border-radius: 22px;
-        background: rgba(255, 255, 255, 0.8);
-        border: 1px solid var(--border);
-        font-weight: 800;
-        box-shadow: var(--shadow);
-      }
-      .hp-kpi b {
-        display: block;
-        font-family: "DM Sans", system-ui, sans-serif;
-        font-size: 1.7rem;
-        line-height: 1.05;
-        margin-bottom: 2px;
-      }
-      .hp-searchRow {
-        display: flex;
-        gap: 10px;
-        flex-wrap: wrap;
-        margin-top: 14px;
-      }
-      .hp-searchRow > * {
-        flex: 1;
-        min-width: 160px;
-      }
-      .hp-results {
-        margin-top: 14px;
-        display: grid;
-        gap: 12px;
-      }
-      .hp-item {
-        border: 1px solid var(--border);
-        border-radius: 22px;
-        background: #fff;
-        overflow: hidden;
-        box-shadow: var(--shadow);
-      }
-      .hp-item .top {
-        display: flex;
-        gap: 12px;
-        align-items: center;
-        padding: 14px;
-      }
-      .hp-item .thumb {
-        width: 58px;
-        height: 58px;
-        border-radius: 16px;
-        background: var(--soft);
-        flex: 0 0 auto;
-        display: grid;
-        place-items: center;
-        overflow: hidden;
-      }
-      .hp-item .thumb img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-      }
-      .hp-item .meta {
-        flex: 1;
-      }
-      .hp-item .ttl {
-        font-weight: 800;
-        font-family: "DM Sans", system-ui, sans-serif;
-      }
-      .hp-item .sub {
-        font-size: 12px;
-        color: var(--muted);
-        margin-top: 4px;
-      }
-      .hp-item .chips {
-        display: flex;
-        gap: 8px;
-        flex-wrap: wrap;
-        margin-top: 8px;
-      }
-      .hp-item .chips .pp-pill {
-        font-size: 12px;
-      }
-      .hp-sectTitle {
-        display: flex;
-        justify-content: space-between;
-        gap: 10px;
-        align-items: end;
-      }
-      .hp-sectTitle .pp-mini {
-        margin-top: 2px;
-      }
-      .hp-miniLinks {
-        display: flex;
-        gap: 8px;
-        flex-wrap: wrap;
-      }
-      .hp-muted {
-        color: var(--muted);
-      }
-      .hp-divider {
-        height: 1px;
-        background: color-mix(in srgb, var(--border) 80%, transparent);
-        margin: 14px 0;
-      }
-      .hp-footnote {
-        font-size: 12px;
-        color: var(--muted);
-        margin-top: 10px;
+
+      @media (max-width: 640px) {
+        .wrap {
+          padding-inline: 12px;
+        }
+
+        .hero {
+          padding: 20px;
+          border-radius: 26px;
+        }
+
+        .heroStats {
+          grid-template-columns: 1fr;
+        }
+
+        .sectionHead {
+          align-items: start;
+          flex-direction: column;
+        }
       }
     </style>
 
-    <link rel="stylesheet" href="assets/css/pp-carousel.css" />
-    <link rel="stylesheet" href="assets/css/pp-nav.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Punya Yatra",
+        "url": "https://punyayatra.in/",
+        "logo": "https://punyayatra.in/assets/images/logo.png",
+        "description": "Punya Yatra helps visitors explore spiritual tours, rituals, routes, kathas and sacred places in Varanasi.",
+        "areaServed": {
+          "@type": "City",
+          "name": "Varanasi"
+        }
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Punya Yatra",
+        "url": "https://punyayatra.in/",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://punyayatra.in/tours.html?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TouristTrip",
+        "name": "Varanasi Spiritual Tours",
+        "description": "Pilgrimage tours covering temples, ghats, rituals and sacred places in Varanasi.",
+        "touristType": "Pilgrimage",
+        "provider": {
+          "@type": "Organization",
+          "name": "Punya Yatra",
+          "url": "https://punyayatra.in/"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Varanasi"
+        }
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What can I explore on Punya Yatra?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can explore spiritual tours, ritual information, pilgrimage routes, kathas, yagyas and sacred places in Varanasi."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does the site help plan Varanasi pilgrimage routes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. The site includes curated tour circuits and a route builder to help visitors plan spiritual journeys across Varanasi."
+            }
+          }
+        ]
+      }
+    </script>
   </head>
 
   <body>
     <div data-include="includes/header.html"></div>
 
-    <main class="pp-container">
-      <div class="pp-carousel" data-ppc autoplay="1" interval="4000">
-        <div
-          class="ppc-slide"
-          data-kicker="Kashi Vishwanath • Jyotirlinga"
-          data-title="Experience the Divine at Mahadev’s Abode"
-          data-sub="Plan your darshan, explore nearby ghats, and map your sacred journey in minutes."
-          data-chip="🕉 Darshan + Route"
-        >
-          <img src="assets/images/varanasi/kashi-viswanath/0.jpg" alt="" />
-        </div>
+    <main class="wrap">
+      <section class="hero">
+        <div class="heroGrid">
+          <div>
+            <div class="eyebrow">Sacred journeys across Kashi</div>
 
-        <div
-          class="ppc-slide"
-          data-kicker="Golden Temple of Kashi"
-          data-title="Walk Through the Sacred Corridors of Vishwanath"
-          data-sub="Add temple, Ganga Aarti, and nearby shrines to your personalized itinerary."
-          data-chip="✨ Temple + Ganga Aarti"
-        >
-          <img src="assets/images/varanasi/kashi-viswanath/1.jpg" alt="" />
-        </div>
+            <h1>
+              Spiritual tours, rituals, and pilgrimage routes in Varanasi
+            </h1>
 
-        <div
-          class="ppc-slide"
-          data-kicker="Har Har Mahadev • Varanasi"
-          data-title="Plan Your Kashi Vishwanath Pilgrimage"
-          data-sub="Search mandirs, set darshan timing, open route map, and share with family."
-          data-chip="📍 Sacred Route Planner"
-        >
-          <img src="assets/images/varanasi/kashi-viswanath/2.jpg" alt="" />
-        </div>
+            <p class="heroLead">
+              Punya Yatra helps visitors explore Varanasi through curated
+              temple circuits, ritual guides, sacred place collections, kathas,
+              yagyas, and route planning tools. Whether you want darshan,
+              spiritual learning, or a structured Kashi visit, this site helps
+              you plan it clearly.
+            </p>
 
-        <div
-          class="ppc-slide"
-          data-kicker="Ancient Kashi • Timeless Faith"
-          data-title="Discover the Glory of Shri Kashi Vishwanath"
-          data-sub="Explore temple history, nearby ghats, and build your spiritual travel map."
-          data-chip="🏛 Heritage + Itinerary"
-        >
-          <img src="assets/images/varanasi/kashi-viswanath/3.jpg" alt="" />
-        </div>
-
-        <div
-          class="ppc-slide"
-          data-kicker="Kashi Vishwanath Corridor"
-          data-title="Build Your Temple Visit Plan in 2 Minutes"
-          data-sub="Add darshan slots, open live route map, and share instantly on WhatsApp."
-          data-chip="⚡ Quick Darshan Planner"
-        >
-          <img src="assets/images/varanasi/kashi-viswanath/4.jpg" alt="" />
-        </div>
-
-        <div
-          class="ppc-slide"
-          data-kicker="City of Light • Varanasi"
-          data-title="Begin Your Journey to Kashi Vishwanath"
-          data-sub="Plan temple visit, Ganga snan, and evening aarti in one seamless route."
-          data-chip="🌅 Temple + Ghat Route"
-        >
-          <img src="assets/images/varanasi/kashi-viswanath/3.jpg" alt="" />
-        </div>
-      </div>
-
-      <!-- HERO -->
-      <section class="hp-hero">
-        <div class="inner">
-          <div class="pp-split">
-            <div>
-              <div class="pp-mini" id="hpMini"></div>
-              <h1 id="hpTitle">Spiritual Tours • Rituals • Kathas</h1>
-              <p class="pp-muted" id="hpSubtitle">
-                Plan trips to Kashi, Ayodhya, Prayagraj — book rituals, kathas &
-                arrangements. Build itinerary, view route on map, and share on
-                WhatsApp.
-              </p>
-
-              <div class="hp-badges">
-                <span class="hp-badge">📍 Locations database</span>
-                <span class="hp-badge">🗺 Route Map</span>
-                <span class="hp-badge">📅 Festivals Calendar</span>
-                <span class="hp-badge">💬 WhatsApp enquiry</span>
-              </div>
-
-              <div class="hp-actions">
-                <a class="pp-btn" href="routes.html" id="hpCta1"
-                  >Start Route Builder</a
-                >
-                <a class="pp-btn pp-btn--ghost" href="route.html" id="hpCta2"
-                  >Open Route Map</a
-                >
-                <a class="pp-btn pp-btn--ghost" href="calendar.html" id="hpCta3"
-                  >Open Calendar</a
-                >
-                <button
-                  class="pp-btn pp-btn--ghost"
-                  id="ppLangBtn"
-                  type="button"
-                >
-                  HI
-                </button>
-              </div>
-            </div>
-
-            <div class="hp-panel" style="max-width: 420px">
-              <div class="hp-sectTitle">
-                <div>
-                  <div class="pp-h2" id="hpQuickTitle">Quick Actions</div>
-                  <div class="pp-mini hp-muted" id="hpQuickSub">
-                    Everything important in one tap
-                  </div>
-                </div>
-                <div class="hp-miniLinks">
-                  <a class="pp-btn pp-btn--ghost" href="admin-locations.html"
-                    >Admin</a
-                  >
-                </div>
-              </div>
-
-              <div class="hp-divider"></div>
-
-              <div class="pp-actions" style="gap: 10px; flex-wrap: wrap">
-                <a
-                  class="pp-btn pp-btn--ghost"
-                  href="tours.html"
-                  id="hpLinkTours"
-                  >Tours</a
-                >
-                <a
-                  class="pp-btn pp-btn--ghost"
-                  href="tour-maker.html"
-                  id="hpLinkMaker"
-                  >Tour Maker</a
-                >
-                <a
-                  class="pp-btn pp-btn--ghost"
-                  href="kathas.html"
-                  id="hpLinkKathas"
-                  >Kathas</a
-                >
-                <a
-                  class="pp-btn pp-btn--ghost"
-                  href="rituals.html"
-                  id="hpLinkRituals"
-                  >Rituals</a
-                >
-                <a
-                  class="pp-btn pp-btn--ghost"
-                  href="occasions.html"
-                  id="hpLinkOcc"
-                  >Occasions</a
-                >
-              </div>
-
-              <div class="hp-kpis" id="hpKpis">
-                <span class="hp-kpi"
-                  >🏙️ Cities: <span id="kpiCities">…</span></span
-                >
-                <span class="hp-kpi"
-                  >📌 Places: <span id="kpiPlaces">…</span></span
-                >
-                <span class="hp-kpi"
-                  >🎉 Occasions: <span id="kpiOcc">…</span></span
-                >
-              </div>
-
-              <div class="hp-footnote" id="hpFoot">
-                Tip: Use the search below to find a place or festival and jump
-                directly to building the itinerary.
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SEARCH + HIGHLIGHTS -->
-      <section class="hp-grid">
-        <!-- LEFT: Smart Search -->
-        <section class="hp-panel">
-          <div class="hp-sectTitle">
-            <div>
-              <div class="pp-h2" id="ssTitle">Smart Search</div>
-              <div class="pp-mini hp-muted" id="ssSub">
-                Search across Locations + Occasions (3+ characters)
-              </div>
-            </div>
-            <div class="hp-miniLinks">
-              <a class="pp-btn pp-btn--ghost" href="routes.html" id="ssGoRoutes"
-                >Go to Routes</a
+            <div class="heroActions">
+              <a class="btn btnPrimary" href="tours.html"
+                >Explore Varanasi tours</a
+              >
+              <a class="btn btnGhost" href="route-map.html"
+                >Plan your pilgrimage route</a
               >
             </div>
-          </div>
 
-          <div class="hp-searchRow">
-            <input
-              class="pp-input"
-              id="ssQuery"
-              placeholder="Type: Kashi / Sangam / Shivratri …"
-              autocomplete="off"
-            />
-            <select class="pp-input" id="ssMode">
-              <option value="both">Locations + Occasions</option>
-              <option value="locations">Locations only</option>
-              <option value="occasions">Occasions only</option>
-            </select>
-            <button class="pp-btn" id="ssBtn" type="button">Search</button>
-            <button class="pp-btn pp-btn--ghost" id="ssClear" type="button">
-              Clear
-            </button>
-          </div>
-
-          <div class="pp-mini hp-muted" id="ssStatus" style="margin-top: 10px">
-            Loading master data…
-          </div>
-          <div class="hp-results" id="ssResults"></div>
-        </section>
-
-        <!-- RIGHT: Today / This month -->
-        <section class="hp-panel">
-          <div class="hp-sectTitle">
-            <div>
-              <div class="pp-h2" id="hiTitle">Highlights</div>
-              <div class="pp-mini hp-muted" id="hiSub">
-                Today + this month from occasions.json
+            <div class="heroStats">
+              <div class="stat">
+                <strong>Temple circuits</strong>
+                <span>Structured spiritual tours across Varanasi</span>
+              </div>
+              <div class="stat">
+                <strong>Ritual guidance</strong>
+                <span>Understand pujas, yagyas and sacred practices</span>
+              </div>
+              <div class="stat">
+                <strong>Route planning</strong>
+                <span>Build and test your own Kashi itinerary</span>
               </div>
             </div>
-            <div class="hp-miniLinks">
-              <a class="pp-btn pp-btn--ghost" href="calendar.html">Calendar</a>
-            </div>
           </div>
 
-          <div class="hp-divider"></div>
-
-          <div class="pp-mini" id="hiTodayLbl">Today</div>
-          <div id="hiToday" class="hp-results"></div>
-
-          <div class="hp-divider"></div>
-
-          <div class="pp-mini" id="hiMonthLbl">This Month</div>
-          <div id="hiMonth" class="hp-results"></div>
-
-          <div class="hp-footnote hp-muted">
-            Festivals based on your <b>data/master/occasions.json</b>.
-          </div>
-        </section>
+          <aside class="heroPanel">
+            <h2>Why this homepage is SEO-focused</h2>
+            <p>
+              This page targets high-intent searches around Varanasi spiritual
+              tourism, Hindu rituals, Kashi pilgrimage planning, temple tours,
+              and sacred travel routes. It also links clearly to the most
+              important sections of the site so search engines can understand
+              the content hierarchy.
+            </p>
+          </aside>
+        </div>
       </section>
 
-      <!-- CITY SPOTLIGHT -->
-      <section class="pp-card pp-pad" style="margin-top: 12px">
-        <div class="hp-sectTitle">
+      <section class="section" aria-labelledby="sections-title">
+        <div class="sectionHead">
           <div>
-            <div class="pp-h2" id="csTitle">City Spotlight</div>
-            <div class="pp-mini hp-muted" id="csSub">
-              Top places from locations.json
+            <h2 id="sections-title">Explore the main sections</h2>
+            <p>
+              Start with the section that matches your spiritual travel intent.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid">
+          <article class="card col-4">
+            <div class="cardInner">
+              <span class="chip">Tours</span>
+              <h3>Varanasi spiritual tours</h3>
+              <p>
+                Browse curated temple circuits, ghat-focused journeys and sacred
+                route ideas for visitors planning darshan or pilgrimage in
+                Varanasi.
+              </p>
+              <a class="cardLink" href="tours.html"
+                >Open tours page →</a
+              >
             </div>
-          </div>
-          <div class="hp-miniLinks">
-            <a class="pp-btn pp-btn--ghost" href="tours.html">Tours</a>
-            <a class="pp-btn pp-btn--ghost" href="routes.html">Routes</a>
-          </div>
-        </div>
+          </article>
 
-        <div class="pp-actions" style="margin-top: 12px">
-          <select class="pp-input" id="csCity"></select>
-          <button class="pp-btn pp-btn--ghost" id="csAddAll" type="button">
-            Add top 5 to itinerary
-          </button>
-          <a class="pp-btn" href="routes.html">Open Itinerary</a>
-        </div>
+          <article class="card col-4">
+            <div class="cardInner">
+              <span class="chip">Route Builder</span>
+              <h3>Plan your pilgrimage route</h3>
+              <p>
+                Build a practical route across sacred locations, test stop
+                order, and create an itinerary that feels smooth and usable.
+              </p>
+              <a class="cardLink" href="route-map.html"
+                >Open route planner →</a
+              >
+            </div>
+          </article>
 
-        <div class="pp-grid" id="csGrid" style="margin-top: 12px"></div>
+          <article class="card col-4">
+            <div class="cardInner">
+              <span class="chip">Rituals</span>
+              <h3>Understand rituals and pujas</h3>
+              <p>
+                Learn about important Hindu rituals in Varanasi including
+                Rudrabhishek, Shraddh-related practices, yagyas and other sacred
+                observances.
+              </p>
+              <a class="cardLink" href="rituals.html"
+                >Open rituals page →</a
+              >
+            </div>
+          </article>
+
+          <article class="card col-6">
+            <div class="cardInner">
+              <span class="chip">Kathas</span>
+              <h3>Spiritual narratives and sacred context</h3>
+              <p>
+                Explore kathas and traditional spiritual narratives that enrich
+                the meaning of sacred places and ritual traditions in Kashi.
+              </p>
+              <a class="cardLink" href="kathas.html"
+                >Open kathas page →</a
+              >
+            </div>
+          </article>
+
+          <article class="card col-6">
+            <div class="cardInner">
+              <span class="chip">Yagyas & Sacred Content</span>
+              <h3>Go deeper into Vedic and spiritual practices</h3>
+              <p>
+                Browse yagyas, occasions, acharyas and related sacred content to
+                understand the broader spiritual ecosystem of Varanasi.
+              </p>
+              <a class="cardLink" href="yagyas.html"
+                >Open yagyas page →</a
+              >
+            </div>
+          </article>
+        </div>
       </section>
 
-      <div class="pp-mini hp-muted" style="margin: 14px 0 0">
-        Powered by master data: <b>data/master/locations.json</b>,
-        <b>data/master/occasions.json</b>.
-      </div>
+      <section class="section" aria-labelledby="seo-topic-title">
+        <div class="seoBlock">
+          <h2 id="seo-topic-title">
+            Why Punya Yatra matters for pilgrims and spiritual visitors
+          </h2>
+
+          <div class="seoCols">
+            <div>
+              <p>
+                Varanasi, also known as Kashi, is one of the most sacred cities
+                in India. Visitors often search for temple routes, darshan
+                circuits, rituals, ghats, and practical ways to move through the
+                city meaningfully. This site is designed to answer that need
+                with structured content instead of scattered information.
+              </p>
+
+              <p>
+                If you are planning a spiritual tour in Varanasi, looking for
+                Hindu rituals in Kashi, or searching for a pilgrimage route that
+                connects important sacred places, the main sections of this site
+                help you move from discovery to planning.
+              </p>
+            </div>
+
+            <div>
+              <p>
+                You can begin with
+                <a href="tours.html">spiritual tours in Varanasi</a>, continue
+                into the <a href="route-map.html">pilgrimage route planner</a>,
+                and then deepen your understanding through
+                <a href="rituals.html">ritual guidance</a> and
+                <a href="kathas.html">sacred narratives</a>.
+              </p>
+
+              <p>
+                This internal structure is useful both for visitors and for
+                search engines, because it clearly signals that Punya Yatra is a
+                destination for Varanasi spiritual travel, ritual knowledge, and
+                Kashi pilgrimage planning.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="footerCta" aria-labelledby="cta-title">
+        <h2 id="cta-title">Begin your Kashi journey with a clear next step</h2>
+        <p>
+          Browse temple circuits, build a custom pilgrimage route, or study
+          rituals and sacred traditions before your visit. Use the main sections
+          below to continue.
+        </p>
+
+        <div class="heroActions">
+          <a class="btn btnPrimary" href="tours.html">Go to Tours</a>
+          <a class="btn btnGhost" href="route-map.html">Go to Route Builder</a>
+          <a class="btn btnGhost" href="rituals.html">Go to Rituals</a>
+        </div>
+      </section>
     </main>
 
     <div data-include="includes/footer.html"></div>
 
-    <!-- Core -->
-    <script src="assets/js/includes.js"></script>
-    <script src="assets/js/pp-nav.js"></script>
-    <script src="assets/js/site-config.js"></script>
-    <script src="assets/js/lang.js"></script>
-    <script src="assets/js/i18n.js"></script>
-
-    <!-- Optional (if you use popout elsewhere) -->
-    <script src="assets/js/data-store.js"></script>
-    <script src="assets/js/render.js"></script>
-    <script src="assets/js/popout.js"></script>
-
-    <!-- Find on page -->
-    <script src="https://programmer-s-picnic.github.io/json-images/find-on-page.js"></script>
-    <script src="assets/js/pp-carousel.js"></script>
-
-    <!-- Your existing page logic (UNCHANGED) -->
-    <script>
-      (function () {
-        const LOC_PATH = "data/master/locations.json";
-        const OCC_PATH = "data/master/occasions.json";
-        const STORE_KEY = "pp_tour_maker_v1";
-
-        const $ = (id) => document.getElementById(id);
-        const pad2 = (n) => String(n).padStart(2, "0");
-        const iso = (d) =>
-          `${d.getFullYear()}-${pad2(d.getMonth() + 1)}-${pad2(d.getDate())}`;
-
-        function t(obj) {
-          if (!window.PP_LANG)
-            return typeof obj === "string" ? obj : obj?.en || obj?.hi || "";
-          return PP_LANG.t(obj);
-        }
-
-        function setLangTexts() {
-          const hi = PP_LANG.getLang() === "hi";
-          $("ppLangBtn").textContent = hi ? "EN" : "HI";
-
-          $("hpMini").textContent = hi
-            ? "यात्रा • अनुष्ठान • कथा • व्हाट्सएप"
-            : "Tours • Rituals • Kathas • WhatsApp";
-          $("hpTitle").textContent = hi
-            ? "आध्यात्मिक यात्राएँ • अनुष्ठान • कथाएँ"
-            : "Spiritual Tours • Rituals • Kathas";
-          $("hpSubtitle").textContent = hi
-            ? "काशी, अयोध्या, प्रयागराज की यात्रा प्लान करें — अनुष्ठान/कथा बुक करें। यात्रा सूची बनाएं, मैप पर रूट देखें और व्हाट्सएप पर भेजें।"
-            : "Plan trips to Kashi, Ayodhya, Prayagraj — book rituals, kathas & arrangements. Build itinerary, view route on map, and share on WhatsApp.";
-
-          $("hpCta1").textContent = hi
-            ? "रूट बिल्डर शुरू करें"
-            : "Start Route Builder";
-          $("hpCta2").textContent = hi ? "रूट मैप खोलें" : "Open Route Map";
-          $("hpCta3").textContent = hi ? "कैलेंडर खोलें" : "Open Calendar";
-
-          $("hpQuickTitle").textContent = hi ? "क्विक एक्शन" : "Quick Actions";
-          $("hpQuickSub").textContent = hi
-            ? "सब कुछ एक टैप में"
-            : "Everything important in one tap";
-          $("hpFoot").textContent = hi
-            ? "टिप: नीचे सर्च से जगह/त्योहार खोजें और तुरंत यात्रा सूची बनाना शुरू करें।"
-            : "Tip: Use the search below to find a place or festival and jump directly to building the itinerary.";
-
-          $("ssTitle").textContent = hi ? "स्मार्ट सर्च" : "Smart Search";
-          $("ssSub").textContent = hi
-            ? "लोकेशन + त्योहार (3+ अक्षर)"
-            : "Search across Locations + Occasions (3+ characters)";
-          $("ssGoRoutes").textContent = hi ? "Routes खोलें" : "Go to Routes";
-          $("ssQuery").placeholder = hi
-            ? "लिखें: काशी / संगम / शिवरात्रि …"
-            : "Type: Kashi / Sangam / Shivratri …";
-          $("ssBtn").textContent = hi ? "खोजें" : "Search";
-          $("ssClear").textContent = hi ? "साफ़ करें" : "Clear";
-          $("ssMode").options[0].text = hi
-            ? "लोकेशन + त्योहार"
-            : "Locations + Occasions";
-          $("ssMode").options[1].text = hi ? "केवल लोकेशन" : "Locations only";
-          $("ssMode").options[2].text = hi ? "केवल त्योहार" : "Occasions only";
-
-          $("hiTitle").textContent = hi ? "हाइलाइट्स" : "Highlights";
-          $("hiSub").textContent = hi ? "आज + इस महीने" : "Today + this month";
-          $("hiTodayLbl").textContent = hi ? "आज" : "Today";
-          $("hiMonthLbl").textContent = hi ? "इस महीने" : "This Month";
-
-          $("csTitle").textContent = hi ? "शहर स्पॉटलाइट" : "City Spotlight";
-          $("csSub").textContent = hi
-            ? "locations.json से टॉप स्थान"
-            : "Top places from locations.json";
-          $("csAddAll").textContent = hi
-            ? "टॉप 5 यात्रा सूची में जोड़ें"
-            : "Add top 5 to itinerary";
-        }
-
-        function norm(s) {
-          return (s || "").toString().trim().toLowerCase();
-        }
-        function pill(tag) {
-          return `<span class="pp-pill">${tag}</span>`;
-        }
-
-        function card({ type, title, sub, img, tags, href, onAdd, waText }) {
-          const tagHtml = (tags || []).slice(0, 6).map(pill).join("");
-          const btns = `
-          <div class="pp-actions" style="padding:0 12px 12px">
-            ${href ? `<a class="pp-btn pp-btn--ghost" href="${href}">${PP_LANG.getLang() === "hi" ? "खोलें" : "Open"}</a>` : ""}
-            ${onAdd ? `<button class="pp-btn" type="button" data-add="1">${PP_LANG.getLang() === "hi" ? "यात्रा में जोड़ें" : "Add to Itinerary"}</button>` : ""}
-            ${
-              waText
-                ? `<a class="pp-btn pp-btn--ghost" target="_blank" rel="noopener"
-              href="https://wa.me/${(window.PP_CONFIG?.contact?.primary?.whatsapp || "").replace(/\D/g, "")}?text=${encodeURIComponent(waText)}">
-              WhatsApp</a>`
-                : ""
-            }
-          </div>`;
-          const html = document.createElement("div");
-          html.className = "hp-item";
-          html.innerHTML = `
-          <div class="top">
-            <div class="thumb">${img ? `<img src="${img}" alt="">` : "📌"}</div>
-            <div class="meta">
-              <div class="ttl">${title}</div>
-              <div class="sub">${sub || type}</div>
-              <div class="chips">${tagHtml}</div>
-            </div>
-          </div>
-          ${btns}`;
-          if (onAdd) html.querySelector('[data-add="1"]').onclick = onAdd;
-          return html;
-        }
-
-        function loadIt() {
-          try {
-            return JSON.parse(localStorage.getItem(STORE_KEY) || "{}");
-          } catch {
-            return {};
-          }
-        }
-        function saveIt(obj) {
-          localStorage.setItem(STORE_KEY, JSON.stringify(obj));
-        }
-
-        function addToItinerary(place) {
-          const db = loadIt();
-          db.itinerary = Array.isArray(db.itinerary) ? db.itinerary : [];
-          const exists = db.itinerary.some((x) => x && x.id === place.id);
-          if (!exists) {
-            db.itinerary.push(place);
-            saveIt(db);
-          }
-        }
-
-        let LOC = null,
-          OCC = null;
-
-        function kpis() {
-          const cities = LOC?.cities?.length || 0;
-          let places = 0;
-          (LOC?.cities || []).forEach((c) => (places += c.places?.length || 0));
-          $("kpiCities").textContent = cities;
-          $("kpiPlaces").textContent = places;
-          $("kpiOcc").textContent = OCC?.occasions?.length || 0;
-        }
-
-        function renderHighlights() {
-          const todayISO = iso(new Date());
-          const month = new Date().getMonth() + 1;
-          const year = new Date().getFullYear();
-
-          const todayList = (OCC?.occasions || []).filter((o) =>
-            (o.dates || []).includes(todayISO),
-          );
-          const monthList = (OCC?.occasions || [])
-            .filter((o) =>
-              (o.dates || []).some(
-                (x) => x && x.startsWith(`${year}-${pad2(month)}-`),
-              ),
-            )
-            .slice(0, 6);
-
-          const hi = PP_LANG.getLang() === "hi";
-
-          const into = (hostId, list, emptyMsg) => {
-            const host = $(hostId);
-            host.innerHTML = "";
-            if (!list.length) {
-              host.innerHTML = `<div class="pp-muted">${emptyMsg}</div>`;
-              return;
-            }
-            list.forEach((o) => {
-              const title = t(o.title) || o.id;
-              const sub = t(o.summary) || t(o.description) || "";
-              const img =
-                o.images && o.images[0]
-                  ? o.images[0]
-                  : "assets/images/placeholder/place.svg";
-              const tags = o.tags || [];
-              host.appendChild(
-                card({
-                  type: "Occasion",
-                  title,
-                  sub,
-                  img,
-                  tags,
-                  href: "calendar.html",
-                  waText:
-                    (t(o.whatsappText) ||
-                      (hi ? "मुझे जानकारी चाहिए: " : "I want details for: ")) +
-                    title,
-                }),
-              );
-            });
-          };
-
-          into(
-            "hiToday",
-            todayList,
-            hi
-              ? "आज कोई त्योहार दर्ज नहीं है।"
-              : "No occasions listed for today.",
-          );
-          into(
-            "hiMonth",
-            monthList,
-            hi
-              ? "इस महीने के लिए अभी सूची खाली है।"
-              : "No occasions listed for this month.",
-          );
-        }
-
-        function citySpotlight() {
-          const sel = $("csCity");
-          sel.innerHTML = "";
-          (LOC?.cities || []).forEach((c) => {
-            const opt = document.createElement("option");
-            opt.value = c.id;
-            opt.textContent = t(c.name) || c.id;
-            sel.appendChild(opt);
-          });
-
-          function render() {
-            const id = sel.value;
-            const city =
-              (LOC?.cities || []).find((c) => c.id === id) ||
-              (LOC?.cities || [])[0];
-            if (!city) return;
-
-            const grid = $("csGrid");
-            grid.innerHTML = "";
-
-            (city.places || []).slice(0, 6).forEach((p) => {
-              const title = t(p.name) || p.id;
-              const sub = t(p.description) || "";
-              const img =
-                p.images && p.images[0]
-                  ? p.images[0]
-                  : "assets/images/placeholder/place.svg";
-              const tags = p.tags || [];
-              const placeObj = {
-                id: `${city.id}:${p.id}`,
-                name: title,
-                lat: p.lat,
-                lng: p.lng,
-                meta: { cityId: city.id, placeId: p.id },
-              };
-
-              grid.appendChild(
-                card({
-                  type: "Place",
-                  title,
-                  sub,
-                  img,
-                  tags,
-                  href: "routes.html",
-                  onAdd: () => {
-                    addToItinerary(placeObj);
-                    alert(
-                      PP_LANG.getLang() === "hi"
-                        ? "यात्रा सूची में जोड़ा गया"
-                        : "Added to itinerary",
-                    );
-                  },
-                }),
-              );
-            });
-          }
-
-          sel.onchange = render;
-          render();
-
-          $("csAddAll").onclick = () => {
-            const city = (LOC?.cities || []).find((c) => c.id === sel.value);
-            if (!city) return;
-            (city.places || []).slice(0, 5).forEach((p) => {
-              addToItinerary({
-                id: `${city.id}:${p.id}`,
-                name: t(p.name) || p.id,
-                lat: p.lat,
-                lng: p.lng,
-                meta: { cityId: city.id, placeId: p.id },
-              });
-            });
-            alert(
-              PP_LANG.getLang() === "hi"
-                ? "टॉप 5 यात्रा सूची में जोड़ दिए गए"
-                : "Top 5 added to itinerary",
-            );
-          };
-        }
-
-        function smartSearch() {
-          const qEl = $("ssQuery");
-          const modeEl = $("ssMode");
-          const resEl = $("ssResults");
-          const stEl = $("ssStatus");
-
-          function matchText(obj) {
-            if (!obj) return "";
-            if (typeof obj === "string") return obj;
-            return `${obj.en || ""} ${obj.hi || ""}`.trim();
-          }
-
-          function doSearch() {
-            const q = norm(qEl.value);
-            const mode = modeEl.value;
-            resEl.innerHTML = "";
-            if (q.length < 3) {
-              stEl.textContent =
-                PP_LANG.getLang() === "hi"
-                  ? "कम से कम 3 अक्षर लिखें…"
-                  : "Type at least 3 characters…";
-              return;
-            }
-            stEl.textContent =
-              PP_LANG.getLang() === "hi" ? "खोज रहे हैं…" : "Searching…";
-
-            const hits = [];
-
-            if (mode === "both" || mode === "locations") {
-              (LOC?.cities || []).forEach((c) => {
-                (c.places || []).forEach((p) => {
-                  const hay = norm(
-                    `${c.id} ${matchText(p.name)} ${matchText(p.description)} ${(p.tags || []).join(" ")}`,
-                  );
-                  if (hay.includes(q))
-                    hits.push({ kind: "place", city: c, place: p });
-                });
-              });
-            }
-
-            if (mode === "both" || mode === "occasions") {
-              (OCC?.occasions || []).forEach((o) => {
-                const hay = norm(
-                  `${o.id} ${matchText(o.title)} ${matchText(o.summary)} ${matchText(o.description)} ${(o.tags || []).join(" ")} ${(o.dates || []).join(" ")}`,
-                );
-                if (hay.includes(q)) hits.push({ kind: "occasion", occ: o });
-              });
-            }
-
-            if (!hits.length) {
-              stEl.textContent =
-                PP_LANG.getLang() === "hi"
-                  ? "कोई परिणाम नहीं मिला"
-                  : "No results";
-              return;
-            }
-            stEl.textContent =
-              PP_LANG.getLang() === "hi"
-                ? `${hits.length} परिणाम`
-                : `${hits.length} result(s)`;
-
-            hits.slice(0, 12).forEach((h) => {
-              if (h.kind === "place") {
-                const c = h.city,
-                  p = h.place;
-                const title = t(p.name) || p.id;
-                const sub = `${t(c.name) || c.id} • ${t(p.description) || ""}`;
-                const img =
-                  p.images && p.images[0]
-                    ? p.images[0]
-                    : "assets/images/placeholder/place.svg";
-                const tags = p.tags || [];
-                const placeObj = {
-                  id: `${c.id}:${p.id}`,
-                  name: title,
-                  lat: p.lat,
-                  lng: p.lng,
-                  meta: { cityId: c.id, placeId: p.id },
-                };
-
-                resEl.appendChild(
-                  card({
-                    type: "Place",
-                    title,
-                    sub,
-                    img,
-                    tags,
-                    href: "routes.html",
-                    onAdd: () => {
-                      addToItinerary(placeObj);
-                      alert(
-                        PP_LANG.getLang() === "hi"
-                          ? "यात्रा सूची में जोड़ा गया"
-                          : "Added to itinerary",
-                      );
-                    },
-                  }),
-                );
-              } else {
-                const o = h.occ;
-                const title = t(o.title) || o.id;
-                const sub =
-                  ((o.dates || [])[0] ? `${(o.dates || [])[0]} • ` : "") +
-                  (t(o.summary) || "");
-                const img =
-                  o.images && o.images[0]
-                    ? o.images[0]
-                    : "assets/images/placeholder/place.svg";
-                const tags = o.tags || [];
-
-                resEl.appendChild(
-                  card({
-                    type: "Occasion",
-                    title,
-                    sub,
-                    img,
-                    tags,
-                    href: "calendar.html",
-                    waText:
-                      (t(o.whatsappText) ||
-                        (PP_LANG.getLang() === "hi"
-                          ? "मुझे जानकारी चाहिए: "
-                          : "I want details for: ")) + title,
-                  }),
-                );
-              }
-            });
-          }
-
-          $("ssBtn").onclick = doSearch;
-          $("ssClear").onclick = () => {
-            qEl.value = "";
-            resEl.innerHTML = "";
-            $("ssStatus").textContent =
-              PP_LANG.getLang() === "hi" ? "तैयार" : "Ready";
-          };
-
-          qEl.addEventListener("input", () => {
-            if ((qEl.value || "").trim().length >= 3) doSearch();
-          });
-
-          window.addEventListener("pp:langchange", () => {
-            setLangTexts();
-            renderHighlights();
-            citySpotlight();
-            if ((qEl.value || "").trim().length >= 3) doSearch();
-          });
-        }
-
-        async function init() {
-          const btn = $("ppLangBtn");
-          btn.onclick = () =>
-            PP_LANG.setLang(PP_LANG.getLang() === "hi" ? "en" : "hi");
-
-          setLangTexts();
-
-          try {
-            const [locRes, occRes] = await Promise.all([
-              fetch(LOC_PATH, { cache: "no-store" }),
-              fetch(OCC_PATH, { cache: "no-store" }),
-            ]);
-
-            LOC = locRes.ok ? await locRes.json() : { cities: [] };
-            OCC = occRes.ok ? await occRes.json() : { occasions: [] };
-
-            $("ssStatus").textContent =
-              PP_LANG.getLang() === "hi" ? "तैयार" : "Ready";
-
-            kpis();
-            renderHighlights();
-            citySpotlight();
-            smartSearch();
-          } catch (e) {
-            console.error(e);
-            $("ssStatus").textContent = "Load failed. Check console.";
-          }
-        }
-
-        document.addEventListener("DOMContentLoaded", init);
-      })();
-    </script>
-
-    <!-- THEME ENGINE (1,2,3,4) -->
-    <script>
-      (function () {
-        "use strict";
-
-        const KEY = "pp_theme";
-        const THEMES = ["saffron", "midnight", "mint"];
-        const ICON = { saffron: "🔶", midnight: "🌙", mint: "🌿" };
-
-        function nowHour() {
-          try {
-            return new Date().getHours();
-          } catch {
-            return 12;
-          }
-        }
-
-        // 3) Auto-Midnight after 7PM (only if user hasn't chosen theme)
-        function pickDefaultTheme() {
-          const saved = localStorage.getItem(KEY);
-          if (saved && THEMES.includes(saved)) return saved;
-
-          const h = nowHour();
-          if (h >= 19 || h < 6) return "midnight";
-          return "saffron";
-        }
-
-        // 2) Smooth transitions (start after first paint)
-        function enableTransitions() {
-          requestAnimationFrame(() => {
-            document.documentElement.classList.add("theme-animate");
-          });
-        }
-
-        function setMetaThemeColor(theme) {
-          let m = document.querySelector('meta[name="theme-color"]');
-          if (!m) {
-            m = document.createElement("meta");
-            m.setAttribute("name", "theme-color");
-            document.head.appendChild(m);
-          }
-          const color =
-            theme === "midnight"
-              ? "#0b1220"
-              : theme === "mint"
-                ? "#059669"
-                : "#d97706";
-          m.setAttribute("content", color);
-        }
-
-        function applyTheme(theme, persist) {
-          const t = THEMES.includes(theme) ? theme : "saffron";
-          document.documentElement.setAttribute("data-theme", t);
-          if (persist) localStorage.setItem(KEY, t);
-          setMetaThemeColor(t);
-
-          const btn = document.getElementById("ppThemeBtn");
-          if (btn) btn.textContent = ICON[t] || "🔶";
-
-          const sel = document.getElementById("ppThemeSelectMobile");
-          if (sel) sel.value = t;
-        }
-
-        function cycleTheme() {
-          const cur =
-            document.documentElement.getAttribute("data-theme") || "saffron";
-          const idx = THEMES.indexOf(cur);
-          applyTheme(THEMES[(idx + 1) % THEMES.length], true);
-        }
-
-        // 4) Inject dropdown into mobile burger menu (works even if pp-nav.js builds the menu)
-        function ensureMobileThemeDropdown() {
-          const host =
-            document.querySelector(".pp-mobile__panel") ||
-            document.querySelector(".pp-nav__drawer") ||
-            document.querySelector(".pp-nav__sheet") ||
-            document.querySelector(".pp-nav__menu") ||
-            document.querySelector(".pp-nav__mobile") ||
-            document.querySelector("[data-pp-mobilemenu]") ||
-            document.querySelector(".pp-popout") ||
-            document.querySelector(".popout");
-
-          if (!host) return;
-          if (document.getElementById("ppThemeSelectMobile")) return;
-
-          const wrap = document.createElement("div");
-          wrap.style.display = "flex";
-          wrap.style.gap = "10px";
-          wrap.style.alignItems = "center";
-          wrap.style.padding = "10px 12px";
-          wrap.style.borderBottom = "1px solid var(--border)";
-
-          const lbl = document.createElement("div");
-          lbl.textContent = "Theme";
-          lbl.style.fontWeight = "900";
-          lbl.style.color = "var(--muted)";
-
-          const sel = document.createElement("select");
-          sel.id = "ppThemeSelectMobile";
-          sel.className = "pp-theme-select";
-          sel.innerHTML = `
-            <option value="saffron">🔶 Saffron</option>
-            <option value="midnight">🌙 Midnight</option>
-            <option value="mint">🌿 Mint</option>
-          `;
-          sel.addEventListener("change", (e) =>
-            applyTheme(e.target.value, true),
-          );
-
-          wrap.appendChild(lbl);
-          wrap.appendChild(sel);
-
-          host.prepend(wrap);
-          sel.value =
-            document.documentElement.getAttribute("data-theme") || "saffron";
-        }
-
-        function injectSelectStyleOnce() {
-          if (document.getElementById("ppThemeSelectStyle")) return;
-          const s = document.createElement("style");
-          s.id = "ppThemeSelectStyle";
-          s.textContent = `
-            .pp-theme-select{
-              padding: 8px 10px;
-              border-radius: 12px;
-              border: 1px solid var(--border);
-              background: var(--card);
-              color: var(--text);
-              font-weight: 900;
-              max-width: 220px;
-            }
-          `;
-          document.head.appendChild(s);
-        }
-
-        document.addEventListener("DOMContentLoaded", () => {
-          injectSelectStyleOnce();
-          enableTransitions();
-
-          // Apply default (auto) theme without persisting (so user can still "choose" later)
-          applyTheme(pickDefaultTheme(), false);
-
-          // If user has already chosen, apply it (no extra write)
-          const saved = localStorage.getItem(KEY);
-          if (saved && THEMES.includes(saved)) applyTheme(saved, false);
-        });
-
-        // Delegated clicks: header is injected via includes.js
-        document.addEventListener("click", (e) => {
-          const tbtn = e.target.closest("#ppThemeBtn");
-          if (tbtn) {
-            cycleTheme();
-            return;
-          }
-
-          const burger = e.target.closest(
-            "[data-pp-burger], .pp-burger, #ppBurger",
-          );
-          if (burger) {
-            setTimeout(ensureMobileThemeDropdown, 60);
-            setTimeout(ensureMobileThemeDropdown, 260);
-          }
-        });
-      })();
-    </script>
-    <script src="assets/js/site-translate.js"></script>
+    <script src="assets/js/includes.js" defer></script>
+    <script src="assets/js/pp-nav.js" defer></script>
+    <script src="assets/js/pp-theme.js" defer></script>
+    <script src="assets/js/lang.js" defer></script>
+    <script src="assets/js/i18n.js" defer></script>
+    <script src="assets/js/site-translate.js" defer></script>
   </body>
 </html>
