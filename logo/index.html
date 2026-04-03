@@ -1,184 +1,1215 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Punya Yatra — Logo Pack</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Punya Yatra — Premium Logo Pack</title>
+  <meta
+    name="description"
+    content="A premium logo pack page for Punya Yatra with improved SVG logos, animated brand mark, copy buttons, and download options."
+  />
+  <meta name="theme-color" content="#d97706" />
+  <style>
+    :root{
+      --bg:#fff8eb;
+      --bg-soft:#fff3df;
+      --card:#ffffff;
+      --ink:#1f2937;
+      --muted:#6b7280;
+      --brand:#d97706;
+      --brand-2:#f59e0b;
+      --brand-3:#fbbf24;
+      --line:#edd8b8;
+      --shadow:0 16px 40px rgba(146,64,14,.12);
+      --radius:22px;
+    }
 
-<style>
-:root{
-  --bg:#fff8eb;
-  --card:#ffffff;
-  --ink:#1f2937;
-  --muted:#6b7280;
-  --brand:#d97706;
-  --brand2:#f59e0b;
-  --line:#ead7b0;
-}
+    *{box-sizing:border-box}
 
-body{
-  margin:0;
-  font-family:system-ui,Arial;
-  background:var(--bg);
-  color:var(--ink);
-}
+    html,body{
+      margin:0;
+      padding:0;
+      background:
+        radial-gradient(circle at top left, #fff7ea 0%, #fff8eb 38%, #fff4e2 100%);
+      color:var(--ink);
+      font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
 
-header{
-  padding:20px;
-  background:linear-gradient(90deg,var(--brand),var(--brand2));
-  color:white;
-}
+    body{
+      min-height:100vh;
+    }
 
-.container{
-  max-width:1100px;
-  margin:auto;
-  padding:20px;
-}
+    .hero{
+      position:relative;
+      overflow:hidden;
+      padding:38px 20px 26px;
+      background:
+        linear-gradient(135deg, rgba(217,119,6,.96), rgba(245,158,11,.93));
+      color:#fff;
+      border-bottom:1px solid rgba(255,255,255,.22);
+    }
 
-.card{
-  background:var(--card);
-  border-radius:16px;
-  padding:20px;
-  margin-bottom:20px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.08);
-}
+    .hero::before,
+    .hero::after{
+      content:"";
+      position:absolute;
+      border-radius:999px;
+      filter:blur(10px);
+      opacity:.16;
+      pointer-events:none;
+    }
 
-h2{ margin-top:0; }
+    .hero::before{
+      width:320px;
+      height:320px;
+      right:-70px;
+      top:-90px;
+      background:#fff8d5;
+    }
 
-.logo-box{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  padding:20px;
-  border:1px dashed var(--line);
-  border-radius:12px;
-  background:#fffdf7;
-  overflow:auto;
-}
+    .hero::after{
+      width:220px;
+      height:220px;
+      left:-40px;
+      bottom:-90px;
+      background:#fff4c2;
+    }
 
-button{
-  margin-top:15px;
-  background:var(--brand);
-  color:white;
-  border:none;
-  padding:10px 16px;
-  border-radius:8px;
-  cursor:pointer;
-}
+    .hero-inner{
+      position:relative;
+      max-width:1240px;
+      margin:0 auto;
+      z-index:1;
+    }
 
-button:hover{
-  background:#b45309;
-}
-</style>
+    .eyebrow{
+      display:inline-block;
+      padding:7px 12px;
+      border:1px solid rgba(255,255,255,.28);
+      border-radius:999px;
+      background:rgba(255,255,255,.12);
+      font-size:12px;
+      letter-spacing:.16em;
+      font-weight:700;
+      text-transform:uppercase;
+      backdrop-filter:blur(8px);
+    }
+
+    .hero h1{
+      margin:14px 0 10px;
+      font-size:clamp(30px,4vw,52px);
+      line-height:1.05;
+      letter-spacing:-.03em;
+    }
+
+    .hero p{
+      margin:0;
+      max-width:840px;
+      font-size:16px;
+      line-height:1.7;
+      color:rgba(255,255,255,.92);
+    }
+
+    .wrap{
+      max-width:1240px;
+      margin:0 auto;
+      padding:22px 18px 40px;
+    }
+
+    .toolbar{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      align-items:center;
+      justify-content:space-between;
+      margin:0 0 18px;
+      padding:14px 16px;
+      background:rgba(255,255,255,.82);
+      border:1px solid var(--line);
+      border-radius:18px;
+      box-shadow:0 8px 24px rgba(146,64,14,.06);
+      backdrop-filter:blur(8px);
+    }
+
+    .toolbar .left{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
+    }
+
+    .toolbar .right{
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .btn{
+      appearance:none;
+      border:none;
+      outline:none;
+      cursor:pointer;
+      border-radius:12px;
+      padding:11px 14px;
+      font-weight:700;
+      font-size:14px;
+      transition:.22s ease;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      text-decoration:none;
+    }
+
+    .btn-primary{
+      background:linear-gradient(135deg,var(--brand),var(--brand-2));
+      color:#fff;
+      box-shadow:0 10px 22px rgba(217,119,6,.25);
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-1px);
+      box-shadow:0 16px 28px rgba(217,119,6,.28);
+    }
+
+    .btn-soft{
+      background:#fff;
+      color:var(--ink);
+      border:1px solid var(--line);
+    }
+
+    .btn-soft:hover{
+      transform:translateY(-1px);
+      border-color:#e2be83;
+      background:#fffaf1;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(12,minmax(0,1fr));
+      gap:18px;
+    }
+
+    .card{
+      grid-column:span 6;
+      background:linear-gradient(180deg,#fff 0%, #fffdf8 100%);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+
+    .card.hero-card{
+      grid-column:span 12;
+    }
+
+    .card-head{
+      padding:18px 18px 10px;
+      border-bottom:1px solid rgba(237,216,184,.6);
+      background:linear-gradient(180deg, rgba(255,248,235,.8), rgba(255,255,255,0));
+    }
+
+    .card-head h2{
+      margin:0 0 6px;
+      font-size:22px;
+      letter-spacing:-.02em;
+    }
+
+    .card-head p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.65;
+      font-size:14px;
+    }
+
+    .preview{
+      padding:24px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height:260px;
+      background:
+        linear-gradient(180deg, rgba(255,253,248,.95), rgba(255,249,238,.88));
+      border-top:1px solid rgba(255,255,255,.45);
+      border-bottom:1px solid rgba(237,216,184,.5);
+      overflow:auto;
+    }
+
+    .preview.tall{
+      min-height:360px;
+    }
+
+    .preview svg{
+      max-width:100%;
+      height:auto;
+      display:block;
+    }
+
+    .meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      padding:16px 18px 18px;
+      align-items:center;
+      justify-content:space-between;
+    }
+
+    .tag-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+
+    .tag{
+      font-size:12px;
+      color:#8a5b22;
+      background:#fff4de;
+      border:1px solid #efd4a5;
+      border-radius:999px;
+      padding:6px 10px;
+      font-weight:700;
+      letter-spacing:.02em;
+    }
+
+    .actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+
+    .footer-note{
+      margin-top:18px;
+      padding:18px;
+      border:1px dashed #e8c892;
+      border-radius:18px;
+      background:#fffaf2;
+      color:#7a6551;
+      line-height:1.7;
+      font-size:14px;
+    }
+
+    .toast{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      background:#1f2937;
+      color:#fff;
+      padding:12px 14px;
+      border-radius:12px;
+      box-shadow:0 16px 34px rgba(0,0,0,.2);
+      font-size:14px;
+      opacity:0;
+      transform:translateY(10px);
+      pointer-events:none;
+      transition:.22s ease;
+      z-index:50;
+    }
+
+    .toast.show{
+      opacity:1;
+      transform:translateY(0);
+    }
+
+    @media (max-width: 980px){
+      .card,
+      .card.hero-card{
+        grid-column:span 12;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      *{
+        scroll-behavior:auto !important;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<header>
-  <h1>Punya Yatra Logo Pack 🎨</h1>
-</header>
+  <header class="hero">
+    <div class="hero-inner">
+      <span class="eyebrow">Premium Brand Pack</span>
+      <h1>Punya Yatra Logo System</h1>
+      <p>
+        Rebuilt with cleaner geometry, better typography balance, stronger sacred-travel symbolism,
+        and more polished SVG structure. This page includes improved main, horizontal, badge, icon,
+        and animated premium versions, each with copy and download actions.
+      </p>
+    </div>
+  </header>
 
-<div class="container">
+  <main class="wrap">
+    <section class="toolbar">
+      <div class="left">
+        <button class="btn btn-primary" onclick="copyAllSVGs()">Copy all SVGs</button>
+        <button class="btn btn-soft" onclick="downloadAll()">Download all SVGs</button>
+      </div>
+      <div class="right">Theme: saffron • style: ghat + river + sunrise • format: inline SVG</div>
+    </section>
 
-<!-- MAIN -->
-<div class="card">
-<h2>Main Logo</h2>
-<div class="logo-box" id="mainLogo">
-<svg viewBox="0 0 500 500">
-  <circle cx="250" cy="160" r="70" fill="#f59e0b"/>
-  <path d="M200 220 L250 150 L300 220 Z" fill="#d97706"/>
-  <rect x="230" y="220" width="40" height="60" fill="#d97706"/>
-  <path d="M120 340 Q240 320 360 340" stroke="#d97706" stroke-width="6" fill="none"/>
-  <text x="250" y="410" text-anchor="middle" font-size="36">Punya Yatra</text>
-  <text x="250" y="450" text-anchor="middle" font-size="28">पुण्य यात्रा</text>
-</svg>
-</div>
-<button onclick="copySVG('mainLogo')">Copy SVG</button>
-</div>
+    <section class="grid">
 
-<!-- EN -->
-<div class="card">
-<h2>English Logo</h2>
-<div class="logo-box" id="enLogo">
-<svg viewBox="0 0 500 400">
-  <circle cx="250" cy="130" r="60" fill="#f59e0b"/>
-  <path d="M210 180 L250 120 L290 180 Z" fill="#d97706"/>
-  <text x="250" y="320" text-anchor="middle" font-size="36">Punya Yatra</text>
-</svg>
-</div>
-<button onclick="copySVG('enLogo')">Copy SVG</button>
-</div>
+      <!-- MAIN LOGO -->
+      <article class="card hero-card">
+        <div class="card-head">
+          <h2>Main Brand Logo</h2>
+          <p>
+            Best for homepage, hero banner, printed brand sheet, and large identity usage.
+            This version combines a sunrise, temple silhouette, flowing river lines, and refined serif brand lettering.
+          </p>
+        </div>
+        <div class="preview tall" id="logo-main">
+          <svg viewBox="0 0 980 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Punya Yatra main logo">
+            <defs>
+              <linearGradient id="mainBgGlow" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#fff6df"/>
+                <stop offset="100%" stop-color="#fffdf9"/>
+              </linearGradient>
+              <radialGradient id="mainSun" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#ffd977"/>
+                <stop offset="58%" stop-color="#f59e0b"/>
+                <stop offset="100%" stop-color="#d97706"/>
+              </radialGradient>
+              <linearGradient id="mainRiver" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#f7c253"/>
+                <stop offset="50%" stop-color="#d97706"/>
+                <stop offset="100%" stop-color="#f7c253"/>
+              </linearGradient>
+              <filter id="mainShadow" x="-20%" y="-20%" width="160%" height="160%">
+                <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#a65408" flood-opacity=".16"/>
+              </filter>
+            </defs>
 
-<!-- BADGE -->
-<div class="card">
-<h2>Badge Logo</h2>
-<div class="logo-box" id="badgeLogo">
-<svg viewBox="0 0 300 300">
-  <circle cx="150" cy="150" r="140" fill="#fff8eb" stroke="#d97706" stroke-width="6"/>
-  <circle cx="150" cy="100" r="40" fill="#f59e0b"/>
-  <text x="150" y="240" text-anchor="middle">Punya Yatra</text>
-</svg>
-</div>
-<button onclick="copySVG('badgeLogo')">Copy SVG</button>
-</div>
+            <rect width="980" height="380" rx="28" fill="url(#mainBgGlow)"/>
 
-<!-- ICON -->
-<div class="card">
-<h2>Minimal Icon</h2>
-<div class="logo-box" id="iconLogo">
-<svg viewBox="0 0 200 200">
-  <circle cx="100" cy="70" r="35" fill="#f59e0b"/>
-  <text x="100" y="180" text-anchor="middle">PY</text>
-</svg>
-</div>
-<button onclick="copySVG('iconLogo')">Copy SVG</button>
-</div>
+            <g transform="translate(48,22)" filter="url(#mainShadow)">
+              <circle cx="168" cy="110" r="58" fill="url(#mainSun)"/>
+              <circle cx="168" cy="110" r="78" fill="#f59e0b" opacity=".08"/>
 
-<!-- ANIMATED -->
-<div class="card">
-<h2>Animated Premium Logo 🔥</h2>
-<div class="logo-box" id="animatedLogo">
+              <g>
+                <path d="M168 56 L181 73 L176 73 L176 89 L160 89 L160 73 L155 73 Z" fill="#8b4510"/>
+                <circle cx="168" cy="52" r="4" fill="#ffd87b"/>
+              </g>
 
-<svg viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+              <g>
+                <path d="M94 204 L126 171 L126 156 L151 130 L151 158 L168 142 L185 158 L185 130 L210 156 L210 171 L242 204 Z" fill="#b15b0c"/>
+                <path d="M114 204 L114 181 L136 162 L200 162 L222 181 L222 204 Z" fill="#d97706"/>
+                <path d="M155 204 L155 178 Q168 165 181 178 L181 204 Z" fill="#7f4008"/>
+                <path d="M132 173 L168 137 L204 173" stroke="#f8d389" stroke-width="4" fill="none" stroke-linecap="round"/>
+              </g>
 
-<style>
-.sun { animation:pulse 3s infinite; transform-origin:center; }
-@keyframes pulse {
-  0%,100%{transform:scale(1);}
-  50%{transform:scale(1.1);}
-}
-.wave{ animation:wave 6s infinite; }
-@keyframes wave{
-  0%,100%{transform:translateX(0);}
-  50%{transform:translateX(20px);}
-}
-</style>
+              <g>
+                <rect x="92" y="206" width="152" height="11" rx="3" fill="#9e500b"/>
+                <rect x="102" y="220" width="132" height="10" rx="3" fill="#bb620f"/>
+                <rect x="112" y="233" width="112" height="9" rx="3" fill="#d97706"/>
+                <rect x="121" y="245" width="94" height="8" rx="3" fill="#e7962d"/>
+              </g>
 
-<circle cx="150" cy="100" r="50" fill="#f59e0b" class="sun"/>
+              <g fill="none" stroke-linecap="round">
+                <path d="M12 286 Q90 264 168 286 T324 286" stroke="url(#mainRiver)" stroke-width="7"/>
+                <path d="M8 307 Q88 287 168 307 T328 307" stroke="#eca223" stroke-width="4.8" opacity=".9"/>
+                <path d="M20 324 Q94 308 168 324 T316 324" stroke="#d97706" stroke-width="3" opacity=".72"/>
+              </g>
+            </g>
 
-<path d="M120 150 L150 100 L180 150 Z" fill="#d97706"/>
-<rect x="135" y="150" width="30" height="40" fill="#d97706"/>
+            <g transform="translate(420,92)">
+              <text
+                x="0"
+                y="82"
+                font-size="78"
+                font-weight="700"
+                fill="#7b4310"
+                style="font-family: Georgia, 'Times New Roman', serif; letter-spacing: 1px;"
+              >
+                Punya Yatra
+              </text>
 
-<path d="M50 220 Q150 200 250 220 T450 220" stroke="#d97706" stroke-width="5" fill="none" class="wave"/>
+              <text
+                x="2"
+                y="122"
+                font-size="18"
+                font-weight="700"
+                fill="#9a5f1f"
+                style="font-family: Inter, Arial, sans-serif; letter-spacing: 5px;"
+              >
+                SACRED ROUTES • SPIRITUAL JOURNEYS
+              </text>
 
-<text x="300" y="140" font-size="40" fill="#1f2937">Punya Yatra</text>
-<text x="300" y="180" font-size="24" fill="#6b7280">पुण्य यात्रा</text>
+              <g transform="translate(0,152)">
+                <path
+                  d="M0 14 C42 14 50 0 78 0 C106 0 114 14 156 14 C198 14 206 0 234 0 C262 0 270 14 312 14 C354 14 362 0 390 0 C418 0 426 14 468 14"
+                  fill="none"
+                  stroke="#d97706"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                />
+                <circle cx="0" cy="14" r="4" fill="#f59e0b"/>
+                <circle cx="468" cy="14" r="4" fill="#f59e0b"/>
+              </g>
 
-</svg>
+              <text
+                x="0"
+                y="212"
+                font-size="22"
+                fill="#6a5845"
+                style="font-family: Inter, Arial, sans-serif;"
+              >
+                River, sunrise, ghat, and pilgrimage identity
+              </text>
+            </g>
+          </svg>
+        </div>
+        <div class="meta">
+          <div class="tag-row">
+            <span class="tag">Primary logo</span>
+            <span class="tag">Hero ready</span>
+            <span class="tag">Print friendly</span>
+          </div>
+          <div class="actions">
+            <button class="btn btn-primary" onclick="copySVG('logo-main')">Copy SVG</button>
+            <button class="btn btn-soft" onclick="downloadSVG('logo-main','punyayatra-logo-main.svg')">Download SVG</button>
+          </div>
+        </div>
+      </article>
 
-</div>
-<button onclick="copySVG('animatedLogo')">Copy SVG</button>
-</div>
+      <!-- HORIZONTAL LOGO -->
+      <article class="card">
+        <div class="card-head">
+          <h2>Horizontal Header Logo</h2>
+          <p>Built for top nav, site header, blog masthead, and narrow layout branding.</p>
+        </div>
+        <div class="preview" id="logo-horizontal">
+          <svg viewBox="0 0 760 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Punya Yatra horizontal logo">
+            <defs>
+              <radialGradient id="hSun" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#ffe08a"/>
+                <stop offset="60%" stop-color="#f59e0b"/>
+                <stop offset="100%" stop-color="#d97706"/>
+              </radialGradient>
+              <linearGradient id="hRiver" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#f8c65c"/>
+                <stop offset="50%" stop-color="#d97706"/>
+                <stop offset="100%" stop-color="#f8c65c"/>
+              </linearGradient>
+            </defs>
 
-</div>
+            <g transform="translate(22,14)">
+              <circle cx="96" cy="70" r="34" fill="url(#hSun)"/>
+              <path d="M96 34 L106 48 L102 48 L102 60 L90 60 L90 48 L86 48 Z" fill="#8b4510"/>
+              <circle cx="96" cy="31" r="3" fill="#ffd87b"/>
 
-<script>
-function copySVG(id){
-  const svg = document.querySelector("#"+id+" svg");
-  navigator.clipboard.writeText(svg.outerHTML);
-  alert("SVG copied!");
-}
-</script>
+              <path d="M52 128 L71 108 L71 96 L86 79 L86 97 L96 88 L106 97 L106 79 L121 96 L121 108 L140 128 Z" fill="#b45f0d"/>
+              <path d="M65 128 L65 113 L79 101 L113 101 L127 113 L127 128 Z" fill="#d97706"/>
+              <path d="M88 128 L88 111 Q96 103 104 111 L104 128 Z" fill="#7f4008"/>
 
+              <rect x="50" y="130" width="92" height="7" rx="2.5" fill="#a5560c"/>
+              <rect x="58" y="140" width="76" height="6" rx="2.5" fill="#c26610"/>
+              <rect x="65" y="149" width="62" height="5" rx="2.5" fill="#de8620"/>
+
+              <path d="M8 174 Q50 162 96 174 T184 174" stroke="url(#hRiver)" stroke-width="5.5" fill="none" stroke-linecap="round"/>
+              <path d="M14 188 Q54 177 96 188 T178 188" stroke="#d97706" stroke-width="2.8" fill="none" stroke-linecap="round" opacity=".8"/>
+            </g>
+
+            <g transform="translate(244,50)">
+              <text
+                x="0"
+                y="58"
+                font-size="54"
+                font-weight="700"
+                fill="#7b4310"
+                style="font-family: Georgia, 'Times New Roman', serif;"
+              >
+                Punya Yatra
+              </text>
+              <text
+                x="2"
+                y="92"
+                font-size="14"
+                font-weight="700"
+                fill="#996028"
+                style="font-family: Inter, Arial, sans-serif; letter-spacing: 3.3px;"
+              >
+                SACRED TRAVEL • DEVOTIONAL DESTINATIONS
+              </text>
+              <path d="M0 114 H324" stroke="#e4bc83" stroke-width="2"/>
+            </g>
+          </svg>
+        </div>
+        <div class="meta">
+          <div class="tag-row">
+            <span class="tag">Navbar</span>
+            <span class="tag">Header</span>
+            <span class="tag">Compact layout</span>
+          </div>
+          <div class="actions">
+            <button class="btn btn-primary" onclick="copySVG('logo-horizontal')">Copy SVG</button>
+            <button class="btn btn-soft" onclick="downloadSVG('logo-horizontal','punyayatra-logo-horizontal.svg')">Download SVG</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- BADGE LOGO -->
+      <article class="card">
+        <div class="card-head">
+          <h2>Circular Badge Logo</h2>
+          <p>Best for favicon previews, profile image use, stamps, app launcher graphics, and centered branding.</p>
+        </div>
+        <div class="preview" id="logo-badge">
+          <svg viewBox="0 0 360 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Punya Yatra badge logo">
+            <defs>
+              <radialGradient id="bSun" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#ffe08a"/>
+                <stop offset="60%" stop-color="#f59e0b"/>
+                <stop offset="100%" stop-color="#d97706"/>
+              </radialGradient>
+              <linearGradient id="bRing" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#f6cb78"/>
+                <stop offset="100%" stop-color="#d97706"/>
+              </linearGradient>
+            </defs>
+
+            <circle cx="180" cy="180" r="164" fill="#fffaf1" stroke="url(#bRing)" stroke-width="8"/>
+            <circle cx="180" cy="180" r="144" fill="none" stroke="#ecd4aa" stroke-width="2" stroke-dasharray="2 8"/>
+
+            <circle cx="180" cy="108" r="44" fill="url(#bSun)"/>
+            <circle cx="180" cy="108" r="61" fill="#f59e0b" opacity=".08"/>
+
+            <path d="M180 63 L191 78 L187 78 L187 92 L173 92 L173 78 L169 78 Z" fill="#8b4510"/>
+            <circle cx="180" cy="60" r="3.5" fill="#ffd87b"/>
+
+            <path d="M131 182 L151 160 L151 148 L166 131 L166 149 L180 136 L194 149 L194 131 L209 148 L209 160 L229 182 Z" fill="#b35e0d"/>
+            <path d="M144 182 L144 166 L158 154 L202 154 L216 166 L216 182 Z" fill="#d97706"/>
+            <path d="M170 182 L170 165 Q180 156 190 165 L190 182 Z" fill="#7f4008"/>
+
+            <rect x="130" y="186" width="100" height="8" rx="3" fill="#a5560c"/>
+            <rect x="138" y="197" width="84" height="7" rx="3" fill="#bf6610"/>
+            <rect x="146" y="207" width="68" height="6" rx="3" fill="#df8b25"/>
+
+            <path d="M82 242 Q132 229 180 242 T278 242" stroke="#d97706" stroke-width="5.2" fill="none" stroke-linecap="round"/>
+            <path d="M88 255 Q132 244 180 255 T272 255" stroke="#f0ab2f" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+            <text
+              x="180"
+              y="292"
+              text-anchor="middle"
+              font-size="25"
+              font-weight="700"
+              fill="#7b4310"
+              style="font-family: Georgia, 'Times New Roman', serif;"
+            >
+              Punya Yatra
+            </text>
+          </svg>
+        </div>
+        <div class="meta">
+          <div class="tag-row">
+            <span class="tag">Badge</span>
+            <span class="tag">Profile</span>
+            <span class="tag">Icon preview</span>
+          </div>
+          <div class="actions">
+            <button class="btn btn-primary" onclick="copySVG('logo-badge')">Copy SVG</button>
+            <button class="btn btn-soft" onclick="downloadSVG('logo-badge','punyayatra-logo-badge.svg')">Download SVG</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- ICON LOGO -->
+      <article class="card">
+        <div class="card-head">
+          <h2>Minimal App Icon</h2>
+          <p>Sharper, more usable at tiny sizes. Ideal for favicon conversion, shortcuts, mobile app tile, and button iconography.</p>
+        </div>
+        <div class="preview" id="logo-icon">
+          <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Punya Yatra icon logo">
+            <defs>
+              <radialGradient id="iSun" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#ffe08c"/>
+                <stop offset="60%" stop-color="#f59e0b"/>
+                <stop offset="100%" stop-color="#d97706"/>
+              </radialGradient>
+            </defs>
+
+            <rect width="240" height="240" rx="48" fill="#fff9f0"/>
+            <circle cx="120" cy="74" r="30" fill="url(#iSun)"/>
+            <circle cx="120" cy="74" r="46" fill="#f59e0b" opacity=".08"/>
+
+            <path d="M120 44 L129 56 L126 56 L126 67 L114 67 L114 56 L111 56 Z" fill="#8b4510"/>
+            <circle cx="120" cy="41" r="2.8" fill="#ffd87b"/>
+
+            <path d="M85 126 L100 110 L100 101 L112 88 L112 102 L120 95 L128 102 L128 88 L140 101 L140 110 L155 126 Z" fill="#b35f0d"/>
+            <path d="M96 126 L96 114 L107 104 L133 104 L144 114 L144 126 Z" fill="#d97706"/>
+            <path d="M113 126 L113 113 Q120 107 127 113 L127 126 Z" fill="#7f4008"/>
+
+            <rect x="84" y="129" width="72" height="6" rx="2.5" fill="#a6570c"/>
+            <rect x="90" y="138" width="60" height="5" rx="2.5" fill="#c66c12"/>
+            <path d="M50 164 Q84 154 120 164 T190 164" stroke="#d97706" stroke-width="4.4" fill="none" stroke-linecap="round"/>
+
+            <text
+              x="120"
+              y="202"
+              text-anchor="middle"
+              font-size="24"
+              font-weight="800"
+              fill="#7b4310"
+              style="font-family: Inter, Arial, sans-serif; letter-spacing: 1px;"
+            >
+              PY
+            </text>
+          </svg>
+        </div>
+        <div class="meta">
+          <div class="tag-row">
+            <span class="tag">Icon</span>
+            <span class="tag">Favicon base</span>
+            <span class="tag">Tiny size ready</span>
+          </div>
+          <div class="actions">
+            <button class="btn btn-primary" onclick="copySVG('logo-icon')">Copy SVG</button>
+            <button class="btn btn-soft" onclick="downloadSVG('logo-icon','punyayatra-logo-icon.svg')">Download SVG</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- MONOGRAM -->
+      <article class="card">
+        <div class="card-head">
+          <h2>Monogram Mark</h2>
+          <p>A cleaner branded symbol for smaller placements where full wording is not needed.</p>
+        </div>
+        <div class="preview" id="logo-monogram">
+          <svg viewBox="0 0 360 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Punya Yatra monogram logo">
+            <defs>
+              <linearGradient id="mFill" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#f59e0b"/>
+                <stop offset="100%" stop-color="#b95b0e"/>
+              </linearGradient>
+            </defs>
+
+            <rect width="360" height="360" rx="42" fill="#fffaf1"/>
+            <circle cx="180" cy="96" r="40" fill="url(#mFill)" opacity=".95"/>
+            <path d="M180 52 L191 67 L187 67 L187 82 L173 82 L173 67 L169 67 Z" fill="#824109"/>
+            <circle cx="180" cy="49" r="3.2" fill="#ffd87b"/>
+
+            <path d="M95 226 Q136 209 180 226 T265 226" stroke="#d97706" stroke-width="6" fill="none" stroke-linecap="round"/>
+            <path d="M105 244 Q142 230 180 244 T255 244" stroke="#eda626" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+
+            <text
+              x="180"
+              y="175"
+              text-anchor="middle"
+              font-size="82"
+              font-weight="800"
+              fill="#7b4310"
+              style="font-family: Georgia, 'Times New Roman', serif; letter-spacing: 2px;"
+            >
+              PY
+            </text>
+            <text
+              x="180"
+              y="286"
+              text-anchor="middle"
+              font-size="18"
+              font-weight="700"
+              fill="#9a6228"
+              style="font-family: Inter, Arial, sans-serif; letter-spacing: 4px;"
+            >
+              PUNYA YATRA
+            </text>
+          </svg>
+        </div>
+        <div class="meta">
+          <div class="tag-row">
+            <span class="tag">Monogram</span>
+            <span class="tag">Compact brand mark</span>
+            <span class="tag">Profile symbol</span>
+          </div>
+          <div class="actions">
+            <button class="btn btn-primary" onclick="copySVG('logo-monogram')">Copy SVG</button>
+            <button class="btn btn-soft" onclick="downloadSVG('logo-monogram','punyayatra-logo-monogram.svg')">Download SVG</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- ANIMATED -->
+      <article class="card hero-card">
+        <div class="card-head">
+          <h2>Animated Premium Logo</h2>
+          <p>
+            A rebuilt premium animated version with softer light, rotating aura rings, flowing river motion,
+            floating particles, and a more elegant text block. Ideal for hero areas, launch screens, and splash sections.
+          </p>
+        </div>
+        <div class="preview tall" id="logo-animated">
+          <svg
+            viewBox="0 0 1200 420"
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+            aria-label="Punya Yatra animated premium logo"
+          >
+            <defs>
+              <linearGradient id="abgGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#fffaf0" />
+                <stop offset="55%" stop-color="#fff3dd" />
+                <stop offset="100%" stop-color="#ffe7bf" />
+              </linearGradient>
+
+              <radialGradient id="asunGrad" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#ffd56a" />
+                <stop offset="55%" stop-color="#f59e0b" />
+                <stop offset="100%" stop-color="#d97706" />
+              </radialGradient>
+
+              <linearGradient id="ariverGrad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#f6b64a" />
+                <stop offset="50%" stop-color="#d97706" />
+                <stop offset="100%" stop-color="#f6b64a" />
+              </linearGradient>
+
+              <linearGradient id="agoldGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#ffd97a" />
+                <stop offset="50%" stop-color="#f59e0b" />
+                <stop offset="100%" stop-color="#c96a08" />
+              </linearGradient>
+
+              <filter id="asoftShadow" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#b45309" flood-opacity="0.18" />
+              </filter>
+
+              <filter id="asunGlow" x="-40%" y="-40%" width="180%" height="180%">
+                <feGaussianBlur stdDeviation="18" result="blur" />
+                <feMerge>
+                  <feMergeNode in="blur" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+
+              <filter id="atextGlow" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#f59e0b" flood-opacity="0.22" />
+              </filter>
+
+              <clipPath id="asunClip">
+                <circle cx="250" cy="146" r="60" />
+              </clipPath>
+
+              <style>
+                .brand-text {
+                  font-family: Georgia, "Times New Roman", serif;
+                  letter-spacing: 1px;
+                }
+
+                .sub-text {
+                  font-family: "Segoe UI", Arial, sans-serif;
+                  letter-spacing: 4px;
+                }
+
+                .sun-pulse {
+                  transform-origin: 250px 146px;
+                  animation: sunPulse 4.5s ease-in-out infinite;
+                }
+
+                .ray-spin {
+                  transform-origin: 250px 146px;
+                  animation: raySpin 20s linear infinite;
+                }
+
+                .ray-breathe {
+                  transform-origin: 250px 146px;
+                  animation: rayBreathe 4s ease-in-out infinite;
+                }
+
+                .river-wave-1 {
+                  animation: waveLeft 8s linear infinite;
+                }
+
+                .river-wave-2 {
+                  animation: waveRight 10s linear infinite;
+                }
+
+                .river-wave-3 {
+                  animation: waveLeft 12s linear infinite;
+                }
+
+                .particle-1 { animation: floatUp 7s ease-in-out infinite; }
+                .particle-2 { animation: floatUp 8.5s ease-in-out infinite 1.1s; }
+                .particle-3 { animation: floatUp 6.5s ease-in-out infinite 0.6s; }
+                .particle-4 { animation: floatUp 9s ease-in-out infinite 2.1s; }
+                .particle-5 { animation: floatUp 7.8s ease-in-out infinite 1.7s; }
+                .particle-6 { animation: floatUp 8.8s ease-in-out infinite 0.9s; }
+
+                .shine-bar {
+                  animation: shineSweep 5.2s ease-in-out infinite;
+                }
+
+                .logo-rise {
+                  animation: riseIn 1.4s ease-out both;
+                  transform-origin: center;
+                }
+
+                .title-fade {
+                  animation: fadeLift 1.8s ease-out both 0.2s;
+                }
+
+                .tagline-fade {
+                  animation: fadeLift 2.2s ease-out both 0.55s;
+                }
+
+                @keyframes sunPulse {
+                  0%, 100% { transform: scale(1); opacity: 0.98; }
+                  50% { transform: scale(1.05); opacity: 1; }
+                }
+
+                @keyframes raySpin {
+                  from { transform: rotate(0deg); }
+                  to { transform: rotate(360deg); }
+                }
+
+                @keyframes rayBreathe {
+                  0%, 100% { opacity: 0.26; transform: scale(1); }
+                  50% { opacity: 0.5; transform: scale(1.06); }
+                }
+
+                @keyframes waveLeft {
+                  0% { transform: translateX(0); }
+                  50% { transform: translateX(-18px); }
+                  100% { transform: translateX(0); }
+                }
+
+                @keyframes waveRight {
+                  0% { transform: translateX(0); }
+                  50% { transform: translateX(16px); }
+                  100% { transform: translateX(0); }
+                }
+
+                @keyframes floatUp {
+                  0% { transform: translateY(8px); opacity: 0; }
+                  15% { opacity: 0.65; }
+                  50% { transform: translateY(-8px); opacity: 0.95; }
+                  100% { transform: translateY(-24px); opacity: 0; }
+                }
+
+                @keyframes shineSweep {
+                  0% { transform: translateX(-360px) skewX(-22deg); opacity: 0; }
+                  12% { opacity: 0; }
+                  20% { opacity: 0.28; }
+                  38% { opacity: 0; }
+                  100% { transform: translateX(860px) skewX(-22deg); opacity: 0; }
+                }
+
+                @keyframes riseIn {
+                  0% { opacity: 0; transform: translateY(18px) scale(0.98); }
+                  100% { opacity: 1; transform: translateY(0) scale(1); }
+                }
+
+                @keyframes fadeLift {
+                  0% { opacity: 0; transform: translateY(12px); }
+                  100% { opacity: 1; transform: translateY(0); }
+                }
+
+                @media (prefers-reduced-motion: reduce) {
+                  .sun-pulse,
+                  .ray-spin,
+                  .ray-breathe,
+                  .river-wave-1,
+                  .river-wave-2,
+                  .river-wave-3,
+                  .particle-1,
+                  .particle-2,
+                  .particle-3,
+                  .particle-4,
+                  .particle-5,
+                  .particle-6,
+                  .shine-bar,
+                  .logo-rise,
+                  .title-fade,
+                  .tagline-fade {
+                    animation: none !important;
+                  }
+                }
+              </style>
+            </defs>
+
+            <rect width="1200" height="420" rx="30" fill="url(#abgGrad)" />
+            <rect x="18" y="18" width="1164" height="384" rx="24" fill="none" stroke="#eab676" stroke-opacity="0.45" />
+
+            <g class="logo-rise" filter="url(#asoftShadow)">
+              <g class="ray-spin ray-breathe" opacity="0.38">
+                <circle cx="250" cy="146" r="88" fill="none" stroke="#f8bb4b" stroke-width="2" stroke-dasharray="6 10" />
+                <circle cx="250" cy="146" r="103" fill="none" stroke="#f3a51c" stroke-width="1.6" stroke-dasharray="3 14" />
+              </g>
+
+              <circle cx="250" cy="146" r="82" fill="#f59e0b" opacity="0.14" filter="url(#asunGlow)" />
+              <circle cx="250" cy="146" r="60" class="sun-pulse" fill="url(#asunGrad)" filter="url(#asunGlow)" />
+
+              <g clip-path="url(#asunClip)">
+                <rect class="shine-bar" x="-180" y="58" width="90" height="176" fill="#fff6d6" opacity="0.45" />
+              </g>
+
+              <g>
+                <path
+                  d="M250 104
+                     L264 122
+                     L258 122
+                     L258 136
+                     L242 136
+                     L242 122
+                     L236 122 Z"
+                  fill="#9a4f0a"
+                  opacity="0.95"
+                />
+                <circle cx="250" cy="101" r="4.8" fill="#ffd56a" />
+              </g>
+
+              <g>
+                <path
+                  d="M168 230
+                     L206 191
+                     L206 175
+                     L235 145
+                     L235 176
+                     L250 161
+                     L265 176
+                     L265 145
+                     L294 175
+                     L294 191
+                     L332 230
+                     Z"
+                  fill="#b65c0c"
+                />
+                <path
+                  d="M193 230
+                     L193 202
+                     L217 180
+                     L283 180
+                     L307 202
+                     L307 230 Z"
+                  fill="#d97706"
+                />
+                <path
+                  d="M235 230
+                     L235 198
+                     Q250 183 265 198
+                     L265 230 Z"
+                  fill="#7c3f08"
+                />
+                <path d="M208 192 L250 150 L292 192" fill="none" stroke="#f6c262" stroke-width="4" stroke-linecap="round" opacity="0.7" />
+                <path d="M215 206 H285" fill="none" stroke="#f7d28a" stroke-width="3" opacity="0.45" />
+              </g>
+
+              <g>
+                <rect x="166" y="232" width="168" height="12" rx="3" fill="#a8550b" />
+                <rect x="178" y="247" width="144" height="11" rx="3" fill="#bc6410" />
+                <rect x="189" y="261" width="122" height="10" rx="3" fill="#d97706" />
+                <rect x="199" y="274" width="102" height="9" rx="3" fill="#e08c25" />
+              </g>
+
+              <g fill="none" stroke-linecap="round">
+                <path
+                  class="river-wave-1"
+                  d="M85 316
+                     Q150 297 215 316
+                     T345 316
+                     T475 316"
+                  stroke="url(#ariverGrad)"
+                  stroke-width="7"
+                  opacity="0.95"
+                />
+                <path
+                  class="river-wave-2"
+                  d="M80 338
+                     Q145 320 210 338
+                     T340 338
+                     T470 338"
+                  stroke="#f2a41f"
+                  stroke-width="5"
+                  opacity="0.82"
+                />
+                <path
+                  class="river-wave-3"
+                  d="M92 356
+                     Q158 340 224 356
+                     T356 356
+                     T488 356"
+                  stroke="#d97706"
+                  stroke-width="3.5"
+                  opacity="0.7"
+                />
+              </g>
+
+              <g fill="#f8c45f">
+                <circle class="particle-1" cx="124" cy="290" r="3.5" />
+                <circle class="particle-2" cx="170" cy="304" r="2.8" />
+                <circle class="particle-3" cx="214" cy="292" r="3.2" />
+                <circle class="particle-4" cx="298" cy="300" r="2.7" />
+                <circle class="particle-5" cx="352" cy="290" r="3.4" />
+                <circle class="particle-6" cx="404" cy="304" r="2.9" />
+              </g>
+            </g>
+
+            <g opacity="0.95">
+              <line x1="520" y1="80" x2="520" y2="340" stroke="url(#agoldGrad)" stroke-width="3" />
+              <line x1="530" y1="96" x2="530" y2="324" stroke="#f7cd76" stroke-width="1.3" opacity="0.6" />
+            </g>
+
+            <g transform="translate(590, 96)">
+              <text
+                class="brand-text title-fade"
+                x="0"
+                y="82"
+                font-size="74"
+                fill="#7c3f08"
+                filter="url(#atextGlow)"
+                font-weight="700"
+              >
+                Punya Yatra
+              </text>
+
+              <text
+                class="sub-text tagline-fade"
+                x="2"
+                y="128"
+                font-size="18"
+                fill="#9a5a12"
+                opacity="0.9"
+                font-weight="600"
+              >
+                SPIRITUAL ROUTES • SACRED JOURNEYS • DIVINE DESTINATIONS
+              </text>
+
+              <g class="tagline-fade" transform="translate(0, 160)">
+                <path d="M0 10 H440" stroke="#e7b163" stroke-width="1.5" opacity="0.8" />
+                <circle cx="0" cy="10" r="4" fill="#d97706" />
+                <circle cx="440" cy="10" r="4" fill="#d97706" />
+              </g>
+
+              <text
+                class="tagline-fade"
+                x="0"
+                y="215"
+                font-size="24"
+                fill="#5f4a32"
+                font-family="Segoe UI, Arial, sans-serif"
+              >
+                Ghat • River • Sunrise identity system
+              </text>
+
+              <text
+                class="tagline-fade"
+                x="0"
+                y="255"
+                font-size="19"
+                fill="#7a6853"
+                font-family="Segoe UI, Arial, sans-serif"
+              >
+                Premium animated SVG for header, hero, and brand launch screens
+              </text>
+
+              <g class="tagline-fade" transform="translate(0, 286)">
+                <path
+                  d="M0 16
+                     C44 16 54 0 82 0
+                     C110 0 118 16 164 16
+                     C210 16 220 0 248 0
+                     C276 0 286 16 332 16
+                     C378 16 388 0 416 0
+                     C444 0 454 16 498 16"
+                  fill="none"
+                  stroke="url(#agoldGrad)"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                />
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div class="meta">
+          <div class="tag-row">
+            <span class="tag">Animated</span>
+            <span class="tag">Hero section</span>
+            <span class="tag">Premium presentation</span>
+          </div>
+          <div class="actions">
+            <button class="btn btn-primary" onclick="copySVG('logo-animated')">Copy SVG</button>
+            <button class="btn btn-soft" onclick="downloadSVG('logo-animated','punyayatra-logo-animated.svg')">Download SVG</button>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="footer-note">
+      Suggested use:
+      main logo for homepage and social banners, horizontal logo for navbar, badge for profile and seals,
+      icon for favicon conversion, and monogram for compact placements. The animated version is best on
+      a landing page hero or opening section.
+    </section>
+  </main>
+
+  <div class="toast" id="toast">Copied</div>
+
+  <script>
+    function getSVGString(containerId){
+      const svg = document.querySelector("#" + containerId + " svg");
+      return svg ? svg.outerHTML : "";
+    }
+
+    async function copySVG(containerId){
+      const text = getSVGString(containerId);
+      if(!text) return;
+      await navigator.clipboard.writeText(text);
+      showToast("SVG copied");
+    }
+
+    async function copyAllSVGs(){
+      const ids = [
+        "logo-main",
+        "logo-horizontal",
+        "logo-badge",
+        "logo-icon",
+        "logo-monogram",
+        "logo-animated"
+      ];
+      const all = ids.map(id => `<!-- ${id} -->\n` + getSVGString(id)).join("\n\n");
+      await navigator.clipboard.writeText(all);
+      showToast("All SVGs copied");
+    }
+
+    function downloadSVG(containerId, filename){
+      const svgText = getSVGString(containerId);
+      if(!svgText) return;
+      const blob = new Blob([svgText], { type: "image/svg+xml;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+      showToast("Downloaded " + filename);
+    }
+
+    function downloadAll(){
+      const files = [
+        ["logo-main","punyayatra-logo-main.svg"],
+        ["logo-horizontal","punyayatra-logo-horizontal.svg"],
+        ["logo-badge","punyayatra-logo-badge.svg"],
+        ["logo-icon","punyayatra-logo-icon.svg"],
+        ["logo-monogram","punyayatra-logo-monogram.svg"],
+        ["logo-animated","punyayatra-logo-animated.svg"]
+      ];
+      files.forEach((item, index) => {
+        setTimeout(() => downloadSVG(item[0], item[1]), index * 180);
+      });
+    }
+
+    function showToast(message){
+      const toast = document.getElementById("toast");
+      toast.textContent = message;
+      toast.classList.add("show");
+      clearTimeout(showToast._t);
+      showToast._t = setTimeout(() => {
+        toast.classList.remove("show");
+      }, 1800);
+    }
+  </script>
 </body>
 </html>
