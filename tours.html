@@ -630,7 +630,8 @@
 
           wrap.innerHTML = state.itinerary
             .map((loc, index) => {
-              const title = getLocationTitle(loc);
+              const title = getLocationTitle(loc).title;
+              console.table(loc);
               const sub = getLocationSubtitle(loc);
 
               return `
