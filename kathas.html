@@ -1,78 +1,226 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Kathas</title>
-    <link rel="stylesheet" href="assets/css/base.css" />
-    <link rel="stylesheet" href="assets/css/popout.css?v=99" />
-    <link rel="stylesheet" href="assets/css/pp-nav.css" />
-  </head>
-  <body data-collection="kathas" data-json="data/master/kathas.json">
-    <div data-include="includes/header.html"></div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kathas</title>
 
-    <main class="pp-container">
-      <section class="pp-card pp-pad" style="margin-top:12px">
-        <div class="pp-split">
-          <div>
-            <div class="pp-mini" id="cpStatus">Loading…</div>
-            <h1 class="pp-h1" id="cpTitle"></h1>
-            <div class="pp-muted" id="cpSubtitle"></div>
-          </div>
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/popout.css?v=99" />
+  <link rel="stylesheet" href="assets/css/pp-nav.css" />
 
-          <div class="pp-actions">
-            <button class="pp-btn pp-btn--ghost" id="cpLang" type="button">HI</button>
-          </div>
-        </div>
+  <style>
+    .katha-card{overflow:hidden;border-radius:18px}
+    .katha-slider{position:relative;height:210px;overflow:hidden;background:#fff4d6}
+    .katha-slide{display:none;width:100%;height:100%;object-fit:cover}
+    .katha-slide.active{display:block}
+    .slide-btn{
+      position:absolute;top:50%;transform:translateY(-50%);
+      border:0;border-radius:999px;background:rgba(0,0,0,.45);
+      color:#fff;width:34px;height:34px;cursor:pointer
+    }
+    .slide-prev{left:10px}.slide-next{right:10px}
 
-        <div class="pp-actions" style="margin-top:12px">
-          <input
-            id="cpQuery"
-            class="pp-input"
-            style="flex:1"
-            placeholder="Type 3+ characters to search…"
-          />
-          <select id="cpTagFilter" class="pp-input">
-            <option value="">All tags</option>
-          </select>
-          <button class="pp-btn" id="cpSearchBtn" type="button">Search</button>
-          <button class="pp-btn pp-btn--ghost" id="cpClearBtn" type="button">Clear</button>
-        </div>
-      </section>
+    .katha-body{padding:14px}
+    .katha-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+    .katha-tag{font-size:12px;padding:4px 8px;border-radius:999px;background:#fff4d6;color:#92400e}
 
-      <section class="pp-card pp-pad" style="margin-top:12px">
-        <div class="pp-h2">Featured</div>
-        <div class="pp-grid" id="cpFeatured" style="margin-top:12px"></div>
-      </section>
+    .katha-meta{margin-top:10px;font-size:14px;color:#6b4b18}
 
-      <section class="pp-card pp-pad" style="margin-top:12px">
-        <div class="pp-h2">All Kathas</div>
-        <div class="pp-grid" id="cpList" style="margin-top:12px"></div>
-      </section>
-    </main>
+    .modal-backdrop{
+      position:fixed;inset:0;background:rgba(0,0,0,.6);
+      display:none;align-items:center;justify-content:center;z-index:9999;padding:20px
+    }
+    .modal-backdrop.show{display:flex}
+    .modal-box{
+      background:#fffaf0;border-radius:20px;padding:20px;
+      max-width:900px;width:100%;max-height:90vh;overflow:auto
+    }
+  </style>
+</head>
 
-    <div data-include="includes/footer.html"></div>
+<body data-json="data/master/kathas.json">
 
-    <script>
-      window.__CP_PAGE_TITLE = {
-        "en": "Kathas",
-        "hi": "कथाएँ"
+<div data-include="includes/header.html"></div>
+
+<main class="pp-container">
+
+<section class="pp-card pp-pad" style="margin-top:12px">
+  <div class="pp-split">
+    <div>
+      <div id="cpStatus">Loading…</div>
+      <h1>Kathas</h1>
+      <div>Ramkatha, Bhagwat, Shiv Mahapuran and more</div>
+    </div>
+  </div>
+
+  <div class="pp-actions" style="margin-top:12px">
+    <input id="cpQuery" class="pp-input" placeholder="Search..." />
+    <select id="cpTagFilter" class="pp-input"><option value="">All tags</option></select>
+    <button id="cpSearchBtn" class="pp-btn">Search</button>
+    <button id="cpClearBtn" class="pp-btn pp-btn--ghost">Clear</button>
+  </div>
+</section>
+
+<section class="pp-card pp-pad" style="margin-top:12px">
+  <h2>Featured</h2>
+  <div id="cpFeatured" class="pp-grid"></div>
+</section>
+
+<section class="pp-card pp-pad" style="margin-top:12px">
+  <h2>All Kathas</h2>
+  <div id="cpList" class="pp-grid"></div>
+</section>
+
+</main>
+
+<div class="modal-backdrop" id="modal">
+  <div class="modal-box">
+    <button onclick="closeModal()" class="pp-btn">Close</button>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<div data-include="includes/footer.html"></div>
+
+<script>
+const DATA_URL = document.body.dataset.json;
+
+const els = {
+  list: document.getElementById("cpList"),
+  featured: document.getElementById("cpFeatured"),
+  status: document.getElementById("cpStatus"),
+  query: document.getElementById("cpQuery"),
+  tag: document.getElementById("cpTagFilter")
 };
-      window.__CP_PAGE_SUB = {
-        "en": "Ramkatha, Bhagwat Katha, Shiv Mahapuran and more.",
-        "hi": "रामकथा, भागवत कथा, शिवमहापुराण आदि।"
-};
-    </script>
 
-    <script src="assets/js/includes.js" defer></script>
-    <script src="assets/js/pp-nav.js" defer></script>
-    <script src="assets/js/pp-theme.js" defer></script>
-    <script src="assets/js/site-config.js" defer></script>
-    <script src="assets/js/lang.js" defer></script>
-    <script src="assets/js/render.js" defer></script>
-    <script src="assets/js/popout.js" defer></script>
-    <script src="assets/js/content-pages.js" defer></script>
-    <script src="assets/js/i18n.js" defer></script>
-    <script src="assets/js/site-translate.js" defer></script>
-  </body>
+let ALL = [];
+
+const text = v => (typeof v === "string" ? v : v?.en || "");
+
+const safe = s => String(s||"").replace(/[&<>"']/g, m=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#039;"}[m]));
+
+function sliderHTML(item){
+  const imgs = item.images || [];
+  return `
+  <div class="katha-slider">
+    ${imgs.map((src,i)=>`
+      <img src="${safe(src)}" class="katha-slide ${i==0?'active':''}">
+    `).join("")}
+    ${imgs.length>1?`
+      <button class="slide-btn slide-prev" data-dir="-1">‹</button>
+      <button class="slide-btn slide-next" data-dir="1">›</button>
+    `:""}
+  </div>`;
+}
+
+function detailsHTML(item){
+  return `
+    <div class="katha-meta">
+      <div><b>Type:</b> ${item.kathaType}</div>
+      <div><b>Duration:</b> ${item.durationDays} day(s)</div>
+    </div>
+    <p style="margin-top:10px">${safe(text(item.description))}</p>
+  `;
+}
+
+function card(item){
+  return `
+  <div class="pp-card katha-card">
+    ${sliderHTML(item)}
+    <div class="katha-body">
+      <h3>${safe(text(item.title))}</h3>
+      <p>${safe(text(item.summary))}</p>
+
+      ${detailsHTML(item)}
+
+      <div class="katha-tags">
+        ${(item.tags||[]).map(t=>`<span class="katha-tag">${t}</span>`).join("")}
+      </div>
+
+      <div class="pp-actions" style="margin-top:12px">
+        <button class="pp-btn" onclick="openModal('${item.id}')">View</button>
+        <a class="pp-btn pp-btn--ghost"
+           target="_blank"
+           href="https://wa.me/919335874326?text=${encodeURIComponent(text(item.whatsappText))}">
+           ${safe(text(item.ctaText))}
+        </a>
+      </div>
+    </div>
+  </div>`;
+}
+
+function render(items){
+  els.list.innerHTML = items.map(card).join("");
+
+  const featured = items.filter(x=>x.featured)
+    .sort((a,b)=>a.featuredRank-b.featuredRank);
+
+  els.featured.innerHTML = featured.map(card).join("");
+
+  bindSlider();
+  els.status.innerText = items.length + " loaded";
+}
+
+function bindSlider(){
+  document.querySelectorAll(".katha-slider").forEach(sl=>{
+    const slides = sl.querySelectorAll(".katha-slide");
+    let i=0;
+    sl.querySelectorAll("[data-dir]").forEach(btn=>{
+      btn.onclick=()=>{
+        slides[i].classList.remove("active");
+        i=(i+Number(btn.dataset.dir)+slides.length)%slides.length;
+        slides[i].classList.add("active");
+      }
+    });
+  });
+}
+
+function openModal(id){
+  const item = ALL.find(x=>x.id===id);
+  document.getElementById("modalContent").innerHTML = `
+    <h2>${text(item.title)}</h2>
+    ${sliderHTML(item)}
+    ${detailsHTML(item)}
+  `;
+  document.getElementById("modal").classList.add("show");
+  bindSlider();
+}
+
+function closeModal(){
+  document.getElementById("modal").classList.remove("show");
+}
+
+function filter(){
+  let q = els.query.value.toLowerCase();
+  let tag = els.tag.value;
+
+  let items = ALL.filter(x=>{
+    let match = text(x.title).toLowerCase().includes(q) || text(x.summary).toLowerCase().includes(q);
+    let tagMatch = !tag || (x.tags||[]).includes(tag);
+    return match && tagMatch;
+  });
+
+  render(items);
+}
+
+fetch(DATA_URL)
+.then(r=>r.json())
+.then(d=>{
+  ALL = d.kathas;
+  render(ALL);
+
+  let tags = [...new Set(ALL.flatMap(x=>x.tags))];
+  els.tag.innerHTML += tags.map(t=>`<option>${t}</option>`).join("");
+});
+
+document.getElementById("cpSearchBtn").onclick = filter;
+document.getElementById("cpClearBtn").onclick = ()=>{location.reload();};
+
+</script>
+
+<script src="assets/js/includes.js"></script>
+<script src="assets/js/pp-nav.js"></script>
+
+</body>
 </html>
