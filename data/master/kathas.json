@@ -11,8 +11,8 @@
         "hi": "प्रसिद्ध संतों और वक्ताओं द्वारा 9 दिवसीय रामकथा।"
       },
       "description": {
-        "en": "Stage, sound, travel, and full arrangement available.",
-        "hi": "स्टेज, साउंड, यात्रा और पूर्ण व्यवस्था उपलब्ध।"
+        "en": "Ram Katha Mahatmya (the glory and spiritual significance of the story of Lord Rama) is a deeply revered concept in Indian tradition. It refers to the greatness of listening to, reciting, and understanding the divine narrative of Lord Rama, mainly described in texts like the Ramayana and Ramcharitmanas.",
+        "hi": "'राम कथा महात्म्य' (भगवान राम की कथा की महिमा और आध्यात्मिक महत्ता) भारतीय परंपरा में एक अत्यंत पूजनीय अवधारणा है। यह भगवान राम की दिव्य कथा को सुनने, उसका पाठ करने और उसे समझने की महानता को दर्शाता है; इस कथा का वर्णन मुख्य रूप से 'रामायण' और 'रामचरितमानस' जैसे ग्रंथों में किया गया है।"
       },
       "kathaType": "ram",
       "durationDays": 9,
@@ -24,7 +24,9 @@
       "images": [
         "assets/images/kathas/ramkatha/0.jpg",
         "assets/images/kathas/ramkatha/1.jpg",
-        "assets/images/kathas/ramkatha/2.jpg"
+        "assets/images/kathas/ramkatha/2.jpg",
+        "assets/images/kathas/ramkatha/3.jpg",
+        "assets/images/kathas/ramkatha/4.jpg"
       ],
       "ctaText": {
         "en": "Arrange Ramkatha",
@@ -38,18 +40,18 @@
       "featuredRank": 1
     },
     {
-      "id": "devi-katha",
+      "id": "devi-katha-9day",
       "title": {
-        "en": "Devi Katha",
-        "hi": "देवी कथा"
+        "en": "Devi Bhagwat Katha",
+        "hi": "देवी भागवत कथा"
       },
       "summary": {
-        "en": "9-day Devi Katha by respected kathavachaks.",
-        "hi": "आदरणीय कथावाचकों द्वारा 9 दिवसीय देवी कथा।"
+        "en": "9-day Devi Bhagwat Katha by respected kathavachaks.",
+        "hi": "आदरणीय कथावाचकों द्वारा 9 दिवसीय देवी भागवत पुराण कथा।"
       },
       "description": {
-        "en": "Stage, sound, travel, and complete Devi Katha arrangements are available.",
-        "hi": "स्टेज, साउंड, यात्रा और संपूर्ण देवी कथा व्यवस्था उपलब्ध है।"
+        "en": "Devi Bhagwat Katha refers to the sacred narration of the Devi Bhagavata Purana—one of the most important texts of the Shakti tradition, which glorifies the Divine Mother (Devi) as the supreme power of the universe.",
+        "hi": "देवी भागवत कथा, देवी भागवत पुराण के पवित्र वर्णन को संदर्भित करती है—जो शक्ति परंपरा के सबसे महत्वपूर्ण ग्रंथों में से एक है, और जो दिव्य माँ (देवी) को ब्रह्मांड की सर्वोच्च शक्ति के रूप में महिमामंडित करता है।"
       },
       "kathaType": "devi",
       "durationDays": 9,
@@ -59,7 +61,11 @@
         "varanasi"
       ],
       "images": [
-        "assets/images/kathas/devi/0.jpg"
+        "assets/images/kathas/devi/0.jpg",
+        "assets/images/kathas/devi/1.jpg",
+        "assets/images/kathas/devi/2.jpg",
+        "assets/images/kathas/devi/3.jpg",
+        "assets/images/kathas/devi/4.jpg"
       ],
       "ctaText": {
         "en": "Arrange Devi Katha",
@@ -83,8 +89,8 @@
         "hi": "भागवत पुराण पर आधारित 7 दिवसीय कथा।"
       },
       "description": {
-        "en": "Complete arrangements for Bhagwat Saptah including stage, decoration, sound and prasad.",
-        "hi": "भागवत सप्ताह हेतु स्टेज, सजावट, साउंड और प्रसाद सहित संपूर्ण व्यवस्था।"
+        "en": "Shrimad Bhagavat Katha Mahatmya describes the divine power and spiritual benefits of listening to the sacred stories of the Bhagavata Purana, which primarily glorifies the Supreme Lord, especially Krishna.",
+        "hi": "श्रीमद्भागवत कथा महात्म्य में भागवत पुराण की पवित्र कहानियों को सुनने की दिव्य शक्ति और आध्यात्मिक लाभों का वर्णन किया गया है, जो मुख्य रूप से सर्वोच्च भगवान, विशेष रूप से कृष्ण की महिमा करती है।"
       },
       "kathaType": "krishna",
       "durationDays": 7,
@@ -94,7 +100,12 @@
         "katha"
       ],
       "images": [
-        "assets/images/kathas/bhagwat/0.jpg"
+        "assets/images/kathas/bhagwat/0.jpg",
+        "assets/images/kathas/bhagwat/1.jpg",
+        "assets/images/kathas/bhagwat/2.jpg",
+        "assets/images/kathas/bhagwat/3.jpg",
+        "assets/images/kathas/bhagwat/4.jpg",
+        "assets/images/kathas/bhagwat/5.jpg"
       ],
       "ctaText": {
         "en": "Arrange Bhagwat Katha",
@@ -118,8 +129,8 @@
         "hi": "शिव महापुराण पर आधारित दिव्य कथा।"
       },
       "description": {
-        "en": "Spiritual narration of Lord Shiva's glories and rituals.",
-        "hi": "भगवान शिव की महिमा और अनुष्ठानों का आध्यात्मिक वर्णन।"
+        "en": "Shiv Mahapuran Katha Mahatmya describes the divine glory and spiritual benefits of listening to and reciting the sacred stories of the Shiva Purana which glorifies Lord Shiva as the supreme reality.",
+        "hi": "शिव महापुराण कथा माहात्म्य में शिव पुराण की पवित्र कथाओं को सुनने और उनका पाठ करने के दिव्य गौरव और आध्यात्मिक लाभों का वर्णन किया गया है जो भगवान शिव को परम सत्ता के रूप में महिमामंडित करता है।"
       },
       "kathaType": "shiv",
       "durationDays": 7,
@@ -143,7 +154,7 @@
       "featuredRank": 4
     },
     {
-      "id": "devi-bhagwat",
+      "id": "devi-bhagwat-7day",
       "title": {
         "en": "Shrimad Devi Bhagwat Katha",
         "hi": "श्रीमद देवी भागवत कथा"
@@ -153,8 +164,8 @@
         "hi": "माँ दुर्गा की महिमा का दिव्य वर्णन।"
       },
       "description": {
-        "en": "Ideal during Navratri and special Shakti occasions.",
-        "hi": "नवरात्रि और विशेष शक्ति पर्वों के लिए उपयुक्त।"
+        "en": "Devi Bhagwat Katha refers to the sacred narration of the Devi Bhagavata Purana, one of the most important texts of the Shakti tradition which glorifies the Divine Mother as the supreme power of the universe.",
+        "hi": "देवी भागवत कथा देवी भागवत पुराण के पवित्र वर्णन को संदर्भित करती है—जो शक्ति परंपरा के सबसे महत्वपूर्ण ग्रंथों में से एक है और जो दिव्य माँ (देवी) को ब्रह्मांड की सर्वोच्च शक्ति के रूप में महिमामंडित करता है।"
       },
       "kathaType": "devi",
       "durationDays": 7,
@@ -188,8 +199,8 @@
         "hi": "रामचरितमानस के सुंदरकांड का पावन पाठ।"
       },
       "description": {
-        "en": "Conducted for peace, prosperity and removal of obstacles.",
-        "hi": "शांति, समृद्धि और बाधा निवारण हेतु कराया जाता है।"
+        "en": "Sunderkand is a vital chapter of Ramcharitmanas describing Hanuman's valor and devotion. People recite it for various reasons, from spiritual peace to overcoming life's obstacles.",
+        "hi": "सुंदरकांड रामचरितमानस का एक अति-महत्वपूर्ण अध्याय है जिसमें हनुमान के शौर्य बुद्धि और भक्ति का वर्णन मिलता है। इसका पाठ या परायण लोग अलग-अलग कारणों से करते हैं—आध्यात्मिक शांति से लेकर जीवन के संकटों तक।"
       },
       "kathaType": "ram",
       "durationDays": 1,
@@ -206,11 +217,46 @@
         "hi": "सुंदरकांड कराएँ"
       },
       "whatsappText": {
-        "en": "I want Sundarkand Path arrangement.",
-        "hi": "मुझे सुंदरकांड पाठ की व्यवस्था चाहिए।"
+        "en": "I want details for Sundarkand Path arrangement.",
+        "hi": "मुझे सुंदरकांड पाठ की व्यवस्था की जानकारी चाहिए।"
       },
       "featured": false,
       "featuredRank": 6
+    },
+    {
+      "id": "akhand-ramcharitmanas",
+      "title": {
+        "en": "Akhand Shri Ramcharitmanas Path",
+        "hi": "अखण्ड श्रीरामचरितमानस पाठ"
+      },
+      "summary": {
+        "en": "Continuous, uninterrupted recitation of the entire Ramcharitmanas.",
+        "hi": "अखण्ड रामचरितमानस का पवित्र पाठ।"
+      },
+      "description": {
+        "en": "An Akhand Path signifies the continuous recitation of the entire Ramcharitmanas, typically completed over 24 hours. It is performed with deep reverence and is a powerful means of attaining Lord Rama's grace.",
+        "hi": "अखंड पाठ का अर्थ है बिना रुके लगातार पूरे रामचरितमानस का पाठ करना। यह सामान्यतः 24 घंटे या उससे अधिक समय में श्रद्धा और अनुशासन के साथ पूरा किया जाता है और भगवान राम की कृपा प्राप्त करने का एक शक्तिशाली माध्यम माना जाता है।"
+      },
+      "kathaType": "ram",
+      "durationDays": 1,
+      "tags": [
+        "hanuman",
+        "ram",
+        "akhand"
+      ],
+      "images": [
+        "assets/images/kathas/akhand-ramcharitmanas/0.jpg"
+      ],
+      "ctaText": {
+        "en": "Arrange Akhand Path",
+        "hi": "अखण्ड पाठ की व्यवस्था करें"
+      },
+      "whatsappText": {
+        "en": "I want details for Akhand Ramcharitmanas Path arrangement.",
+        "hi": "मुझे अखण्ड श्रीरामचरितमानस पाठ की व्यवस्था की जानकारी चाहिए।"
+      },
+      "featured": false,
+      "featuredRank": 7
     }
   ]
 }

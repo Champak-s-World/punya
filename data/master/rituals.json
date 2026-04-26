@@ -1,5 +1,32 @@
 {
   "rituals": [
+
+    {
+      "id": "test",
+      "featured": true,
+      "featuredRank": 12,
+      "featuredNote": {
+        "en": "Testing",
+        "hi": "राहु जाप"
+      },
+      "tags": ["rahu", "astrology"],
+      "images": [
+        "assets/images/rituals/0.jpeg",
+        "assets/images/rituals/1.jpeg"
+      ],
+      "title": {
+        "en": "Rahu Jaap",
+        "hi": "राहु जाप"
+      },
+      "content": {
+        "en": "Rahu is considered a shadow planet in Vedic astrology representing the lunar node. Chanting Rahu mantras is believed to reduce confusion, remove obstacles, and calm the negative effects of Rahu in the horoscope. Rahu Jaap is often performed during Rahu Mahadasha, when Rahu causes sudden changes, stress, or confusion in life.",
+        "hi": "राहु वैदिक ज्योतिष में एक छाया ग्रह माना जाता है जो चंद्रमा और सूर्य के मार्ग के छेदन बिंदु का प्रतीक है। राहु जाप करने से राहु दोष की शांति, मानसिक तनाव में कमी और जीवन की बाधाओं को दूर करने में सहायता मानी जाती है।"
+      }
+    },
+
+
+
+    
     {
       "id": "rahu-jaap",
       "featured": true,
