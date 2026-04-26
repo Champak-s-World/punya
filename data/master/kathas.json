@@ -140,7 +140,11 @@
         "katha"
       ],
       "images": [
-        "assets/images/kathas/shiv/0.jpg"
+        "assets/images/kathas/shiv/0.jpg",
+        "assets/images/kathas/shiv/1.jpg",
+        "assets/images/kathas/shiv/2.jpg",
+        "assets/images/kathas/shiv/3.jpg",
+        "assets/images/kathas/shiv/4.jpg"
       ],
       "ctaText": {
         "en": "Arrange Shiv Mahapuran",
@@ -175,7 +179,11 @@
         "navratri"
       ],
       "images": [
-        "assets/images/kathas/devi/0.jpg"
+        "assets/images/kathas/devi/0.jpg",
+        "assets/images/kathas/devi/1.jpg",
+        "assets/images/kathas/devi/2.jpg",
+        "assets/images/kathas/devi/3.jpg",
+        "assets/images/kathas/devi/4.jpg"
       ],
       "ctaText": {
         "en": "Arrange Devi Bhagwat",
@@ -210,7 +218,11 @@
         "sundarkand"
       ],
       "images": [
-        "assets/images/kathas/sundarkand/0.jpg"
+        "assets/images/kathas/sundarkand/0.jpg",
+        "assets/images/kathas/sundarkand/1.jpg",
+        "assets/images/kathas/sundarkand/2.jpg",
+        "assets/images/kathas/sundarkand/3.jpg",
+        "assets/images/kathas/sundarkand/4.jpg"
       ],
       "ctaText": {
         "en": "Arrange Sundarkand",
@@ -245,7 +257,13 @@
         "akhand"
       ],
       "images": [
-        "assets/images/kathas/akhand-ramcharitmanas/0.jpg"
+        "assets/images/kathas/akhand-ramcharitmanas/0.jpg",
+        "assets/images/kathas/akhand-ramcharitmanas/1.jpg",
+        "assets/images/kathas/akhand-ramcharitmanas/2.jpg",
+        "assets/images/kathas/akhand-ramcharitmanas/3.jpg",
+        "assets/images/kathas/akhand-ramcharitmanas/4.jpg",
+        "assets/images/kathas/akhand-ramcharitmanas/5.jpg",
+        "assets/images/kathas/akhand-ramcharitmanas/6.jpg"
       ],
       "ctaText": {
         "en": "Arrange Akhand Path",
