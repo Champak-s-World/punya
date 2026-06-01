@@ -182,8 +182,6 @@
     "Auto from upcoming occasions (Calendar) with fallback to curated featured flags.": {hi:"आगामी अवसरों (कैलेंडर) से ऑटो, और आवश्यकता होने पर curated featured flags का उपयोग।"},
     "Coming next": {hi:"आगे आने वाला"},
     "Data-driven content + booking CTAs.": {hi:"डेटा-आधारित सामग्री + बुकिंग CTA।"},
-    "Dummy Card": {hi:"डमी कार्ड"},
-    "Replace with real content.": {hi:"इसे वास्तविक सामग्री से बदलें।"},
     "See Gallery": {hi:"गैलरी देखें"},
 
     "Master Data Preview": {hi:"मास्टर डेटा पूर्वावलोकन"},
