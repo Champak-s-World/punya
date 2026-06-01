@@ -1,0 +1,103 @@
+/* Punya Yatra simplified design system */
+:root {
+  --py-bg: #fffaf2;
+  --py-card: #ffffff;
+  --py-soft: #fff1df;
+  --py-text: #1f2937;
+  --py-muted: #6b7280;
+  --py-brand: #d97706;
+  --py-brand-dark: #9a3412;
+  --py-border: #fed7aa;
+  --py-shadow: 0 14px 34px rgba(124, 45, 18, 0.09);
+  --py-radius: 22px;
+  --bg-0: var(--py-bg);
+  --bg-1: #fff7ed;
+  --bg: var(--py-bg);
+  --card: var(--py-card);
+  --panel2: var(--py-soft);
+  --soft: var(--py-soft);
+  --text: var(--py-text);
+  --muted: var(--py-muted);
+  --brand: var(--py-brand);
+  --brand2: var(--py-brand-dark);
+  --border: var(--py-border);
+  --shadow: var(--py-shadow);
+  --r: var(--py-radius);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--py-text);
+  background: linear-gradient(180deg, #fffaf2 0%, #fff7ed 100%);
+  line-height: 1.65;
+}
+a { color: inherit; }
+img, video { max-width: 100%; height: auto; }
+
+.site-shell, .pp-container { width: min(1120px, calc(100% - 32px)); margin-inline: auto; }
+.site-header {
+  position: sticky; top: 0; z-index: 1000;
+  background: rgba(255, 250, 242, 0.94);
+  border-bottom: 1px solid var(--py-border);
+  backdrop-filter: blur(12px);
+}
+.site-header__inner { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+.site-brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; }
+.site-brand__logo { width: 46px; height: 46px; border-radius: 16px; box-shadow: var(--py-shadow); }
+.site-brand__text strong { display: block; font-size: 1.08rem; letter-spacing: -0.02em; }
+.site-brand__text small { display: block; color: var(--py-muted); font-weight: 700; font-size: 0.78rem; }
+.site-nav { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+.site-nav a { text-decoration: none; padding: 9px 11px; border-radius: 999px; font-weight: 800; font-size: 0.93rem; color: #3f2a1d; }
+.site-nav a:hover, .site-nav a[aria-current="page"] { background: var(--py-soft); color: var(--py-brand-dark); }
+.site-nav__cta { background: var(--py-brand) !important; color: white !important; }
+.site-menu-button { display: none; border: 1px solid var(--py-border); background: white; border-radius: 999px; padding: 9px 13px; font-weight: 800; color: var(--py-brand-dark); }
+
+main, .page-main { padding-block: 24px; }
+.pp-card, .site-card, section.card {
+  background: var(--py-card);
+  border: 1px solid var(--py-border);
+  border-radius: var(--py-radius);
+  box-shadow: var(--py-shadow);
+  overflow: hidden;
+}
+.pp-pad, .site-pad { padding: clamp(18px, 3vw, 28px); }
+.pp-h1, h1 { font-size: clamp(2rem, 5vw, 4rem); line-height: 1.08; letter-spacing: -0.05em; margin: 0 0 12px; }
+.pp-h2, h2 { letter-spacing: -0.035em; line-height: 1.18; }
+.pp-muted, .muted, p { color: var(--py-muted); }
+.pp-mini, .eyebrow { color: var(--py-brand-dark); text-transform: uppercase; letter-spacing: .12em; font-size: .78rem; font-weight: 900; }
+.pp-grid, .site-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.pp-actions, .site-actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.pp-btn, .btn, button.primary, a.button {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 44px; padding: 10px 16px; border-radius: 999px; border: 1px solid transparent;
+  background: var(--py-brand); color: white; text-decoration: none; font-weight: 900; cursor: pointer;
+}
+.pp-btn--ghost, .btn.secondary, a.button.secondary { background: white; color: var(--py-brand-dark); border-color: var(--py-border); }
+input, select, textarea, .pp-input { border: 1px solid var(--py-border); border-radius: 14px; padding: 11px 12px; background: white; color: var(--py-text); }
+
+.site-footer { margin-top: 34px; background: #431407; color: #ffedd5; }
+.site-footer a { color: #fff7ed; }
+.site-footer__grid { display: grid; grid-template-columns: 1.2fr 0.8fr 0.8fr; gap: 22px; padding-block: 34px; }
+.site-footer__brand { font-size: 1.35rem; font-weight: 900; letter-spacing: -0.04em; color: white; }
+.site-footer h2 { font-size: 1rem; margin: 0 0 8px; color: white; }
+.site-footer p { color: #fed7aa; margin: 8px 0; }
+.site-footer__whatsapp { display: inline-flex; padding: 9px 13px; border: 1px solid #fed7aa; border-radius: 999px; text-decoration: none; font-weight: 900; }
+.site-footer__bottom { border-top: 1px solid rgba(254, 215, 170, .25); padding-block: 14px; color: #fed7aa; font-size: .92rem; }
+.site-include-error { margin: 12px; padding: 12px; border-radius: 12px; border: 1px solid #fecaca; background: #fff1f2; color: #991b1b; font-weight: 800; }
+
+@media (max-width: 860px) {
+  .site-menu-button { display: inline-flex; }
+  .site-header__inner { align-items: flex-start; padding-block: 12px; }
+  .site-nav { display: none; position: absolute; left: 16px; right: 16px; top: 70px; padding: 12px; background: white; border: 1px solid var(--py-border); border-radius: 18px; box-shadow: var(--py-shadow); }
+  .site-nav.is-open { display: grid; grid-template-columns: 1fr 1fr; }
+  .site-nav a { border-radius: 12px; }
+  .site-footer__grid, .pp-grid, .site-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 520px) {
+  .site-shell, .pp-container { width: min(100% - 22px, 1120px); }
+  .site-brand__text small { display: none; }
+  .site-nav.is-open { grid-template-columns: 1fr; }
+}

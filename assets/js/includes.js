@@ -1,24 +1,26 @@
-(function () {
-  "use strict";
-
-  async function loadIncludes() {
-    const nodes = document.querySelectorAll("[data-include]");
-
-    for (const el of nodes) {
-      const url = el.getAttribute("data-include");
-      try {
-        const r = await fetch(url, { cache: "no-store" });
-        el.innerHTML = await r.text();
-      } catch (e) {
-        el.innerHTML = `<div style="padding:12px;color:#b91c1c;font-weight:900">
-             Include failed: ${url}
-           </div>`;
-      }
+(() => {
+  async function includePart(node) {
+    const url = node.getAttribute('data-include');
+    if (!url) return;
+    try {
+      const response = await fetch(url, { cache: 'no-cache' });
+      if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
+      node.innerHTML = await response.text();
+    } catch (error) {
+      node.innerHTML = `<div class="site-include-error">Could not load ${url}</div>`;
+      console.error('Include failed:', url, error);
     }
-
-    // 🔥 IMPORTANT: tell the rest of the app includes are ready
-    window.dispatchEvent(new CustomEvent("pp:includesloaded"));
   }
 
-  document.addEventListener("DOMContentLoaded", loadIncludes);
+  async function loadIncludes() {
+    const nodes = [...document.querySelectorAll('[data-include]')];
+    await Promise.all(nodes.map(includePart));
+    document.dispatchEvent(new CustomEvent('site:includes-ready'));
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadIncludes);
+  } else {
+    loadIncludes();
+  }
 })();
