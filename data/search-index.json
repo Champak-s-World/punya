@@ -1,0 +1,122 @@
+[
+  {
+    "title": "Punya Yatra — Spiritual Tours, Rituals & Pilgrimage Routes in Varanasi",
+    "url": "index.html",
+    "description": "Explore spiritual tours in Varanasi, temple circuits, ritual guidance, pilgrimage routes, kathas, yagyas, and sacred places across Kashi with Punya Yatra.",
+    "text": "Punya Yatra — Spiritual Tours, Rituals & Pilgrimage Routes in Varanasi Spiritual Tours • Rituals • Kathas Plan trips to Kashi, Ayodhya, Prayagraj — book rituals, kathas & arrangements. Build itinerary, view route on map, and share on WhatsApp. 📍 Locations database 🗺 Route Map 📅 Festivals Calendar 💬 WhatsApp enquiry Start Route Builder Open Route Map Open Calendar HI Quick Actions Everything important in one tap Tours Tour Maker Kathas Rituals Occasions 🏙️ Cities: … 📌 Places: … 🎉 Occasions: … Tip: Use the search below to find a place or festival and jump directly to building the itinerary. Smart Search Search across Locations + Occasions (3+ characters) Go to Routes Locations + Occasions Locations only Occasions only Search Clear Preparing your Varanasi guide… Highlights Today + this month from occasions.json Calendar Today This Month Festivals and sacred occasions for planning your journey. City Spotlight Top places from locations.json Tours Routes Add top 5 to itinerary Open Itinerary Curated Varanasi places, occasions and journey ideas. \u0001"
+  },
+  {
+    "title": "Varanasi Pilgrimage Route Builder | Punya Yatra",
+    "url": "tours.html",
+    "description": "Plan your Varanasi pilgrimage route with Punya Yatra. Search sacred places, build an itinerary, load tours, and view temple and ghat routes on an interactive map.",
+    "text": "Varanasi Pilgrimage Route Builder | Punya Yatra Single page: search → itinerary → map Route Builder Same storage key: pp_tour_maker_v1 . Search locations, load a tour, adjust the itinerary, and the map updates instantly. Search & Add Ready. Start typing. Only locations.json Search Clear Type 3+ characters to find places. Itinerary Auto-updates map Download WhatsApp Clear The itinerary is empty. Add places from the search panel. Map No loaded tour Open old Routes page No stops to show on the map. \u0001"
+  },
+  {
+    "title": "Rituals",
+    "url": "rituals.html",
+    "description": "Explore ritual arrangements including puja, abhishek and other sacred services for your pilgrimage.",
+    "text": "Rituals Loading… HI All tags Search Clear Featured All Rituals \u0001"
+  },
+  {
+    "title": "Kathas",
+    "url": "kathas.html",
+    "description": "Book and plan kathas including Ramkatha, Bhagwat Katha and other devotional programmes with Punya Yatra.",
+    "text": "Kathas Loading… Kathas Ramkatha, Bhagwat, Shiv Mahapuran and more All tags Search Clear Featured All Kathas Close \u0001"
+  },
+  {
+    "title": "Kathas | Spiritual Services",
+    "url": "katha.html",
+    "description": "Explore katha arrangements and devotional storytelling services for families, groups and spiritual gatherings.",
+    "text": "Kathas | Spiritual Services Kathas v1 placeholder (Option C). Next we will fill this with JSON-driven cards. Featured Selected kathas and devotional programmes for quick discovery. Kathas Explore available kathas and devotional sessions. \\n\\n \u0001"
+  },
+  {
+    "title": "Yagyas",
+    "url": "yagyas.html",
+    "description": "Explore yagya arrangements and sacred fire ritual services for families, groups and special occasions.",
+    "text": "Yagyas Loading… HI All tags Search Clear Featured All Yagyas \u0001"
+  },
+  {
+    "title": "Routes — Search + Itinerary",
+    "url": "routes.html",
+    "description": "Search places, build itineraries and plan spiritual travel routes with Punya Yatra.",
+    "text": "Routes — Search + Itinerary Search places • Build itinerary • Syncs with Route Map Routes Choose search source, start typing (3+ chars) or press Search. Add places to itinerary, reorder, remove, then open Route Map. HI Only locations.json Only OpenStreetMap Both (locations first) Search Clear Open Route Map Loading data… My Itinerary Saved in localStorage key: pp_tour_maker_v1 Download JSON Share WhatsApp Clear Itinerary \u0001"
+  },
+  {
+    "title": "Route Builder + Map",
+    "url": "route.html",
+    "description": "Create a custom pilgrimage route, view places on a map and plan the next steps for your journey.",
+    "text": "Route Builder + Map Single page: Search → Itinerary → Map (auto sync) Route Builder Same storage key: pp_tour_maker_v1 . Any change updates the map immediately. Search & Add Loading data… Only locations.json Only OpenStreetMap Both (locations first) Search Clear Itinerary Auto-updates map Download WhatsApp Clear Map Ready. Open old Routes page --> \u0001"
+  },
+  {
+    "title": "Route Builder • Punya Yatra",
+    "url": "route-map.html",
+    "description": "Build and view pilgrimage routes on a map for Varanasi, Kashi and nearby spiritual destinations.",
+    "text": "Route Builder • Punya Yatra Single page: search → itinerary → map Route Builder Same storage key: pp_tour_maker_v1 . Search locations, load a tour, adjust the itinerary, and the map updates instantly. Search & Add Ready. Start typing. Only locations.json Search Clear Type 3+ characters to find places. Itinerary Auto-updates map Download WhatsApp Clear The itinerary is empty. Add places from the search panel. Map No loaded tour Open old Routes page No stops to show on the map. \u0001"
+  },
+  {
+    "title": "Map Tours • Spiritual Services",
+    "url": "maps.html",
+    "description": "Explore spiritual places and route maps for Varanasi and nearby pilgrimage destinations.",
+    "text": "Map Tours • Spiritual Services Map Tours Explore Varanasi , Ayodhya and Prayagraj with tourist places. Use Current Location to get nearby suggestions, then add places to Tour Maker . Use Current Location Open Tour Maker Open Gallery Search places Type city/place/tag (e.g., ghat , ram , kashi ). Selected place Tap a marker to view details. Quick add Add a whole city’s top places to Tour Maker: Varanasi Ayodhya Prayagraj \u0001"
+  },
+  {
+    "title": "Calendar",
+    "url": "calendar.html",
+    "description": "View important spiritual dates, festivals and pilgrimage occasions for planning your Punya Yatra journey.",
+    "text": "Calendar Unified Calendar Calendar Weekly • Monthly • Yearly • Synced to occasions.json Occasions Rituals Kathas HI Weekly Monthly Yearly « Year ‹ … › Year » Today Next 7 Days Month Year Occasions on: \u0001"
+  },
+  {
+    "title": "Occasions",
+    "url": "occasions.html",
+    "description": "Discover spiritual occasions, festival dates and suggested services for pilgrimage planning.",
+    "text": "Occasions Loading… HI All tags Search Clear Featured All Occasions \u0001"
+  },
+  {
+    "title": "Acharyas",
+    "url": "acharyas.html",
+    "description": "Meet acharyas and spiritual service providers associated with Punya Yatra for rituals, kathas, yagyas and pilgrimage support.",
+    "text": "Acharyas Loading… HI All tags Search Clear Featured All Acharyas \u0001"
+  },
+  {
+    "title": "Experiences | Spiritual Services",
+    "url": "experiences.html",
+    "description": "Unified experiences auto-linked with calendar dates and videos.",
+    "text": "Experiences | Spiritual Services Unified Experiences Services auto-linked with calendar dates and videos using shared tags. Help: How Experiences Work Show Golden rule: Tags are the glue. If tags don't match, items won't link. 🛕 Service data/services.json 🏷️ Shared Tags shiv / ram / tour 📅 Next Date data/calendar.json 🎥 Related Video data/videos.json How to add new items Add a service in data/services.json with tags. Add a calendar occasion in data/calendar.json with the same tags. Add a video in data/videos.json with the same tags (or add its youtubeId in service.relatedVideos). Reload — cards auto-update. // service { \"id\":\"rudrabhishek\", \"tags\":[\"shiv\"], \"relatedVideos\":[\"_hasaKTG3vw\"] } // calendar { \"date\":\"2026-02-14\", \"tags\":[\"shiv\"] } // video { \"youtubeId\":\"_hasaKTG3vw\", \"tags\":[\"shiv\"] } Featured Auto from upcoming occasions (Calendar) with fallback to curated featured flags. Experiences Auto-linked cards (service + next date + video + WhatsApp CTA). \u0001"
+  },
+  {
+    "title": "Gallery | Spiritual Services",
+    "url": "gallery.html",
+    "description": "Browse photos from tours, rituals and kathas.",
+    "text": "Gallery | Spiritual Services Gallery Photos & moments from tours, rituals, and kathas. Featured Auto from upcoming occasions (Calendar) with fallback to curated featured flags. Browse by Category Use Previous/Next or swipe on mobile. Category ‹ › — — 0 / 0 \u0001"
+  },
+  {
+    "title": "Videos | Spiritual Services",
+    "url": "videos.html",
+    "description": "Videos that animate and play on scroll using Intersection Observer.",
+    "text": "Videos | Spiritual Services Videos Scroll to play. Videos animate in and auto pause when out of view. Add/Edit videos in data/videos.json Auto-play works best when videos are muted. Featured Auto from upcoming occasions (Calendar) with fallback to curated featured flags. \u0001"
+  },
+  {
+    "title": "Move Through the City | Spiritual Services",
+    "url": "city-journey.html",
+    "description": "Explore locations across the city, then open images and videos for each stop in a guided visual journey.",
+    "text": "Move Through the City | Spiritual Services Visual City Explorer Move Through the City Press locations on the left to move through the city. Each stop opens its pictures and videos so the visitor can explore before adding it to a route or tour. 📍 Location list 🖼 Pictures 🎥 Videos 🗺 Route-ready Browse Stops Locations Loading locations… Loading city journey… \u0001"
+  },
+  {
+    "title": "Contact Punya Yatra | Spiritual Tours and Ritual Arrangements",
+    "url": "contact.html",
+    "description": "Contact Punya Yatra for Varanasi pilgrimage planning, ritual arrangements, kathas, yagyas, guided routes and WhatsApp enquiries.",
+    "text": "Contact Punya Yatra | Spiritual Tours and Ritual Arrangements Contact Contact us for pilgrimage routes, rituals, kathas, yagyas, local arrangements and custom spiritual journeys. Featured Auto from upcoming occasions (Calendar) with fallback to curated featured flags. How can we help? Share your date, city, number of people, and the service you need. We will guide you with the next steps. 🗺️ Pilgrimage Planning Route suggestions for Kashi, Ayodhya, Prayagraj and nearby sacred places. Explore Routes 🪔 Ritual Arrangements Enquire about puja, yagya, katha and related local arrangements. See Rituals 📞 Direct Contact Reach us by phone, email or WhatsApp for a clear response. WhatsApp \u0001"
+  },
+  {
+    "title": "Search",
+    "url": "search.html",
+    "description": "Search pages and services on Punya Yatra.",
+    "text": ""
+  },
+  {
+    "title": "Sitemap",
+    "url": "sitemap.html",
+    "description": "Browse all important pages on Punya Yatra.",
+    "text": ""
+  }
+]
