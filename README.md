@@ -14,3 +14,8 @@ This rebuild keeps the richer old-style home page visually, but removes the heav
 - `sitemap.html`, `sitemap.xml`, `robots.txt` for navigation and SEO
 
 No admin pages, duplicate scripts, `.git`, videos, shortcut files, or report files are included.
+
+
+## Folder based page structure
+
+Public pages now use clean folder URLs. For example, `tours/index.html` is available as `/tours/`, `rituals/index.html` as `/rituals/`, and `contact/index.html` as `/contact/`. Shared header/footer links and search URLs have been updated accordingly.

@@ -2,103 +2,103 @@
   {
     "title": "Kashi Darshan Tour",
     "category": "Tours",
-    "url": "tours.html#kashi-darshan",
+    "url": "/tours/#kashi-darshan",
     "description": "A balanced Varanasi circuit covering Kashi Vishwanath, Dashashwamedh Ghat, Annapurna, Kal Bhairav and evening Ganga Aarti."
   },
   {
     "title": "Sarnath and Kashi Day Plan",
     "category": "Tours",
-    "url": "tours.html#sarnath-kashi",
+    "url": "/tours/#sarnath-kashi",
     "description": "A calm day plan combining Sarnath, ghats, temples and simple food breaks for families and senior visitors."
   },
   {
     "title": "Rudrabhishek Arrangement",
     "category": "Rituals",
-    "url": "rituals.html#rudrabhishek",
+    "url": "/rituals/#rudrabhishek",
     "description": "Guided Rudrabhishek assistance with clear timing, material planning and family-friendly coordination."
   },
   {
     "title": "Griha Puja and Sankalp",
     "category": "Rituals",
-    "url": "rituals.html#griha-puja",
+    "url": "/rituals/#griha-puja",
     "description": "Simple and respectful puja arrangements for homes, travel groups and special family occasions."
   },
   {
     "title": "Bhagwat Katha",
     "category": "Kathas",
-    "url": "kathas.html#bhagwat",
+    "url": "/kathas/#bhagwat",
     "description": "Assistance for Bhagwat Katha planning, venue coordination and basic public communication material."
   },
   {
     "title": "Ram Katha",
     "category": "Kathas",
-    "url": "kathas.html#ram-katha",
+    "url": "/kathas/#ram-katha",
     "description": "Support for Ram Katha events, family functions and devotional gatherings."
   },
   {
     "title": "Mahamrityunjay Yagya",
     "category": "Yagyas",
-    "url": "yagyas.html#mahamrityunjay",
+    "url": "/yagyas/#mahamrityunjay",
     "description": "Structured planning help for Mahamrityunjay Yagya with timing, sankalp and coordination details."
   },
   {
     "title": "Gallery",
     "category": "Gallery",
-    "url": "gallery.html",
+    "url": "/gallery/",
     "description": "Selected visuals from Kashi, ghats, rituals and devotional event settings."
   },
   {
     "title": "Home",
     "category": "Page",
-    "url": "index.html",
+    "url": "/",
     "description": "Old-style warm home page with quick actions and spiritual travel highlights."
   },
   {
     "title": "Tours",
     "category": "Page",
-    "url": "tours.html",
+    "url": "/tours/",
     "description": "Kashi tour plans and family pilgrimage routes."
   },
   {
     "title": "Rituals",
     "category": "Page",
-    "url": "rituals.html",
+    "url": "/rituals/",
     "description": "Puja and ritual arrangement pages."
   },
   {
     "title": "Kathas",
     "category": "Page",
-    "url": "kathas.html",
+    "url": "/kathas/",
     "description": "Katha services and event planning."
   },
   {
     "title": "Yagyas",
     "category": "Page",
-    "url": "yagyas.html",
+    "url": "/yagyas/",
     "description": "Yagya assistance and devotional planning."
   },
   {
     "title": "Gallery",
     "category": "Page",
-    "url": "gallery.html",
+    "url": "/gallery/",
     "description": "Photo gallery."
   },
   {
     "title": "Contact",
     "category": "Page",
-    "url": "contact.html",
+    "url": "/contact/",
     "description": "Contact Punya Yatra."
   },
   {
     "title": "Sitemap",
     "category": "Page",
-    "url": "sitemap.html",
+    "url": "/sitemap/",
     "description": "All public pages."
   },
   {
     "title": "Search",
     "category": "Page",
-    "url": "search.html",
+    "url": "/search/",
     "description": "Search the site."
   }
 ]

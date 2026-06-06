@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://punyayatra.in/index.html</loc><lastmod>2026-06-06</lastmod><priority>1.0</priority></url>
-  <url><loc>https://punyayatra.in/tours.html</loc><lastmod>2026-06-06</lastmod><priority>0.8</priority></url>
-  <url><loc>https://punyayatra.in/rituals.html</loc><lastmod>2026-06-06</lastmod><priority>0.8</priority></url>
-  <url><loc>https://punyayatra.in/kathas.html</loc><lastmod>2026-06-06</lastmod><priority>0.8</priority></url>
-  <url><loc>https://punyayatra.in/yagyas.html</loc><lastmod>2026-06-06</lastmod><priority>0.8</priority></url>
-  <url><loc>https://punyayatra.in/gallery.html</loc><lastmod>2026-06-06</lastmod><priority>0.8</priority></url>
-  <url><loc>https://punyayatra.in/contact.html</loc><lastmod>2026-06-06</lastmod><priority>0.8</priority></url>
-  <url><loc>https://punyayatra.in/sitemap.html</loc><lastmod>2026-06-06</lastmod><priority>0.8</priority></url>
-  <url><loc>https://punyayatra.in/search.html</loc><lastmod>2026-06-06</lastmod><priority>0.8</priority></url>
+  <url><loc>https://punyayatra.in/</loc><lastmod>2026-06-06</lastmod><priority>1.0</priority></url>
+  <url><loc>https://punyayatra.in/tours/</loc><lastmod>2026-06-06</lastmod><priority>0.8</priority></url>
+  <url><loc>https://punyayatra.in/rituals/</loc><lastmod>2026-06-06</lastmod><priority>0.8</priority></url>
+  <url><loc>https://punyayatra.in/kathas/</loc><lastmod>2026-06-06</lastmod><priority>0.8</priority></url>
+  <url><loc>https://punyayatra.in/yagyas/</loc><lastmod>2026-06-06</lastmod><priority>0.8</priority></url>
+  <url><loc>https://punyayatra.in/gallery/</loc><lastmod>2026-06-06</lastmod><priority>0.8</priority></url>
+  <url><loc>https://punyayatra.in/contact/</loc><lastmod>2026-06-06</lastmod><priority>0.8</priority></url>
+  <url><loc>https://punyayatra.in/sitemap/</loc><lastmod>2026-06-06</lastmod><priority>0.8</priority></url>
+  <url><loc>https://punyayatra.in/search/</loc><lastmod>2026-06-06</lastmod><priority>0.8</priority></url>
 </urlset>
