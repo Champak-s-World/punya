@@ -54,19 +54,6 @@ function theme() {
   }));
 }
 
-function lang() {
-  const saved = localStorage.getItem("punya-lang") || "en";
-  document.documentElement.lang = saved;
-  $$("[data-lang-toggle]").forEach(btn => {
-    btn.textContent = saved === "hi" ? "Hindi / English" : "English / Hindi";
-    btn.addEventListener("click", () => {
-      const next = document.documentElement.lang === "hi" ? "en" : "hi";
-      document.documentElement.lang = next;
-      localStorage.setItem("punya-lang", next);
-      btn.textContent = next === "hi" ? "Hindi / English" : "English / Hindi";
-    });
-  });
-}
 
 function navToggle() {
   const h = $(".site-header"), btn = $(".nav-toggle");
@@ -108,7 +95,6 @@ function init() {
   activateNav();
   breadcrumbs();
   theme();
-  lang();
   navToggle();
   year();
   renderHomeCards();
