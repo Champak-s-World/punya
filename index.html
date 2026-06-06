@@ -1,1 +1,213 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#d97706"><link rel="stylesheet" href="/assets/css/style.css"><link rel="icon" href="/assets/images/brand/logo.svg"><title>Search | Punya Yatra</title><meta name="description" content="Search the Punya Yatra website."><meta property="og:title" content="Search | Punya Yatra"><meta property="og:description" content="Search the Punya Yatra website."><meta property="og:image" content="/assets/images/varanasi/hero-kashi.jpg"></head><body><a class="skip-link" href="#main">Skip to content</a><div data-include="/includes/header.html"></div><main id="main"><section class="simple-page"><div class="container"><span class="eyebrow">Search</span><h1 class="page-title">Search Punya Yatra</h1><p class="lead">Find pages, tours, rituals, kathas and yagyas.</p><div class="panel"><input data-search-box type="search" placeholder="Type to search..." style="width:100%;padding:14px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--text)"><div class="search-results" data-search-results></div></div></div></section></main><div data-include="/includes/footer.html"></div><script src="/assets/js/main.js" defer></script><script src="/assets/js/search.js" defer></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#d97706">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" href="/assets/images/brand/logo.svg">
+  <title>Punya Yatra | Kashi Darshan, Rituals, Kathas and Yagyas</title>
+  <meta name="description" content="Plan Kashi darshan, Varanasi tours, rituals, kathas and yagyas with warm family-friendly guidance.">
+  <meta property="og:title" content="Punya Yatra | Kashi Darshan and Spiritual Services">
+  <meta property="og:description" content="Plan Kashi darshan, Varanasi tours, rituals, kathas and yagyas with warm family-friendly guidance.">
+  <meta property="og:image" content="/assets/images/varanasi/hero-kashi.jpg">
+  <style>
+    .home-hero-shell{position:relative;overflow:hidden;padding:54px 0 28px}
+    .home-hero-shell::before{content:"";position:absolute;inset:-20% -10% auto auto;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(245,158,11,.24),transparent 66%);pointer-events:none}
+    .hero-grid{align-items:center}.hero-copy-card{position:relative;z-index:1}.hero-copy-card h1{max-width:11ch}.hero-points{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:20px}.hero-point{padding:12px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.48)}.hero-point strong{display:block;color:var(--brand-dark);font-size:1.15rem}.home-carousel{position:relative;z-index:1;overflow:hidden;border-radius:32px;background:linear-gradient(135deg,#fff7ed,#ffedd5);box-shadow:0 28px 90px rgba(120,53,15,.24);min-height:520px;border:1px solid rgba(217,119,6,.22);isolation:isolate}.home-carousel::before{content:"";position:absolute;inset:auto -20% -35% -20%;height:55%;background:radial-gradient(circle at center,rgba(217,119,6,.28),transparent 68%);z-index:0}.carousel-viewport{position:relative;height:420px;overflow:hidden}.carousel-track{display:flex;height:100%;transition:transform .72s cubic-bezier(.22,.75,.25,1);will-change:transform}.carousel-slide{position:relative;min-width:100%;height:420px;display:flex;align-items:flex-end;overflow:hidden}.carousel-slide img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.035)}.carousel-slide::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,23,42,.03),rgba(15,23,42,.18) 35%,rgba(15,23,42,.72))}.carousel-caption{position:relative;z-index:2;padding:clamp(1.05rem,3vw,1.8rem);color:#fff;text-shadow:0 2px 14px rgba(0,0,0,.42)}.carousel-caption span{display:inline-flex;margin-bottom:.5rem;padding:.3rem .76rem;border:1px solid rgba(255,255,255,.52);border-radius:999px;background:rgba(255,255,255,.18);backdrop-filter:blur(8px);font-size:.78rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase}.carousel-caption h2{margin:.15rem 0 .35rem;font-size:clamp(1.55rem,3vw,2.45rem);line-height:1.05;color:#fff}.carousel-caption p{max-width:34rem;margin:0;font-size:1rem;color:rgba(255,255,255,.95)}.carousel-top-badge{position:absolute;top:1rem;left:1rem;z-index:5;display:flex;align-items:center;gap:.5rem;padding:.55rem .82rem;border-radius:999px;background:rgba(255,251,235,.92);color:#7c2d12;font-weight:900;box-shadow:0 10px 25px rgba(0,0,0,.14)}.carousel-counter{position:absolute;top:1rem;right:1rem;z-index:5;padding:.55rem .8rem;border-radius:999px;background:rgba(15,23,42,.48);color:#fff;font-weight:800;backdrop-filter:blur(8px)}.carousel-controls{position:absolute;top:50%;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:0 1rem;pointer-events:none;z-index:6;transform:translateY(-50%)}.carousel-btn{width:46px;height:46px;border:1px solid rgba(255,255,255,.5);border-radius:999px;background:rgba(255,255,255,.9);color:#7c2d12;box-shadow:0 10px 25px rgba(0,0,0,.18);cursor:pointer;pointer-events:auto;font-size:1.55rem;line-height:1}.carousel-btn:hover,.carousel-btn:focus-visible{background:#fff7ed;outline:3px solid rgba(251,191,36,.78);outline-offset:3px}.carousel-bottom{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center;padding:14px;background:linear-gradient(180deg,rgba(255,251,235,.9),rgba(255,237,213,.94));border-top:1px solid rgba(217,119,6,.18)}.carousel-thumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.carousel-thumb{display:grid;grid-template-columns:58px 1fr;gap:10px;align-items:center;text-align:left;border:1px solid rgba(217,119,6,.25);border-radius:16px;background:rgba(255,255,255,.68);padding:7px;cursor:pointer;color:#431407}.carousel-thumb img{width:58px;height:48px;object-fit:cover;border-radius:12px}.carousel-thumb strong{display:block;font-size:.82rem;line-height:1.1}.carousel-thumb small{display:block;color:#765f4d;font-weight:700}.carousel-thumb[aria-current="true"]{background:#fff7ed;border-color:#d97706;box-shadow:0 10px 22px rgba(120,53,15,.14)}.carousel-actions{display:flex;gap:10px;align-items:center;justify-content:flex-end}.carousel-play,.carousel-fullscreen{border:1px solid rgba(217,119,6,.28);border-radius:999px;background:#fff7ed;color:#7c2d12;font-weight:900;padding:10px 12px;cursor:pointer}.carousel-play:hover,.carousel-fullscreen:hover,.carousel-play:focus-visible,.carousel-fullscreen:focus-visible{background:#ffffff;outline:3px solid rgba(251,191,36,.72);outline-offset:2px}.home-carousel:fullscreen{width:100vw;height:100vh;border-radius:0;border:0;display:flex;flex-direction:column;background:#120a05}.home-carousel:fullscreen .carousel-viewport{height:calc(100vh - 122px);flex:1}.home-carousel:fullscreen .carousel-slide{height:calc(100vh - 122px)}.home-carousel:fullscreen .carousel-bottom{position:relative;z-index:9}.home-carousel:-webkit-full-screen{width:100vw;height:100vh;border-radius:0;border:0;display:flex;flex-direction:column;background:#120a05}.home-carousel:-webkit-full-screen .carousel-viewport{height:calc(100vh - 122px);flex:1}.home-carousel:-webkit-full-screen .carousel-slide{height:calc(100vh - 122px)}.carousel-progress{position:absolute;left:0;bottom:0;height:4px;width:100%;background:rgba(255,255,255,.34);z-index:8}.carousel-progress span{display:block;height:100%;width:0;background:#fbbf24}.home-service-strip{margin-top:20px;display:flex;flex-wrap:wrap;gap:10px}.home-service-strip a{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:999px;background:var(--card);padding:10px 13px;font-weight:900;box-shadow:0 8px 18px rgba(120,53,15,.07)}.home-service-strip a:hover{text-decoration:none;background:var(--soft)}.trust-row{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:16px}.trust-card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px;box-shadow:0 10px 24px rgba(120,53,15,.06)}.trust-card strong{display:block;color:var(--brand-dark)}@media(max-width:1000px){.carousel-thumbs{grid-template-columns:repeat(3,1fr)}.carousel-thumb:nth-child(n+4){display:none}.home-carousel{min-height:500px}}@media(max-width:760px){.home-carousel{min-height:auto}.carousel-viewport,.carousel-slide{height:360px}.carousel-top-badge{display:none}.carousel-bottom{grid-template-columns:1fr}.carousel-actions{justify-content:flex-start}.carousel-play{justify-self:start}.carousel-thumbs{grid-template-columns:repeat(2,1fr)}.carousel-thumb{grid-template-columns:48px 1fr}.carousel-thumb img{width:48px;height:42px}.hero-points,.trust-row{grid-template-columns:1fr}.carousel-controls{padding:0 .55rem}.carousel-btn{width:39px;height:39px}}
+    @media(max-width:520px){.carousel-thumbs{display:none}.carousel-bottom{display:flex}.carousel-viewport,.carousel-slide{height:330px}}
+
+    /* Desktop fix: keep thumbnail buttons and fullscreen button above all carousel layers */
+    .carousel-viewport{z-index:1}
+    .carousel-bottom{position:relative;z-index:30;pointer-events:auto}
+    .carousel-thumbs,.carousel-actions{position:relative;z-index:31;pointer-events:auto}
+    .carousel-thumb{position:relative;z-index:32;pointer-events:auto;user-select:none;-webkit-user-select:none;touch-action:manipulation}
+    .carousel-thumb *{pointer-events:none}
+    .carousel-thumb:hover,.carousel-thumb:focus-visible{background:#fff;border-color:#b45309;outline:3px solid rgba(251,191,36,.72);outline-offset:2px;transform:translateY(-1px)}
+    .carousel-fullscreen-top{position:absolute;top:1rem;right:5.6rem;z-index:40;display:inline-flex;align-items:center;gap:.35rem;background:rgba(255,247,237,.96);box-shadow:0 10px 25px rgba(0,0,0,.16)}
+    .carousel-fullscreen-top::before{content:"⛶";font-size:1rem;line-height:1}
+    .home-carousel:fullscreen .carousel-fullscreen-top,
+    .home-carousel:-webkit-full-screen .carousel-fullscreen-top{right:1rem;top:1rem}
+    .home-carousel:fullscreen .carousel-counter,
+    .home-carousel:-webkit-full-screen .carousel-counter{right:10rem}
+
+    @media(prefers-reduced-motion:reduce){.carousel-track{transition:none}}
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div data-include="/includes/header.html"></div>
+  <main id="main">
+    <section class="home-hero-shell hero">
+      <div class="container hero-grid">
+        <div class="hero-copy-card">
+          <span class="eyebrow">Kashi darshan, rituals and kathas</span>
+          <h1>Plan a peaceful spiritual journey in Varanasi.</h1>
+          <p class="lead">Punya Yatra helps families, senior visitors and devotional groups plan darshan, rituals, kathas and yagyas with simple guidance and warm coordination.</p>
+          <div class="actions">
+            <a class="btn primary" href="/contact/">Plan my visit</a>
+            <a class="btn" href="/tours/">Explore tours</a>
+            <a class="btn" href="/rituals/">Ritual help</a>
+          </div>
+          <div class="hero-points" aria-label="Punya Yatra highlights">
+            <div class="hero-point"><strong>Comfort</strong><span>Routes for family pace</span></div>
+            <div class="hero-point"><strong>Clarity</strong><span>Simple booking path</span></div>
+            <div class="hero-point"><strong>Warmth</strong><span>Respectful guidance</span></div>
+          </div>
+          <div class="home-service-strip" aria-label="Quick service links">
+            <a href="/tours/">Kashi tours</a>
+            <a href="/rituals/">Rudrabhishek</a>
+            <a href="/kathas/">Kathas</a>
+            <a href="/yagyas/">Yagyas</a>
+          </div>
+        </div>
+
+        <div class="home-carousel" data-home-carousel aria-roledescription="carousel" aria-label="Punya Yatra visual highlights" tabindex="0">
+          <div class="carousel-top-badge">Punya Yatra highlights</div>
+          <div class="carousel-counter" data-carousel-counter>1 / 5</div>
+          <button class="carousel-fullscreen carousel-fullscreen-top" type="button" data-carousel-fullscreen aria-label="Open carousel in fullscreen">Fullscreen</button>
+          <div class="carousel-viewport">
+            <div class="carousel-track" data-carousel-track>
+              <article class="carousel-slide" data-carousel-slide data-thumb-title="Kashi Darshan" data-thumb-subtitle="Start here">
+                <img src="/assets/images/varanasi/hero-kashi.jpg" alt="Kashi Vishwanath and Varanasi spiritual travel">
+                <div class="carousel-caption"><span>Kashi darshan</span><h2>Begin with a peaceful plan.</h2><p>Share your dates, family size and main purpose. We help shape a comfortable route.</p></div>
+              </article>
+              <article class="carousel-slide" data-carousel-slide data-thumb-title="Ganga Aarti" data-thumb-subtitle="Evening ghats">
+                <img src="/assets/images/varanasi/dashashwamedh.jpg" alt="Evening at Dashashwamedh Ghat in Varanasi">
+                <div class="carousel-caption"><span>Ghats and Ganga</span><h2>Move slowly, see more deeply.</h2><p>Plan ghats, aarti, temple visits and quiet family time without rushing the journey.</p></div>
+              </article>
+              <article class="carousel-slide" data-carousel-slide data-thumb-title="Assi Ghat" data-thumb-subtitle="Family pace">
+                <img src="/assets/images/varanasi/assi-ghat.jpg" alt="Assi Ghat in Varanasi">
+                <div class="carousel-caption"><span>Family friendly</span><h2>Comfort matters in Kashi.</h2><p>Good routes, clear timing and simple coordination for elders, children and groups.</p></div>
+              </article>
+              <article class="carousel-slide" data-carousel-slide data-thumb-title="Sarnath" data-thumb-subtitle="Nearby visit">
+                <img src="/assets/images/varanasi/sarnath.jpg" alt="Sarnath near Varanasi">
+                <div class="carousel-caption"><span>Beyond the lanes</span><h2>Add Sarnath and nearby visits.</h2><p>Combine darshan with calm cultural visits when your schedule allows.</p></div>
+              </article>
+              <article class="carousel-slide" data-carousel-slide data-thumb-title="Ritual Help" data-thumb-subtitle="Puja support">
+                <img src="/assets/images/rituals/rudrabhishek.jpeg" alt="Ritual arrangement for a devotional family visit">
+                <div class="carousel-caption"><span>Ritual coordination</span><h2>Keep the sacred work simple.</h2><p>Clear planning for puja, sankalp, rituals, kathas and family occasions.</p></div>
+              </article>
+            </div>
+          </div>
+          <div class="carousel-controls" aria-hidden="false">
+            <button class="carousel-btn" type="button" data-carousel-prev aria-label="Previous slide">‹</button>
+            <button class="carousel-btn" type="button" data-carousel-next aria-label="Next slide">›</button>
+          </div>
+          <div class="carousel-bottom">
+            <div class="carousel-thumbs" data-carousel-thumbs aria-label="Carousel thumbnail controls"></div>
+            <div class="carousel-actions"><button class="carousel-play" type="button" data-carousel-pause aria-pressed="false">Pause</button></div>
+          </div>
+          <div class="carousel-progress" aria-hidden="true"><span data-carousel-progress></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quick-panel">
+      <div class="container panel quick-grid">
+        <form class="quick-search" data-home-search><input type="search" placeholder="Search tours, rituals, kathas..."><button class="btn primary" type="submit">Search</button></form>
+        <div class="stat"><strong>7+</strong><span>public pages only</span></div>
+        <div class="stat"><strong>1</strong><span>clean CSS file</span></div>
+        <div class="stat"><strong>Small</strong><span>manageable codebase</span></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head"><div><span class="eyebrow">Start here</span><h2>Choose what you need</h2><p>Keep the experience simple: tours, rituals, kathas, yagyas and a direct contact path.</p></div><a class="btn" href="/sitemap/">Use sitemap</a></div>
+        <div class="cards"><article class="card"><h3>Kashi tours</h3><p>Comfortable routes for ghats, temples, Sarnath and family visits.</p><a href="/tours/">View tours</a></article><article class="card"><h3>Rituals</h3><p>Rudrabhishek, puja and sankalp planning with clear coordination.</p><a href="/rituals/">View rituals</a></article><article class="card"><h3>Kathas and yagyas</h3><p>Support for devotional gatherings and special family occasions.</p><a href="/kathas/">View kathas</a></article></div>
+        <div class="trust-row">
+          <div class="trust-card"><strong>Simple first call</strong><span>Dates, people and purpose are enough to begin.</span></div>
+          <div class="trust-card"><strong>Family-friendly pace</strong><span>Plans can be shaped for elders and children.</span></div>
+          <div class="trust-card"><strong>Clear route thinking</strong><span>Darshan, ghats and nearby places are grouped sensibly.</span></div>
+          <div class="trust-card"><strong>Direct contact</strong><span>WhatsApp and email are visible from every page.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section warm-band"><div class="container split"><div><span class="eyebrow">City spotlight</span><h2>Kashi, seen with warmth and patience</h2><p>For many families, Varanasi is not only a destination. It is memory, devotion, food, lanes, ghats, darshan and quiet moments. The site keeps that feeling, while the code stays small.</p><div class="actions"><a class="btn primary" href="/contact/">WhatsApp us</a><a class="btn" href="/gallery/">See gallery</a></div></div><div class="gallery-grid"><img src="/assets/images/varanasi/dashashwamedh.jpg" alt="Dashashwamedh Ghat"><img src="/assets/images/varanasi/assi-ghat.jpg" alt="Assi Ghat"><img src="/assets/images/varanasi/sarnath.jpg" alt="Sarnath"><img src="/assets/images/varanasi/manikarnika.jpg" alt="Varanasi ghat"></div></div></section>
+
+    <section class="section"><div class="container"><div class="section-head"><div><span class="eyebrow">Popular choices</span><h2>Useful services</h2></div><a class="btn" href="/search/">Search all</a></div><div class="cards" data-content-cards data-limit="6"></div></div></section>
+  </main>
+  <div data-include="/includes/footer.html"></div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function(){
+      var carousel = document.querySelector("[data-home-carousel]");
+      if(!carousel) return;
+      var track = carousel.querySelector("[data-carousel-track]");
+      var slides = Array.prototype.slice.call(carousel.querySelectorAll("[data-carousel-slide]"));
+      var thumbsWrap = carousel.querySelector("[data-carousel-thumbs]");
+      var prev = carousel.querySelector("[data-carousel-prev]");
+      var next = carousel.querySelector("[data-carousel-next]");
+      var pauseBtn = carousel.querySelector("[data-carousel-pause]");
+      var fullscreenBtns = Array.prototype.slice.call(carousel.querySelectorAll("[data-carousel-fullscreen]"));
+      var counter = carousel.querySelector("[data-carousel-counter]");
+      var progress = carousel.querySelector("[data-carousel-progress]");
+      var current = 0, timer = null, progressTimer = null, paused = false, delay = 5600;
+      var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      function makeThumbs(){
+        slides.forEach(function(slide, index){
+          var image = slide.querySelector("img");
+          var btn = document.createElement("button");
+          btn.className = "carousel-thumb";
+          btn.type = "button";
+          btn.dataset.slideIndex = String(index);
+          btn.setAttribute("aria-label", "Show " + (slide.dataset.thumbTitle || "slide " + (index + 1)));
+          btn.innerHTML = '<img src="' + image.getAttribute("src") + '" alt=""><span><strong>' + (slide.dataset.thumbTitle || "Slide") + '</strong><small>' + (slide.dataset.thumbSubtitle || "View") + '</small></span>';
+          btn.addEventListener("click", function(event){ event.preventDefault(); event.stopPropagation(); goTo(index, true); });
+          btn.addEventListener("pointerup", function(event){ event.preventDefault(); event.stopPropagation(); goTo(index, true); });
+          btn.addEventListener("keydown", function(event){ if(event.key === "Enter" || event.key === " "){ event.preventDefault(); goTo(index, true); } });
+          thumbsWrap.appendChild(btn);
+        });
+      }
+      function update(){
+        track.style.transform = "translateX(-" + (current * 100) + "%)";
+        slides.forEach(function(slide, index){ slide.setAttribute("aria-hidden", index === current ? "false" : "true"); });
+        Array.prototype.slice.call(thumbsWrap.children).forEach(function(thumb, index){ thumb.setAttribute("aria-current", index === current ? "true" : "false"); });
+        if(counter) counter.textContent = (current + 1) + " / " + slides.length;
+        restartProgress();
+      }
+      function goTo(index, userAction){ current = (index + slides.length) % slides.length; update(); if(userAction) restart(); }
+      function start(){ if(reduceMotion || paused) return; stop(); timer = window.setInterval(function(){ goTo(current + 1, false); }, delay); startProgress(); }
+      function stop(){ if(timer) window.clearInterval(timer); timer = null; if(progressTimer) window.clearInterval(progressTimer); progressTimer = null; }
+      function restart(){ stop(); start(); }
+      function startProgress(){
+        if(!progress || reduceMotion || paused) return;
+        var startTime = Date.now(); progress.style.width = "0%";
+        progressTimer = window.setInterval(function(){
+          var pct = Math.min(100, ((Date.now() - startTime) / delay) * 100);
+          progress.style.width = pct + "%";
+        }, 80);
+      }
+      function restartProgress(){ if(progress){ progress.style.width = "0%"; } }
+      function setPaused(value){ paused = value; pauseBtn.textContent = paused ? "Play" : "Pause"; pauseBtn.setAttribute("aria-pressed", paused ? "true" : "false"); if(paused) stop(); else start(); }
+      function isFullscreen(){ return document.fullscreenElement === carousel || document.webkitFullscreenElement === carousel; }
+      function updateFullscreenText(){ fullscreenBtns.forEach(function(btn){ btn.textContent = isFullscreen() ? "Exit fullscreen" : "Fullscreen"; btn.setAttribute("aria-label", isFullscreen() ? "Exit carousel fullscreen" : "Open carousel in fullscreen"); }); }
+      function toggleFullscreen(){
+        if(isFullscreen()){
+          if(document.exitFullscreen) document.exitFullscreen();
+          else if(document.webkitExitFullscreen) document.webkitExitFullscreen();
+          return;
+        }
+        if(carousel.requestFullscreen) carousel.requestFullscreen();
+        else if(carousel.webkitRequestFullscreen) carousel.webkitRequestFullscreen();
+      }
+      makeThumbs();
+      thumbsWrap.addEventListener("click", function(event){ var btn = event.target.closest(".carousel-thumb"); if(!btn) return; event.preventDefault(); event.stopPropagation(); goTo(Number(btn.dataset.slideIndex || 0), true); }, true);
+      thumbsWrap.addEventListener("pointerup", function(event){ var btn = event.target.closest(".carousel-thumb"); if(!btn) return; event.preventDefault(); event.stopPropagation(); goTo(Number(btn.dataset.slideIndex || 0), true); }, true);
+      update(); start();
+      prev.addEventListener("click", function(){ goTo(current - 1, true); });
+      next.addEventListener("click", function(){ goTo(current + 1, true); });
+      pauseBtn.addEventListener("click", function(){ setPaused(!paused); });
+      fullscreenBtns.forEach(function(btn){ btn.addEventListener("click", function(event){ event.preventDefault(); event.stopPropagation(); toggleFullscreen(); }); }); document.addEventListener("fullscreenchange", updateFullscreenText); document.addEventListener("webkitfullscreenchange", updateFullscreenText); updateFullscreenText();
+      carousel.addEventListener("mouseenter", function(){ if(!paused) stop(); });
+      carousel.addEventListener("mouseleave", function(){ if(!paused) start(); });
+      carousel.addEventListener("focusin", function(){ if(!paused) stop(); });
+      carousel.addEventListener("focusout", function(){ if(!paused) start(); });
+      carousel.addEventListener("keydown", function(event){ if(event.key === "ArrowLeft") goTo(current - 1, true); if(event.key === "ArrowRight") goTo(current + 1, true); });
+    });
+  </script>
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

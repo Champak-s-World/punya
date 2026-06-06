@@ -13,16 +13,104 @@
     </section>
     <section>
       <h2>Explore</h2>
-      <p><a href="/plan/">Plan Tour</a> · <a href="/tours/">Tours</a> · <a href="/rituals/">Rituals</a></p>
-      <p><a href="/kathas/">Kathas</a> · <a href="/yagyas/">Yagyas</a> · <a href="/gallery/">Gallery</a></p>
-      <p><a href="/sitemap/">Sitemap</a> · <a href="/search/">Search</a></p>
+      <p><a href="/tours/">Tours</a> · <a href="/rituals/">Rituals</a> · <a href="/kathas/">Kathas</a> · <a href="/yagyas/">Yagyas</a></p>
+      <p><a href="/gallery/">Gallery</a> · <a href="/sitemap/">Sitemap</a> · <a href="/search/">Search</a></p>
     </section>
     <section>
       <h2>Contact</h2>
       <p><a href="https://wa.me/919335874326">WhatsApp: +91 93358 74326</a></p>
       <p><a href="mailto:punyayatra@example.com">punyayatra@example.com</a></p>
-      <p><button class="footer-mini-button" type="button" data-open-chatbot>Open tour planner</button></p>
+      <p><a href="/contact/">Send a planning request</a></p>
     </section>
   </div>
   <p class="footer-bottom">© <span data-year></span> Punya Yatra. Clean static website for spiritual travel planning.</p>
 </footer>
+
+
+<div class="chatbot-widget" data-chatbot-widget>
+  <button class="chatbot-launch" type="button" data-chatbot-toggle aria-expanded="false" aria-controls="punya-chatbot-panel">
+    <span aria-hidden="true">✦</span>
+    <strong>Plan tour</strong>
+  </button>
+
+  <section class="chatbot-panel" id="punya-chatbot-panel" data-chatbot-panel hidden aria-label="Varanasi tour planning assistant">
+    <div class="chatbot-head">
+      <div>
+        <strong>Punya Planner</strong>
+        <small>Multi-step Varanasi tour wizard</small>
+      </div>
+      <button type="button" data-chatbot-close aria-label="Close tour planner">×</button>
+    </div>
+
+    <div class="chatbot-body">
+      <p class="chatbot-intro">Answer a few questions and get a simple tour plan that you can send on WhatsApp.</p>
+
+      <form class="tour-wizard" data-tour-wizard>
+        <div class="wizard-progress" aria-label="Planning progress"><span data-wizard-progress></span></div>
+
+        <fieldset class="wizard-step" data-wizard-step>
+          <legend>1. Travel date</legend>
+          <label>When do you want to visit?
+            <input name="date" type="date">
+          </label>
+          <label>How many days?
+            <select name="days">
+              <option value="1 day">1 day</option>
+              <option value="2 days">2 days</option>
+              <option value="3 days">3 days</option>
+              <option value="4+ days">4+ days</option>
+            </select>
+          </label>
+        </fieldset>
+
+        <fieldset class="wizard-step" data-wizard-step hidden>
+          <legend>2. Group details</legend>
+          <label>Number of people
+            <input name="people" type="number" min="1" value="2">
+          </label>
+          <label>Main group type
+            <select name="group">
+              <option value="family">Family</option>
+              <option value="senior visitors">Senior visitors</option>
+              <option value="couple">Couple</option>
+              <option value="devotional group">Devotional group</option>
+            </select>
+          </label>
+        </fieldset>
+
+        <fieldset class="wizard-step" data-wizard-step hidden>
+          <legend>3. Main purpose</legend>
+          <label><input name="purpose" type="radio" value="Kashi darshan" checked> Kashi darshan</label>
+          <label><input name="purpose" type="radio" value="Ritual or puja"> Ritual or puja</label>
+          <label><input name="purpose" type="radio" value="Ganga aarti and ghats"> Ganga aarti and ghats</label>
+          <label><input name="purpose" type="radio" value="Sarnath and nearby places"> Sarnath and nearby places</label>
+        </fieldset>
+
+        <fieldset class="wizard-step" data-wizard-step hidden>
+          <legend>4. Comfort level</legend>
+          <label>Preferred pace
+            <select name="pace">
+              <option value="slow and comfortable">Slow and comfortable</option>
+              <option value="balanced">Balanced</option>
+              <option value="maximum sightseeing">Maximum sightseeing</option>
+            </select>
+          </label>
+          <label>Special note
+            <textarea name="note" rows="3" placeholder="Example: elders are travelling, avoid too much walking, need morning darshan..."></textarea>
+          </label>
+        </fieldset>
+
+        <fieldset class="wizard-step" data-wizard-step hidden>
+          <legend>5. Your plan</legend>
+          <div class="wizard-summary" data-wizard-summary></div>
+        </fieldset>
+
+        <div class="wizard-actions">
+          <button class="btn" type="button" data-wizard-prev>Back</button>
+          <button class="btn primary" type="button" data-wizard-next>Next</button>
+          <a class="btn wizard-whatsapp" data-wizard-whatsapp href="https://wa.me/919335874326" target="_blank" rel="noopener">Send on WhatsApp</a>
+        </div>
+      </form>
+    </div>
+  </section>
+</div>
