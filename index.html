@@ -1,1 +1,277 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#d97706"><link rel="stylesheet" href="assets/css/style.css"><link rel="icon" href="assets/images/brand/logo.svg"><title>Punya Yatra | Punya Yatra</title><meta name="description" content="Plan Kashi darshan, Varanasi tours, rituals, kathas and yagyas with warm family-friendly guidance."><meta property="og:title" content="Punya Yatra | Punya Yatra"><meta property="og:description" content="Plan Kashi darshan, Varanasi tours, rituals, kathas and yagyas with warm family-friendly guidance."><meta property="og:image" content="assets/images/varanasi/hero-kashi.jpg"></head><body><a class="skip-link" href="#main">Skip to content</a><div data-include="includes/header.html"></div><main id="main"><section class="hero"><div class="container hero-grid"><div><span class="eyebrow">Kashi darshan, rituals and kathas</span><h1>Plan a peaceful spiritual journey in Varanasi.</h1><p class="lead">Punya Yatra helps families, senior visitors and devotional groups plan darshan, rituals, kathas and yagyas with simple guidance and warm coordination.</p><div class="actions"><a class="btn primary" href="contact.html">Plan my visit</a><a class="btn" href="tours.html">Explore tours</a><a class="btn" href="rituals.html">Ritual help</a></div></div><div class="hero-card"><img src="assets/images/varanasi/hero-kashi.jpg" alt="Kashi Vishwanath and Varanasi spiritual travel"><p><strong>Start with a simple plan.</strong> Tell us your dates, family size and main purpose. We help you shape a comfortable route.</p></div></div></section><section class="quick-panel"><div class="container panel quick-grid"><form class="quick-search" data-home-search><input type="search" placeholder="Search tours, rituals, kathas..."><button class="btn primary" type="submit">Search</button></form><div class="stat"><strong>7+</strong><span>public pages only</span></div><div class="stat"><strong>1</strong><span>clean CSS file</span></div><div class="stat"><strong>Small</strong><span>manageable codebase</span></div></div></section><section class="section"><div class="container"><div class="section-head"><div><span class="eyebrow">Start here</span><h2>Choose what you need</h2><p>Keep the experience simple: tours, rituals, kathas, yagyas and a direct contact path.</p></div><a class="btn" href="sitemap.html">Use sitemap</a></div><div class="cards"><article class="card"><h3>Kashi tours</h3><p>Comfortable routes for ghats, temples, Sarnath and family visits.</p><a href="tours.html">View tours</a></article><article class="card"><h3>Rituals</h3><p>Rudrabhishek, puja and sankalp planning with clear coordination.</p><a href="rituals.html">View rituals</a></article><article class="card"><h3>Kathas and yagyas</h3><p>Support for devotional gatherings and special family occasions.</p><a href="kathas.html">View kathas</a></article></div></div></section><section class="section warm-band"><div class="container split"><div><span class="eyebrow">City spotlight</span><h2>Kashi, seen with warmth and patience</h2><p>For many families, Varanasi is not only a destination. It is memory, devotion, food, lanes, ghats, darshan and quiet moments. The site keeps that feeling, while the code stays small.</p><div class="actions"><a class="btn primary" href="contact.html">WhatsApp us</a><a class="btn" href="gallery.html">See gallery</a></div></div><div class="gallery-grid"><img src="assets/images/varanasi/dashashwamedh.jpg" alt="Dashashwamedh Ghat"><img src="assets/images/varanasi/assi-ghat.jpg" alt="Assi Ghat"><img src="assets/images/varanasi/sarnath.jpg" alt="Sarnath"><img src="assets/images/varanasi/manikarnika.jpg" alt="Varanasi ghat"></div></div></section><section class="section"><div class="container"><div class="section-head"><div><span class="eyebrow">Popular choices</span><h2>Useful services</h2></div><a class="btn" href="search.html">Search all</a></div><div class="cards" data-content-cards data-limit="6"></div></div></section></main><div data-include="includes/footer.html"></div><script src="assets/js/main.js" defer></script></body></html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#d97706"><link rel="stylesheet" href="assets/css/style.css"><link rel="icon" href="assets/images/brand/logo.svg"><title>Punya Yatra | Punya Yatra</title><meta name="description" content="Plan Kashi darshan, Varanasi tours, rituals, kathas and yagyas with warm family-friendly guidance."><meta property="og:title" content="Punya Yatra | Punya Yatra"><meta property="og:description" content="Plan Kashi darshan, Varanasi tours, rituals, kathas and yagyas with warm family-friendly guidance."><meta property="og:image" content="assets/images/varanasi/hero-kashi.jpg">
+<style>
+/* Home hero carousel: scoped, lightweight, no external dependency */
+.home-carousel{
+  position:relative;
+  overflow:hidden;
+  border-radius:28px;
+  background:linear-gradient(135deg,#fff7ed,#ffedd5);
+  box-shadow:0 24px 70px rgba(120,53,15,.20);
+  min-height:430px;
+  isolation:isolate;
+}
+.home-carousel::before{
+  content:"";
+  position:absolute;
+  inset:auto -20% -35% -20%;
+  height:55%;
+  background:radial-gradient(circle at center,rgba(217,119,6,.26),transparent 68%);
+  z-index:0;
+}
+.carousel-track{
+  display:flex;
+  height:100%;
+  transition:transform .65s cubic-bezier(.22,.75,.25,1);
+  will-change:transform;
+}
+.carousel-slide{
+  position:relative;
+  min-width:100%;
+  min-height:430px;
+  display:flex;
+  align-items:flex-end;
+  overflow:hidden;
+}
+.carousel-slide img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transform:scale(1.03);
+}
+.carousel-slide::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,rgba(15,23,42,.05),rgba(15,23,42,.62));
+}
+.carousel-caption{
+  position:relative;
+  z-index:2;
+  padding:clamp(1rem,3vw,1.6rem);
+  color:#fff;
+  text-shadow:0 2px 12px rgba(0,0,0,.35);
+}
+.carousel-caption span{
+  display:inline-flex;
+  margin-bottom:.45rem;
+  padding:.28rem .7rem;
+  border:1px solid rgba(255,255,255,.46);
+  border-radius:999px;
+  background:rgba(255,255,255,.16);
+  backdrop-filter:blur(8px);
+  font-size:.78rem;
+  font-weight:800;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.carousel-caption h2{
+  margin:.15rem 0 .35rem;
+  font-size:clamp(1.45rem,3vw,2.35rem);
+  line-height:1.05;
+  color:#fff;
+}
+.carousel-caption p{
+  max-width:34rem;
+  margin:0;
+  font-size:1rem;
+  color:rgba(255,255,255,.94);
+}
+.carousel-controls{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:1rem;
+  pointer-events:none;
+  z-index:4;
+}
+.carousel-btn{
+  width:44px;
+  height:44px;
+  border:1px solid rgba(255,255,255,.48);
+  border-radius:999px;
+  background:rgba(255,255,255,.86);
+  color:#7c2d12;
+  box-shadow:0 10px 25px rgba(0,0,0,.16);
+  cursor:pointer;
+  pointer-events:auto;
+  font-size:1.45rem;
+  line-height:1;
+}
+.carousel-btn:hover,
+.carousel-btn:focus-visible{
+  background:#fff7ed;
+  outline:3px solid rgba(251,191,36,.75);
+  outline-offset:3px;
+}
+.carousel-dots{
+  position:absolute;
+  left:50%;
+  bottom:1rem;
+  transform:translateX(-50%);
+  display:flex;
+  gap:.45rem;
+  z-index:5;
+  padding:.35rem .5rem;
+  border-radius:999px;
+  background:rgba(15,23,42,.24);
+  backdrop-filter:blur(8px);
+}
+.carousel-dot{
+  width:.65rem;
+  height:.65rem;
+  border:0;
+  border-radius:999px;
+  background:rgba(255,255,255,.58);
+  cursor:pointer;
+}
+.carousel-dot[aria-current="true"]{
+  width:1.65rem;
+  background:#fff;
+}
+.carousel-note{
+  position:absolute;
+  top:1rem;
+  right:1rem;
+  z-index:5;
+  max-width:14rem;
+  padding:.7rem .85rem;
+  border-radius:18px;
+  background:rgba(255,251,235,.92);
+  color:#7c2d12;
+  box-shadow:0 10px 25px rgba(0,0,0,.15);
+  font-size:.86rem;
+}
+.carousel-note strong{display:block;color:#431407}
+@media (max-width:760px){
+  .home-carousel,.carousel-slide{min-height:360px}
+  .carousel-note{display:none}
+  .carousel-controls{padding:.55rem}
+  .carousel-btn{width:38px;height:38px}
+}
+@media (prefers-reduced-motion:reduce){
+  .carousel-track{transition:none}
+}
+</style>
+</head><body><a class="skip-link" href="#main">Skip to content</a><div data-include="includes/header.html"></div><main id="main"><section class="hero"><div class="container hero-grid"><div><span class="eyebrow">Kashi darshan, rituals and kathas</span><h1>Plan a peaceful spiritual journey in Varanasi.</h1><p class="lead">Punya Yatra helps families, senior visitors and devotional groups plan darshan, rituals, kathas and yagyas with simple guidance and warm coordination.</p><div class="actions"><a class="btn primary" href="contact.html">Plan my visit</a><a class="btn" href="tours.html">Explore tours</a><a class="btn" href="rituals.html">Ritual help</a></div></div><div class="home-carousel" data-home-carousel aria-roledescription="carousel" aria-label="Punya Yatra highlights" tabindex="0">
+  <div class="carousel-track" data-carousel-track>
+    <article class="carousel-slide" data-carousel-slide>
+      <img src="assets/images/varanasi/hero-kashi.jpg" alt="Kashi Vishwanath and Varanasi spiritual travel">
+      <div class="carousel-caption">
+        <span>Kashi darshan</span>
+        <h2>Begin with a peaceful plan.</h2>
+        <p>Share your dates, family size and main purpose. We help shape a comfortable route.</p>
+      </div>
+    </article>
+    <article class="carousel-slide" data-carousel-slide>
+      <img src="assets/images/varanasi/dashashwamedh.jpg" alt="Evening at Dashashwamedh Ghat in Varanasi">
+      <div class="carousel-caption">
+        <span>Ghats and Ganga</span>
+        <h2>Move slowly, see more deeply.</h2>
+        <p>Plan ghats, aarti, temple visits and quiet family time without rushing the journey.</p>
+      </div>
+    </article>
+    <article class="carousel-slide" data-carousel-slide>
+      <img src="assets/images/varanasi/assi-ghat.jpg" alt="Assi Ghat in Varanasi">
+      <div class="carousel-caption">
+        <span>Family friendly</span>
+        <h2>Comfort matters in Kashi.</h2>
+        <p>Good routes, clear timing and simple coordination for elders, children and groups.</p>
+      </div>
+    </article>
+    <article class="carousel-slide" data-carousel-slide>
+      <img src="assets/images/varanasi/sarnath.jpg" alt="Sarnath near Varanasi">
+      <div class="carousel-caption">
+        <span>Beyond the lanes</span>
+        <h2>Add Sarnath and nearby visits.</h2>
+        <p>Combine darshan with calm cultural visits when your schedule allows.</p>
+      </div>
+    </article>
+  </div>
+  <div class="carousel-note"><strong>Start with a simple plan.</strong> Dates, purpose and family size are enough.</div>
+  <div class="carousel-controls" aria-hidden="false">
+    <button class="carousel-btn" type="button" data-carousel-prev aria-label="Previous slide">‹</button>
+    <button class="carousel-btn" type="button" data-carousel-next aria-label="Next slide">›</button>
+  </div>
+  <div class="carousel-dots" data-carousel-dots aria-label="Carousel slide controls"></div>
+</div></div></section><section class="quick-panel"><div class="container panel quick-grid"><form class="quick-search" data-home-search><input type="search" placeholder="Search tours, rituals, kathas..."><button class="btn primary" type="submit">Search</button></form><div class="stat"><strong>7+</strong><span>public pages only</span></div><div class="stat"><strong>1</strong><span>clean CSS file</span></div><div class="stat"><strong>Small</strong><span>manageable codebase</span></div></div></section><section class="section"><div class="container"><div class="section-head"><div><span class="eyebrow">Start here</span><h2>Choose what you need</h2><p>Keep the experience simple: tours, rituals, kathas, yagyas and a direct contact path.</p></div><a class="btn" href="sitemap.html">Use sitemap</a></div><div class="cards"><article class="card"><h3>Kashi tours</h3><p>Comfortable routes for ghats, temples, Sarnath and family visits.</p><a href="tours.html">View tours</a></article><article class="card"><h3>Rituals</h3><p>Rudrabhishek, puja and sankalp planning with clear coordination.</p><a href="rituals.html">View rituals</a></article><article class="card"><h3>Kathas and yagyas</h3><p>Support for devotional gatherings and special family occasions.</p><a href="kathas.html">View kathas</a></article></div></div></section><section class="section warm-band"><div class="container split"><div><span class="eyebrow">City spotlight</span><h2>Kashi, seen with warmth and patience</h2><p>For many families, Varanasi is not only a destination. It is memory, devotion, food, lanes, ghats, darshan and quiet moments. The site keeps that feeling, while the code stays small.</p><div class="actions"><a class="btn primary" href="contact.html">WhatsApp us</a><a class="btn" href="gallery.html">See gallery</a></div></div><div class="gallery-grid"><img src="assets/images/varanasi/dashashwamedh.jpg" alt="Dashashwamedh Ghat"><img src="assets/images/varanasi/assi-ghat.jpg" alt="Assi Ghat"><img src="assets/images/varanasi/sarnath.jpg" alt="Sarnath"><img src="assets/images/varanasi/manikarnika.jpg" alt="Varanasi ghat"></div></div></section><section class="section"><div class="container"><div class="section-head"><div><span class="eyebrow">Popular choices</span><h2>Useful services</h2></div><a class="btn" href="search.html">Search all</a></div><div class="cards" data-content-cards data-limit="6"></div></div></section></main><div data-include="includes/footer.html"></div>
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+  var carousel = document.querySelector("[data-home-carousel]");
+  if(!carousel) return;
+
+  var track = carousel.querySelector("[data-carousel-track]");
+  var slides = Array.prototype.slice.call(carousel.querySelectorAll("[data-carousel-slide]"));
+  var dotsWrap = carousel.querySelector("[data-carousel-dots]");
+  var prev = carousel.querySelector("[data-carousel-prev]");
+  var next = carousel.querySelector("[data-carousel-next]");
+  var current = 0;
+  var timer = null;
+  var delay = 5200;
+  var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function makeDots(){
+    slides.forEach(function(_, index){
+      var dot = document.createElement("button");
+      dot.className = "carousel-dot";
+      dot.type = "button";
+      dot.setAttribute("aria-label", "Show slide " + (index + 1));
+      dot.addEventListener("click", function(){ goTo(index, true); });
+      dotsWrap.appendChild(dot);
+    });
+  }
+
+  function update(){
+    track.style.transform = "translateX(-" + (current * 100) + "%)";
+    slides.forEach(function(slide, index){
+      slide.setAttribute("aria-hidden", index === current ? "false" : "true");
+    });
+    Array.prototype.slice.call(dotsWrap.children).forEach(function(dot, index){
+      dot.setAttribute("aria-current", index === current ? "true" : "false");
+    });
+  }
+
+  function goTo(index, userAction){
+    current = (index + slides.length) % slides.length;
+    update();
+    if(userAction) restart();
+  }
+
+  function start(){
+    if(reduceMotion) return;
+    stop();
+    timer = window.setInterval(function(){ goTo(current + 1, false); }, delay);
+  }
+
+  function stop(){
+    if(timer) window.clearInterval(timer);
+    timer = null;
+  }
+
+  function restart(){
+    stop();
+    start();
+  }
+
+  makeDots();
+  update();
+  start();
+
+  prev.addEventListener("click", function(){ goTo(current - 1, true); });
+  next.addEventListener("click", function(){ goTo(current + 1, true); });
+
+  carousel.addEventListener("mouseenter", stop);
+  carousel.addEventListener("mouseleave", start);
+  carousel.addEventListener("focusin", stop);
+  carousel.addEventListener("focusout", start);
+
+  carousel.addEventListener("keydown", function(event){
+    if(event.key === "ArrowLeft") goTo(current - 1, true);
+    if(event.key === "ArrowRight") goTo(current + 1, true);
+  });
+});
+</script>
+<script src="assets/js/main.js" defer></script></body></html>
