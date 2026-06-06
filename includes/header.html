@@ -1,33 +1,26 @@
-<header class="site-header" id="siteHeader">
-  <div class="site-shell site-header__inner">
-    <a class="site-brand" href="index.html" aria-label="Punya Yatra home">
-      <img src="assets/images/brand/logo.svg" alt="Punya Yatra" class="site-brand__logo" />
-      <span class="site-brand__text">
-        <strong>Punya Yatra</strong>
-        <small>Warm Varanasi journeys, rituals and kathas</small>
-      </span>
-    </a>
-
-    <button class="site-menu-button" type="button" data-menu-toggle aria-expanded="false" aria-controls="siteNav">Menu</button>
-
-    <nav class="site-nav" id="siteNav" aria-label="Primary navigation">
-      <a href="index.html">Home</a>
-      <a href="tours.html">Tours</a>
-      <a href="rituals.html">Rituals</a>
-      <a href="kathas.html">Kathas</a>
-      <a href="yagyas.html">Yagyas</a>
-      <a href="routes.html">Routes</a>
-      <a href="calendar.html">Calendar</a>
-      <a href="gallery.html">Gallery</a>
-      <form class="site-search" role="search" action="search.html" method="get">
-        <label class="sr-only" for="siteSearchInput">Search Punya Yatra</label>
-        <input id="siteSearchInput" name="q" type="search" placeholder="Search" autocomplete="off" />
-        <button type="submit" aria-label="Search">Search</button>
-      </form>
-      <a href="contact.html" class="site-nav__cta">Contact</a>
-    </nav>
-  </div>
-  <div class="site-shell">
-    <nav class="site-breadcrumbs" data-breadcrumbs aria-label="Breadcrumb"></nav>
+<header class="site-header">
+  <a class="brand" href="index.html" aria-label="Punya Yatra home">
+    <img src="assets/images/brand/logo.svg" alt="Punya Yatra logo" width="44" height="44">
+    <span><strong>Punya Yatra</strong><small>Kashi travel, rituals and kathas</small></span>
+  </a>
+  <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">Menu</button>
+  <nav class="site-nav" aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="tours.html">Tours</a>
+    <a href="rituals.html">Rituals</a>
+    <a href="kathas.html">Kathas</a>
+    <a href="yagyas.html">Yagyas</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="sitemap.html">Sitemap</a>
+    <a class="nav-cta" href="contact.html">Contact</a>
+  </nav>
+  <form class="nav-search" action="search.html" role="search">
+    <input name="q" type="search" placeholder="Search" aria-label="Search Punya Yatra">
+    <button type="submit">Go</button>
+  </form>
+  <div class="header-tools">
+    <button type="button" data-theme-toggle>Theme</button>
+    <button type="button" data-lang-toggle>English / Hindi</button>
   </div>
 </header>
+<nav class="breadcrumbs" aria-label="Breadcrumbs"></nav>
