@@ -100,5 +100,11 @@
     "category": "Page",
     "url": "/search/",
     "description": "Search the site."
+  },
+  {
+    "title": "Plan Tour",
+    "category": "Page",
+    "url": "/plan/",
+    "description": "Multi-step wizard for planning a Varanasi tour, Kashi darshan, rituals, ghats and Sarnath visit."
   }
 ]
