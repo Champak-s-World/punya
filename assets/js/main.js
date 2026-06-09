@@ -287,6 +287,57 @@ function chatbotWizard() {
   closeWizard();
 }
 
+function galleryPage() {
+  const gallery = $('[data-gallery]');
+  if (!gallery) return;
+  const filters = $$('[data-gallery-filter]');
+  const items = $$('[data-gallery-category]', gallery);
+  const lightbox = $('[data-gallery-lightbox]');
+  const lightboxImage = $('[data-gallery-lightbox-image]');
+  const lightboxTitle = $('[data-gallery-lightbox-title]');
+  const lightboxCaption = $('[data-gallery-lightbox-caption]');
+  const close = $('[data-gallery-close]');
+  let lastFocus = null;
+
+  function applyFilter(value) {
+    filters.forEach(btn => btn.classList.toggle('is-active', btn.dataset.galleryFilter === value));
+    items.forEach(item => {
+      const show = value === 'all' || item.dataset.galleryCategory === value;
+      item.hidden = !show;
+    });
+  }
+
+  function openImage(button) {
+    if (!lightbox || !lightboxImage) return;
+    lastFocus = button;
+    lightboxImage.src = button.dataset.src || '';
+    lightboxImage.alt = button.dataset.title || 'Gallery image';
+    if (lightboxTitle) lightboxTitle.textContent = button.dataset.title || '';
+    if (lightboxCaption) lightboxCaption.textContent = button.dataset.caption || '';
+    lightbox.hidden = false;
+    document.body.style.overflow = 'hidden';
+    if (close) close.focus({ preventScroll: true });
+  }
+
+  function closeImage() {
+    if (!lightbox) return;
+    lightbox.hidden = true;
+    document.body.style.overflow = '';
+    if (lightboxImage) lightboxImage.src = '';
+    if (lastFocus) lastFocus.focus({ preventScroll: true });
+  }
+
+  filters.forEach(btn => btn.addEventListener('click', () => applyFilter(btn.dataset.galleryFilter || 'all')));
+  $$('[data-gallery-open]', gallery).forEach(btn => btn.addEventListener('click', () => openImage(btn)));
+  if (close) close.addEventListener('click', closeImage);
+  if (lightbox) lightbox.addEventListener('click', event => {
+    if (event.target === lightbox) closeImage();
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && lightbox && !lightbox.hidden) closeImage();
+  });
+}
+
 function init() {
   activateNav();
   breadcrumbs();
@@ -296,6 +347,7 @@ function init() {
   renderHomeCards();
   homeSearch();
   chatbotWizard();
+  galleryPage();
 }
 
 Promise.all($$("[data-include]").map(includePart)).then(init);
