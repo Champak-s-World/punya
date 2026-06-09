@@ -43,9 +43,30 @@
     </div>
 
     <div class="chatbot-body">
-      <p class="chatbot-intro">Answer a few questions and get a simple tour plan that you can send on WhatsApp.</p>
+      <p class="chatbot-intro">Ask about tours, rituals, kathas, yagyas, Sarnath, Ganga Aarti or contact details. You can also open the planning wizard.</p>
 
-      <form class="tour-wizard" data-tour-wizard>
+      <div class="chatbot-messages" data-chatbot-messages aria-live="polite">
+        <div class="chatbot-message bot">
+          <p>Namaste. Ask me anything about planning a Varanasi visit, or type <strong>plan tour</strong> to open the wizard.</p>
+        </div>
+      </div>
+
+      <div class="chatbot-suggestions" aria-label="Suggested questions">
+        <button type="button" data-chatbot-suggest="Kashi darshan tour">Kashi darshan</button>
+        <button type="button" data-chatbot-suggest="Rudrabhishek">Rudrabhishek</button>
+        <button type="button" data-chatbot-suggest="Ganga Aarti">Ganga Aarti</button>
+        <button type="button" data-chatbot-suggest="contact WhatsApp">Contact</button>
+      </div>
+
+      <form class="chatbot-query-form" data-chatbot-query-form>
+        <label class="sr-only" for="punya-chatbot-input">Type your question</label>
+        <input id="punya-chatbot-input" data-chatbot-input type="text" autocomplete="off" placeholder="Type your question...">
+        <button class="btn primary" type="submit">Send</button>
+      </form>
+
+      <button class="btn chatbot-wizard-toggle" type="button" data-chatbot-wizard-toggle aria-expanded="false">Open tour planning wizard</button>
+
+      <form class="tour-wizard" data-tour-wizard hidden>
         <div class="wizard-progress" aria-label="Planning progress"><span data-wizard-progress></span></div>
 
         <fieldset class="wizard-step" data-wizard-step>
