@@ -343,6 +343,7 @@ function init() {
   breadcrumbs();
   theme();
   navToggle();
+  pwaInstall();
   year();
   renderHomeCards();
   homeSearch();
@@ -350,4 +351,50 @@ function init() {
   galleryPage();
 }
 
+let deferredInstallPrompt = null;
+
+function pwaInstall() {
+  const installButton = $("[data-install-app]");
+  if (!installButton) return;
+
+  const standalone = window.matchMedia("(display-mode: standalone)").matches ||
+    window.navigator.standalone === true;
+  if (standalone) {
+    installButton.hidden = true;
+    return;
+  }
+
+  if (deferredInstallPrompt) installButton.hidden = false;
+
+  installButton.addEventListener("click", async function () {
+    if (!deferredInstallPrompt) return;
+    installButton.disabled = true;
+    deferredInstallPrompt.prompt();
+    await deferredInstallPrompt.userChoice;
+    deferredInstallPrompt = null;
+    installButton.hidden = true;
+    installButton.disabled = false;
+  });
+}
+
+window.addEventListener("beforeinstallprompt", function (event) {
+  event.preventDefault();
+  deferredInstallPrompt = event;
+  const installButton = $("[data-install-app]");
+  if (installButton) installButton.hidden = false;
+});
+
+window.addEventListener("appinstalled", function () {
+  deferredInstallPrompt = null;
+  const installButton = $("[data-install-app]");
+  if (installButton) installButton.hidden = true;
+});
+
 Promise.all($$("[data-include]").map(includePart)).then(init);
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function () {
+    navigator.serviceWorker.register("/service-worker.js").catch(function (error) {
+      console.warn("Punya Yatra service worker registration failed:", error);
+    });
+  });
+}

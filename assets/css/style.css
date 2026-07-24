@@ -13,6 +13,11 @@
 .site-footer p{color:#fed7aa}
 @media(max-width:900px){.footer-grid-wide{grid-template-columns:1fr}.footer-social{gap:8px}}
 
+/* PWA install button */
+.header-tools .install-app-button{background:linear-gradient(135deg,var(--brand),#ea580c);border-color:transparent;color:#fff;cursor:pointer}
+.header-tools .install-app-button:hover,.header-tools .install-app-button:focus-visible{background:linear-gradient(135deg,var(--brand-dark),var(--brand));outline:3px solid rgba(251,191,36,.55);outline-offset:2px}
+.header-tools .install-app-button[hidden]{display:none!important}
+
 
 /* Targeted additions: mobile menu icon, bottom-right chatbot and Varanasi tour wizard */
 .nav-toggle{align-items:center;gap:8px;cursor:pointer}
