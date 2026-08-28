@@ -10,4 +10,16 @@ Exquisite, responsive pilgrimage website for https://punyayatra.in/.
 4. Confirm the custom domain is `punyayatra.in`.
 5. Enable HTTPS when GitHub makes the option available.
 
-The homepage includes English and Hindi speech synthesis, a WhatsApp itinerary planner, destination cards, signature journeys and links to Kashi Yatra Guide.
+The complete site includes English and Hindi speech synthesis, a WhatsApp itinerary planner, nine destinations, signature journeys and a live catalogue built from the supplied Kashi Yatra sitemap.
+
+## Commercial purpose
+
+Punya Yatra is designed to generate revenue through:
+
+- paid custom itinerary planning;
+- tour, transport and accommodation coordination;
+- clearly labelled sponsored local-business listings;
+- hotel and travel-partner referrals; and
+- disclosed affiliate recommendations.
+
+Reading the site is free. Paid services, commissions, sponsorships and affiliate relationships should remain clearly disclosed to visitors.
