@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://punyayatra.in/sitemap.xml

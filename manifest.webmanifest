@@ -1,0 +1,9 @@
+{
+  "name": "Punya Yatra",
+  "short_name": "Punya Yatra",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fffaf1",
+  "theme_color": "#541e19",
+  "description": "Sacred journeys across Kashi and Uttar Pradesh."
+}
