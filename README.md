@@ -12,6 +12,9 @@ Upload all files and folders to the root of the `Champak-s-World/punya` reposito
 - Six tour packages with details, inclusions, schedules and prices
 - Responsive mobile and desktop presentation
 - Contextual English/Hindi speech synthesis
+- Cinematic, swipe-enabled Kashi story slideshow
+- User-controlled Bhairavi background music
+- Contextual links to Kashi Yatra blog guides and stories
 - Search-engine metadata and accessible navigation
 - No affiliate redirects
 
