@@ -1,22 +1,13 @@
-# Cleanup Report
+# Punya Yatra deployment package
 
-This ZIP has been cleaned for safer static deployment.
+Updated 2026-08-29.
 
-## Removed
-- `.git/` repository history and metadata.
-- Windows shortcut files such as `cmd.exe.lnk`.
-- Public navigation link to the admin helper page.
-- Obvious demo video entries, placeholder text and the Rickroll YouTube ID.
-- Duplicate script includes in `contact.html`.
-
-## Fixed
-- Added missing meta descriptions to public HTML pages.
-- Replaced dummy cards on the contact page with practical contact/service cards.
-- Synchronized contact details in `data/site.config.js` and `data/config/site-config.json`.
-- Replaced invalid JSON files with safe valid JSON and preserved originals as `.broken.txt` files for manual review.
-- Renamed generic video titles inside location master data from `Example Video` to `Location video`.
-
-## Still recommended before final launch
-- Replace all stock/placeholder images and remote `picsum.photos` URLs with real optimized images.
-- Review service prices, cancellation policy, privacy policy, and trust-building business details.
-- Keep admin/helper pages out of public navigation or move them to a private workflow.
+- Restored the full homepage.
+- Added site-wide SEO, canonical, social cards and structured data.
+- Corrected the sitemap to include only pages present in this build.
+- Activated the PWA manifest and service worker.
+- Added custom sacred arrangements and stronger direct-booking reassurance.
+- Added visible WhatsApp/call contact information.
+- Improved the automatic page-show with Bhairavi music, gentle iframe scrolling, play/pause and previous/next controls.
+- Removed visitor-facing implementation notes from the gallery.
+- Deployment ZIP intentionally excludes `.git/` history.
