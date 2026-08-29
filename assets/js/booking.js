@@ -1,7 +1,5 @@
 (()=>{
   const tour=document.getElementById("tour");
-  const root=document.body.dataset.root||"./";
-  document.querySelectorAll("[data-tour]").forEach(button=>button.addEventListener("click",()=>{if(tour){tour.value=button.dataset.tour;document.getElementById("book")?.scrollIntoView({behavior:"smooth"})}else location.href=root+"book/?tour="+encodeURIComponent(button.dataset.tour)}));
   if(tour){const requested=new URLSearchParams(location.search).get("tour");if(requested&&[...tour.options].some(option=>option.value===requested))tour.value=requested}
   document.getElementById("bookingForm")?.addEventListener("submit",event=>{event.preventDefault();const value=id=>document.getElementById(id).value;const message=`Namaste. I would like to book a Punya Yatra.\nTour: ${value("tour")}\nName: ${value("name")}\nTravel date: ${value("date")||"Flexible"}\nTravellers: ${value("travellers")}\nHotel: ${value("hotel")}\nPickup: ${value("pickup")||"To be discussed"}\nPlease confirm availability and quotation.`;open("https://wa.me/919335874326?text="+encodeURIComponent(message),"_blank","noopener")});
   const slider=document.querySelector("[data-slider]");

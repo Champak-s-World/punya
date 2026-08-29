@@ -18,6 +18,8 @@ Upload all files and folders to the root of the `Champak-s-World/punya` reposito
 
 The shared HTML includes are loaded with `assets/js/includes.js`. Preview through a local web server or GitHub Pages; browser security prevents `fetch()` includes from working when an HTML file is opened directly from a device folder.
 
+Tour booking controls are ordinary links rather than JavaScript-only buttons. Each link opens `book/index.html` with the chosen tour in the query string, and the booking page safely preselects it. Asset URLs include a version marker to prevent older defective scripts remaining in the browser cache.
+
 ## Features
 
 - Direct pilgrimage-tour booking through WhatsApp

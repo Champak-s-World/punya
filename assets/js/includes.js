@@ -3,7 +3,7 @@
   const page=document.body.dataset.page||"";
   async function inject(selector,file){
     const host=document.querySelector(selector);if(!host)return;
-    try{const response=await fetch(root+"includes/"+file);if(!response.ok)throw new Error(response.status);host.innerHTML=(await response.text()).replaceAll("{{ROOT}}",root)}
+    try{const response=await fetch(root+"includes/"+file+"?v=5",{cache:"no-cache"});if(!response.ok)throw new Error(response.status);host.innerHTML=(await response.text()).replaceAll("{{ROOT}}",root)}
     catch(error){host.innerHTML=`<div class="include-error">Unable to load ${file}. View this site through GitHub Pages or a local web server.</div>`}
   }
   Promise.all([inject("#site-header","header.html"),inject("#site-footer","footer.html")]).then(()=>{
