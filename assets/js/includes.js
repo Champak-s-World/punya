@@ -12,4 +12,6 @@
     menu?.addEventListener("click",()=>{const open=nav.classList.toggle("open");menu.setAttribute("aria-expanded",String(open))});
     const header=document.querySelector("header");addEventListener("scroll",()=>header?.classList.toggle("scrolled",scrollY>40),{passive:true});
   });
+  const pageShowStyle=document.createElement("link");pageShowStyle.rel="stylesheet";pageShowStyle.href=root+"assets/css/page-show.css?v=9";document.head.appendChild(pageShowStyle);
+  const pageShowScript=document.createElement("script");pageShowScript.src=root+"assets/js/page-show.js?v=9";pageShowScript.defer=true;document.head.appendChild(pageShowScript);
 })();

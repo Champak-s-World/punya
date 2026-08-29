@@ -1,0 +1,19 @@
+(()=>{
+  if(window.self!==window.top)return;
+  const root=document.body.dataset.root||"./";
+  const pages=[{title:"Welcome to Punya Yatra",url:root+"index.html"},{title:"Complete Pilgrimage Tours",url:root+"tours/"},{title:"The Visual Yatra",url:root+"gallery/"},{title:"Stories of Kashi",url:root+"stories/"},{title:"Plan and Book Your Journey",url:root+"book/"}];
+  let index=0,idleTimer=null,slideTimer=null,playing=true,lastFocused=null;
+  const modal=document.createElement("div");modal.className="page-show";modal.setAttribute("role","dialog");modal.setAttribute("aria-modal","true");modal.setAttribute("aria-label","Explore Punya Yatra");
+  modal.innerHTML=`<div class="page-show-dialog"><div class="page-show-bar"><div class="page-show-title"><small>DISCOVER PUNYA YATRA</small><strong></strong></div><button class="page-show-control" data-prev type="button" aria-label="Previous page">‹</button><button class="page-show-control" data-play type="button" aria-label="Pause automatic page show">Ⅱ</button><button class="page-show-control" data-next type="button" aria-label="Next page">›</button><a class="page-show-control page-show-open" data-open href="#">Open page</a><button class="page-show-control" data-close type="button" aria-label="Close page show">×</button></div><div class="page-show-progress"><span></span></div><iframe class="page-show-frame" title="Punya Yatra page preview"></iframe></div>`;
+  const launch=document.createElement("button");launch.className="page-show-launch";launch.type="button";launch.textContent="▶ Explore site";document.body.append(modal,launch);
+  const frame=modal.querySelector("iframe"),title=modal.querySelector("strong"),openLink=modal.querySelector("[data-open]"),playButton=modal.querySelector("[data-play]");
+  function restartSlides(){clearTimeout(slideTimer);modal.classList.remove("playing");void modal.offsetWidth;if(playing&&modal.classList.contains("open")){modal.classList.add("playing");slideTimer=setTimeout(()=>showPage(index+1),20000)}}
+  function showPage(next){index=(next+pages.length)%pages.length;const page=pages[index];title.textContent=page.title;frame.src=page.url+(page.url.includes("?")?"&":"?")+"preview=1";openLink.href=page.url;restartSlides()}
+  function openShow(){clearTimeout(idleTimer);lastFocused=document.activeElement;modal.classList.add("open");document.body.classList.add("page-show-lock");showPage(index);modal.querySelector("[data-close]").focus()}
+  function closeShow(){modal.classList.remove("open","playing");document.body.classList.remove("page-show-lock");clearTimeout(slideTimer);frame.src="about:blank";lastFocused?.focus?.();resetIdle()}
+  function resetIdle(){clearTimeout(idleTimer);if(!modal.classList.contains("open"))idleTimer=setTimeout(openShow,60000)}
+  modal.querySelector("[data-prev]").addEventListener("click",()=>showPage(index-1));modal.querySelector("[data-next]").addEventListener("click",()=>showPage(index+1));modal.querySelector("[data-close]").addEventListener("click",closeShow);
+  playButton.addEventListener("click",()=>{playing=!playing;playButton.textContent=playing?"Ⅱ":"▶";playButton.setAttribute("aria-label",playing?"Pause automatic page show":"Play automatic page show");restartSlides()});launch.addEventListener("click",openShow);modal.addEventListener("click",e=>{if(e.target===modal)closeShow()});
+  document.addEventListener("keydown",e=>{if(e.key==="Escape"&&modal.classList.contains("open"))closeShow();else if(modal.classList.contains("open")&&e.key==="ArrowRight")showPage(index+1);else if(modal.classList.contains("open")&&e.key==="ArrowLeft")showPage(index-1)});
+  ["pointerdown","keydown","scroll","touchstart"].forEach(event=>document.addEventListener(event,resetIdle,{passive:true}));document.addEventListener("visibilitychange",()=>{if(document.hidden){clearTimeout(idleTimer);clearTimeout(slideTimer)}else if(modal.classList.contains("open"))restartSlides();else resetIdle()});resetIdle();
+})();
