@@ -1,25 +1,18 @@
 # Punya Yatra
 
-Exquisite, responsive pilgrimage website for https://punyayatra.in/.
+Complete static booking website for `punyayatra.in`, designed for GitHub Pages.
 
-## Publish on GitHub Pages
+## Publish
 
-1. Upload everything inside this folder to the repository root.
-2. In GitHub, open Settings > Pages.
-3. Publish from the main branch and root folder.
-4. Confirm the custom domain is `punyayatra.in`.
-5. Enable HTTPS when GitHub makes the option available.
+Upload all files and folders to the root of the `Champak-s-World/punya` repository. In GitHub, open **Settings → Pages**, choose **Deploy from a branch**, then select `main` and `/ (root)`.
 
-The complete site includes English and Hindi speech synthesis, a WhatsApp itinerary planner, nine destinations, signature journeys and a live catalogue built from the supplied Kashi Yatra sitemap.
+## Features
 
-## Commercial purpose
+- Direct pilgrimage-tour booking through WhatsApp
+- Six tour packages with details, inclusions, schedules and prices
+- Responsive mobile and desktop presentation
+- Contextual English/Hindi speech synthesis
+- Search-engine metadata and accessible navigation
+- No affiliate redirects
 
-Punya Yatra is designed to generate revenue through:
-
-- paid custom itinerary planning;
-- tour, transport and accommodation coordination;
-- clearly labelled sponsored local-business listings;
-- hotel and travel-partner referrals; and
-- disclosed affiliate recommendations.
-
-Reading the site is free. Paid services, commissions, sponsorships and affiliate relationships should remain clearly disclosed to visitors.
+Update the WhatsApp number in `index.html` and `assets/js/booking.js` if the booking contact changes.
