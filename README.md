@@ -11,6 +11,7 @@ Upload all files and folders to the root of the `Champak-s-World/punya` reposito
 - `index.html` — connected homepage
 - `tours/index.html` — complete tour catalogue
 - `stories/index.html` — slideshow, music and Kashi Yatra stories
+- `gallery/index.html` — visual destination gallery, fullscreen viewer and music-enabled slideshow
 - `book/index.html` — direct booking form
 - `includes/header.html` and `includes/footer.html` — shared site-wide includes
 - `assets/css/` — separated visual, gallery, page and premium styles
