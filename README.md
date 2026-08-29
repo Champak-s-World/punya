@@ -21,7 +21,9 @@ The shared HTML includes are loaded with `assets/js/includes.js`. Preview throug
 
 Tour booking controls are ordinary links rather than JavaScript-only buttons. Each link opens `book/index.html` with the chosen tour in the query string, and the booking page safely preselects it. Asset URLs include a version marker to prevent older defective scripts remaining in the browser cache.
 
-All principal artwork is bundled in `assets/images/` as lightweight SVG files. The site does not depend on the previously missing `raw.githubusercontent.com` image paths.
+All imagery is bundled locally in `assets/images/`. The site does not depend on the previously missing `raw.githubusercontent.com` image paths.
+
+The supplied Kashi photographs are bundled in `assets/images/photos/` and take priority throughout the hero, Kashi tour cards, story slideshow, homepage preview and full gallery. SVGs are retained only for destinations such as Sarnath, Prayagraj and Ayodhya where no matching uploaded photograph was available.
 
 ## Features
 
