@@ -15,6 +15,9 @@ Upload all files and folders to the root of the `Champak-s-World/punya` reposito
 - Cinematic, swipe-enabled Kashi story slideshow
 - User-controlled Bhairavi background music
 - Contextual links to Kashi Yatra blog guides and stories
+- Premium indigo, coral and antique-gold visual identity
+- 3D pointer-responsive tour cards and layered glass surfaces
+- Scroll-triggered reveals, cinematic depth and reduced-motion support
 - Search-engine metadata and accessible navigation
 - No affiliate redirects
 
