@@ -20,6 +20,8 @@ The shared HTML includes are loaded with `assets/js/includes.js`. Preview throug
 
 Tour booking controls are ordinary links rather than JavaScript-only buttons. Each link opens `book/index.html` with the chosen tour in the query string, and the booking page safely preselects it. Asset URLs include a version marker to prevent older defective scripts remaining in the browser cache.
 
+All principal artwork is bundled in `assets/images/` as lightweight SVG files. The site does not depend on the previously missing `raw.githubusercontent.com` image paths.
+
 ## Features
 
 - Direct pilgrimage-tour booking through WhatsApp
