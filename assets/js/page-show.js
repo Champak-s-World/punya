@@ -10,10 +10,10 @@
     {title:"Plan and Book Your Journey",url:root+"book/"}
   ];
   const MUSIC_URL="https://programmer-s-picnic.github.io/json-images/music/Bhairavi%20-%20Sitarkhani%20-%20Aditya%20Verma,%20Subir%20Dev.mp3";
-  const SLIDE_MS=24000;
+  const SLIDE_MS=20000;
   const IDLE_MS=60000;
 
-  let index=0,idleTimer=null,slideTimer=null,scrollTimer=null,scrollDelay=null;
+  let index=0,idleTimer=null,slideTimer=null,scrollTimer=null;
   let playing=true,musicWanted=true,lastFocused=null;
 
   const showMusic=new Audio(MUSIC_URL);
@@ -39,7 +39,7 @@
       </div>
       <div class="page-show-progress"><span></span></div>
       <iframe class="page-show-frame" tabindex="-1" title="Punya Yatra page preview"></iframe>
-      <div class="page-show-hint">Pages scroll gently as the yatra continues · <span data-music-status>Music on</span></div>
+      <div class="page-show-hint">Each page scrolls fully in 20 seconds · <span data-music-status>Music on</span></div>
     </div>`;
 
   const launch=document.createElement("button");
@@ -69,25 +69,31 @@
   }
 
   function stopAutoScroll(){
-    clearInterval(scrollTimer);clearTimeout(scrollDelay);scrollTimer=null;scrollDelay=null;
+    if(scrollTimer)cancelAnimationFrame(scrollTimer);
+    scrollTimer=null;
   }
 
   function startAutoScroll(){
     stopAutoScroll();
     if(!playing||matchMedia("(prefers-reduced-motion: reduce)").matches)return;
-    scrollDelay=setTimeout(()=>{
-      try{
-        const win=frame.contentWindow,doc=frame.contentDocument;
-        if(!win||!doc)return;
-        win.scrollTo({top:0,behavior:"auto"});
-        scrollTimer=setInterval(()=>{
-          if(!modal.classList.contains("open")||!playing)return;
-          const max=Math.max(doc.documentElement.scrollHeight,doc.body?.scrollHeight||0)-win.innerHeight;
-          if(max<=0)return;
-          if(win.scrollY<max-2)win.scrollBy(0,1.6);
-        },55);
-      }catch(error){/* same-origin preview expected; fail quietly if unavailable */}
-    },2200);
+    try{
+      const win=frame.contentWindow,doc=frame.contentDocument;
+      if(!win||!doc)return;
+      win.scrollTo({top:0,behavior:"auto"});
+      const started=performance.now();
+      const step=now=>{
+        if(!modal.classList.contains("open")||!playing){scrollTimer=null;return}
+        const max=Math.max(doc.documentElement.scrollHeight,doc.body?.scrollHeight||0)-win.innerHeight;
+        const progress=Math.min((now-started)/SLIDE_MS,1);
+        if(max>0)win.scrollTo(0,max*progress);
+        if(progress<1)scrollTimer=requestAnimationFrame(step);
+        else{
+          if(max>0)win.scrollTo(0,max);
+          scrollTimer=null;
+        }
+      };
+      scrollTimer=requestAnimationFrame(step);
+    }catch(error){/* same-origin preview expected; fail quietly if unavailable */}
   }
 
   function restartSlides(){
@@ -107,7 +113,7 @@
     frame.src=page.url+(page.url.includes("?")?"&":"?")+"preview=1";
     openLink.href=page.url;
     stopAutoScroll();
-    restartSlides();
+    modal.classList.remove("playing");
   }
 
   function openShow(){
@@ -137,7 +143,11 @@
     if(!modal.classList.contains("open"))idleTimer=setTimeout(openShow,IDLE_MS);
   }
 
-  frame.addEventListener("load",startAutoScroll);
+  frame.addEventListener("load",()=>{
+    if(!modal.classList.contains("open"))return;
+    startAutoScroll();
+    restartSlides();
+  });
   modal.querySelector("[data-prev]").addEventListener("click",()=>showPage(index-1));
   modal.querySelector("[data-next]").addEventListener("click",()=>showPage(index+1));
   modal.querySelector("[data-close]").addEventListener("click",closeShow);
