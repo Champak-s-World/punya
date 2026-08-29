@@ -6,6 +6,18 @@ Complete static booking website for `punyayatra.in`, designed for GitHub Pages.
 
 Upload all files and folders to the root of the `Champak-s-World/punya` repository. In GitHub, open **Settings → Pages**, choose **Deploy from a branch**, then select `main` and `/ (root)`.
 
+## Structure
+
+- `index.html` — connected homepage
+- `tours/index.html` — complete tour catalogue
+- `stories/index.html` — slideshow, music and Kashi Yatra stories
+- `book/index.html` — direct booking form
+- `includes/header.html` and `includes/footer.html` — shared site-wide includes
+- `assets/css/` — separated visual, gallery, page and premium styles
+- `assets/js/` — include loader, booking, slideshow, speech and 3D animation scripts
+
+The shared HTML includes are loaded with `assets/js/includes.js`. Preview through a local web server or GitHub Pages; browser security prevents `fetch()` includes from working when an HTML file is opened directly from a device folder.
+
 ## Features
 
 - Direct pilgrimage-tour booking through WhatsApp
