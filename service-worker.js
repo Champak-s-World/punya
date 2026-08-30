@@ -1,10 +1,11 @@
-const CACHE="punya-yatra-v2";
+const CACHE="punya-yatra-v3";
 const BASE=new URL("./",self.registration.scope).pathname;
 const local=path=>new URL(path,self.registration.scope).pathname;
 const CORE=[
   BASE,
   local("offline.html"),
   local("favicon.svg"),
+  local("assets/images/punya-yatra-logo.png"),
   local("manifest.webmanifest"),
   local("assets/css/exquisite.css"),
   local("assets/css/premium.css"),

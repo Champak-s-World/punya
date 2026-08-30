@@ -8,3 +8,10 @@
 .preview-note{font-size:13px;color:rgba(255,255,255,.78)}
 @media(max-width:900px){.trust-strip{grid-template-columns:repeat(2,1fr);margin-top:22px}.service-intro{grid-template-columns:1fr;gap:14px}.service-grid{grid-template-columns:1fr 1fr}.custom-journey-banner{grid-template-columns:1fr}.custom-journey-banner .button{justify-self:start}}
 @media(max-width:620px){.trust-strip{grid-template-columns:1fr;width:min(100% - 24px,1180px)}.service-grid{grid-template-columns:1fr}.sacred-services{padding-bottom:50px}.custom-journey-banner{width:min(100% - 24px,1180px);padding:25px}.faq-section{width:min(100% - 24px,1000px)}}
+.brand-logo-link{display:flex!important;align-items:center;flex:0 0 auto;line-height:0;letter-spacing:0!important}
+.brand-logo{display:block;width:94px;height:69px;object-fit:contain;filter:drop-shadow(0 5px 12px rgba(0,0,0,.3))}
+.footer-logo-link{width:max-content}
+.footer-logo-link .brand-logo{width:170px;height:auto;filter:none}
+@media(max-width:900px){
+  .site-header .brand-logo{width:76px;height:56px}
+}
